@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>FileMapping</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="FileMapping"/>
+<MSHelp:RLTitle Title="FileMapping"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_FileMapping"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping::FileMapping"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping::FileMapping"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping::SetTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping::SetTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping::IsOpen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping::IsOpen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping::Close"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping::Close"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>FileMapping</h1>
+
+<p>
+The <b>FileMapping</b> class in conjunction with the
+<a href="class_filemapping_map.htm"><b>FileMapping::Map</b></a> class
+simplifies the use of file mapping. See <a href="ms-help://MS.MSDNVS/fileio/filemap_61d3.htm">File Mapping Overview</a> for details.
+</p>
+
+<p>The <b>FileMapping</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FileMapping</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filemap_79wn.htm"><b>CreateFileMapping</b></a></td>
+<td width="40%">Assigns <i>INVALID_HANDLE_VALUE</i> or calls SetTo().</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>~FileMapping</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/helplib/handobj_289x.htm"><b>CloseHandle</b></a></td>
+<td width="40%">Calls Close().</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HANDLE</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the file mapping handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filemap_79wn.htm"><b>CreateFileMapping</b></a></td>
+<td width="40%">Creates or opens file mapping.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsOpen</b></td>
+<td width="30%">-</td>
+<td width="40%">Validates the handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Close</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/helplib/handobj_289x.htm"><b>CloseHandle</b></a></td>
+<td width="40%">Closes file mapping.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="class_filemapping_map.htm"><b>FileMapping::Map</b></a>,
+<a href="ms-help://MS.MSDNVS/fileio/filemap_61d3.htm">File Mapping Overview</a>,
+<a href="ms-help://MS.MSDNVS/fileio/filemap_0583.htm">File Mapping Functions</a>
+</p>
+
+</body>
+</html>

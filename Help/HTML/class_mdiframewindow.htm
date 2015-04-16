@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>MDIFrameWindow</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="MDIFrameWindow"/>
+<MSHelp:RLTitle Title="MDIFrameWindow"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_MDIFrameWindow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::CreateClient"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::CreateClient"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::GetClientWindow"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::GetClientWindow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIActivate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIActivate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDICascade"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDICascade"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDICreate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDICreate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIDestroy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIDestroy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIGetActive"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIGetActive"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIIconArrange"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIIconArrange"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIMaximize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIMaximize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDINext"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDINext"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIPrevious"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIPrevious"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIRefreshMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIRefreshMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDIRestore"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDIRestore"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDISetMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDISetMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MDIFrameWindow::MDITile"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MDIFrameWindow::MDITile"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>MDIFrameWindow</h1>
+
+<p>
+The <b>MDIFrameWindow</b> class is a <a href="class_window.htm"><b>Window</b></a>-derived class
+and is meant for MDI frame windows. The only difference between it and <b>Window</b> is
+that it has a few additional <b>MDIXXX</b> functions and that you <b>must</b> call
+<b>CreateClient</b> during processing <b>OnCreate</b> in order to create the MDI client window.
+</p>
+
+<p>The <b>MDIFrameWindow</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI phenomena</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CreateClient</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the MDI client window. This function must be called when processing the <b>WM_CREATE</b> message.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetClientWindow</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the MDI client window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIActivate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_0605.htm"><b>WM_MDIACTIVATE</b></a></td>
+<td width="40%">Activates the specified MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDICascade</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_90th.htm"><b>WM_MDICASCADE</b></a></td>
+<td width="40%">Cascades all MDI child windows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDICreate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_4qn9.htm"><b>WM_MDICREATE</b></a></td>
+<td width="40%">Creates an MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIDestroy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_8zax.htm"><b>WM_MDIDESTROY</b></a></td>
+<td width="40%">Destroys an MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIGetActive</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_43qd.htm"><b>WM_MDIGETACTIVE</b></a></td>
+<td width="40%">Retruns the active MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIIconArrange</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_05ut.htm"><b>WM_MDIICONARRANGE</b></a></td>
+<td width="40%">Arranges all minimized MDI child windows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIMaximize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_4uhx.htm"><b>WM_MDIMAXIMIZE</b></a></td>
+<td width="40%">Maximizes an MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDINext</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_14z8.htm"><b>WM_MDINEXT</b></a></td>
+<td width="40%">Activates the next MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIPrevious</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_14z8.htm"><b>WM_MDINEXT</b></a></td>
+<td width="40%">Activates the previous MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIRefreshMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_6yut.htm"><b>WM_MDIREFRESHMENU</b></a></td>
+<td width="40%">Applies changes to the MDI window menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDIRestore</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_50f9.htm"><b>WM_MDIRESTORE</b></a></td>
+<td width="40%">Restores a minimized or maximized MDI child window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDISetMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_19px.htm"><b>WM_MDISETMENU</b></a></td>
+<td width="40%">Sets new MDI window menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MDITile</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_56n9.htm"><b>WM_MDITILE</b></a></td>
+<td width="40%">Tiles all MDI child windows.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="class_window.htm"><b>Window</b></a>,
+<a href="ms-help://MS.MSDNVS/winui/mdocint_6crp.htm">Multiple Document Interface Overview</a>,
+<a href="ms-help://MS.MSDNVS/winui/mdocint_8fxv.htm">Multiple Document Interface Messages</a>
+</p>
+
+</body>
+</html>

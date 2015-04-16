@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>WindowClass</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="WindowClass"/>
+<MSHelp:RLTitle Title="WindowClass"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_WindowClass"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WindowClass"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WindowClass"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WindowClass::WindowClass"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WindowClass::WindowClass"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>WindowClass</h1>
+
+<p>
+The <b>WindowClass</b> class is a required component for the <a href="class_window.htm"><b>Window</b></a> class.
+It serves the sole purpose for registering a window class with
+<a href="ms-help://MS.MSDNVS/winui/winclass_70s3.htm"><b>RegisterClass</b></a> function.
+It is neccessary to use this class in order for <b>Window</b> to work correctly.
+</p>
+
+<p>The <b>WindowClass</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>WindowClass</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/winclass_70s3.htm"><b>RegisterClass</b></a></td>
+<td width="40%">Registers the window class. The protected version is for derived classes that supply their own window procedure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator LPCTSTR</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns name of the registered window class.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/winclass_70s3.htm"><b>RegisterClass</b></a>,
+<a href="class_window.htm"><b>Window</b></a>
+</p>
+
+</body>
+</html>

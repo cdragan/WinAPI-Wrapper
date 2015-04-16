@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HelpTOC SYSTEM "ms-help://hx/resources/HelpTOC.DTD">
+<HelpTOC DTDVersion="1.0" PluginStyle="Hierarchical" PluginTitle="WinAPI Wrapper">
+	<!-- Insert TOC Nodes Here -->
+	<HelpTOCNode Url="\HTML\index.htm"/>
+	<HelpTOCNode Url="\HTML\basics.htm"/>
+	<HelpTOCNode Url="\HTML\sample.htm"/>
+	<HelpTOCNode Url="\HTML\usage.htm">
+		<HelpTOCNode Url="\HTML\usage_intro.htm"/>
+		<HelpTOCNode Url="\HTML\usage_project.htm"/>
+		<HelpTOCNode Url="\HTML\usage_window.htm"/>
+		<HelpTOCNode Url="\HTML\usage_dialog.htm"/>
+		<HelpTOCNode Url="\HTML\usage_control.htm"/>
+		<HelpTOCNode Url="\HTML\usage_application.htm"/>
+		<HelpTOCNode Url="\HTML\usage_mdi.htm"/>
+		<HelpTOCNode Url="\HTML\usage_samples.htm"/>
+		<HelpTOCNode Url="\HTML\usage_windowclass.htm"/>
+		<HelpTOCNode Url="\HTML\usage_misc.htm"/>
+		<HelpTOCNode Url="\HTML\usage_gdi.htm"/>
+		<HelpTOCNode Url="\HTML\usage_threads.htm"/>
+		<HelpTOCNode Url="\HTML\usage_iptr.htm"/>
+    <HelpTOCNode Url="\HTML\usage_pure.htm"/>
+    <ToolData Name="MSTOCEXPST" Value="Expanded"/></HelpTOCNode>
+	<HelpTOCNode Url="\HTML\wizard.htm"/>
+	<HelpTOCNode Url="\HTML\classes.htm">
+		<HelpTOCNode Title="Miscellaneous">
+			<HelpTOCNode Url="\HTML\class_address.htm"/>
+			<HelpTOCNode Url="\HTML\class_application.htm"/>
+    <HelpTOCNode Url="\HTML\class_autoimagelist.htm"/>
+			<HelpTOCNode Url="\HTML\class_cominitializer.htm"/>
+    <HelpTOCNode Url="\HTML\class_criticalsection.htm"/>
+			<HelpTOCNode Url="\HTML\class_criticalsection_lock.htm"/>
+			<HelpTOCNode Url="\HTML\class_file.htm"/>
+			<HelpTOCNode Url="\HTML\class_filemapping.htm"/>
+			<HelpTOCNode Url="\HTML\class_filemapping_map.htm"/>
+			<HelpTOCNode Url="\HTML\class_filetime.htm"/>
+			<HelpTOCNode Url="\HTML\class_findfile.htm"/>
+			<HelpTOCNode Url="\HTML\class_getfilenamedialog.htm"/>
+			<HelpTOCNode Url="\HTML\class_getfolderdialog.htm"/>
+			<HelpTOCNode Url="\HTML\class_imagelist.htm"/>
+			<HelpTOCNode Url="\HTML\class_iptr.htm"/>
+    <HelpTOCNode Url="\HTML\class_menu.htm"/>
+			<HelpTOCNode Url="\HTML\class_messagequeue.htm"/>
+			<HelpTOCNode Url="\HTML\class_noncopyable.htm"/>
+			<HelpTOCNode Url="\HTML\class_regkey.htm"/>
+			<HelpTOCNode Url="\HTML\class_semaphore.htm"/>
+			<HelpTOCNode Url="\HTML\class_socket.htm"/>
+			<HelpTOCNode Url="\HTML\class_thread.htm"/>
+			<HelpTOCNode Url="\HTML\class_wpoint.htm"/>
+			<HelpTOCNode Url="\HTML\class_wrect.htm"/>
+			<HelpTOCNode Url="\HTML\class_wsize.htm"/>
+    </HelpTOCNode>
+		<HelpTOCNode Title="Windows">
+			<HelpTOCNode Url="\HTML\class_desktopwindow.htm"/>
+			<HelpTOCNode Url="\HTML\class_dialog.htm"/>
+			<HelpTOCNode Url="\HTML\class_foregroundwindow.htm"/>
+			<HelpTOCNode Url="\HTML\class_genericwindow.htm"/>
+			<HelpTOCNode Url="\HTML\class_mdichildwindow.htm"/>
+			<HelpTOCNode Url="\HTML\class_mdichildwindowclass.htm"/>
+			<HelpTOCNode Url="\HTML\class_mdiframewindow.htm"/>
+			<HelpTOCNode Url="\HTML\class_modelessdialog.htm"/>
+			<HelpTOCNode Url="\HTML\class_window.htm"/>
+			<HelpTOCNode Url="\HTML\class_windowclass.htm"/>
+		</HelpTOCNode>
+		<HelpTOCNode Title="GDI">
+			<HelpTOCNode Url="\HTML\class_bitmap.htm"/>
+			<HelpTOCNode Url="\HTML\class_brush.htm"/>
+			<HelpTOCNode Url="\HTML\class_clientdc.htm"/>
+			<HelpTOCNode Url="\HTML\class_compatibledc.htm"/>
+			<HelpTOCNode Url="\HTML\class_dc.htm"/>
+			<HelpTOCNode Url="\HTML\class_dcex.htm"/>
+			<HelpTOCNode Url="\HTML\class_font.htm"/>
+			<HelpTOCNode Url="\HTML\class_gdiobject.htm"/>
+			<HelpTOCNode Url="\HTML\class_gdiobjectbase.htm"/>
+			<HelpTOCNode Url="\HTML\class_paintdc.htm"/>
+			<HelpTOCNode Url="\HTML\class_pen.htm"/>
+			<HelpTOCNode Url="\HTML\class_region.htm"/>
+			<HelpTOCNode Url="\HTML\class_selectobj.htm"/>
+			<HelpTOCNode Url="\HTML\class_stockobject.htm"/>
+			<HelpTOCNode Url="\HTML\class_windowdc.htm"/>
+		</HelpTOCNode>
+		<HelpTOCNode Title="Controls">
+			<HelpTOCNode Url="\HTML\class_button.htm"/>
+			<HelpTOCNode Url="\HTML\class_checkbox.htm"/>
+			<HelpTOCNode Url="\HTML\class_combobox.htm"/>
+			<HelpTOCNode Url="\HTML\class_comboboxex.htm"/>
+			<HelpTOCNode Url="\HTML\class_control.htm"/>
+			<HelpTOCNode Url="\HTML\class_defpushbutton.htm"/>
+			<HelpTOCNode Url="\HTML\class_edit.htm"/>
+			<HelpTOCNode Url="\HTML\class_groupbox.htm"/>
+			<HelpTOCNode Url="\HTML\class_headercontrol.htm"/>
+			<HelpTOCNode Url="\HTML\class_hotkey.htm"/>
+			<HelpTOCNode Url="\HTML\class_listbox.htm"/>
+			<HelpTOCNode Url="\HTML\class_listview.htm"/>
+			<HelpTOCNode Url="\HTML\class_pager.htm"/>
+			<HelpTOCNode Url="\HTML\class_progressbar.htm"/>
+			<HelpTOCNode Url="\HTML\class_radiobutton.htm"/>
+			<HelpTOCNode Url="\HTML\class_rebar.htm"/>
+			<HelpTOCNode Url="\HTML\class_scrollbar.htm"/>
+			<HelpTOCNode Url="\HTML\class_static.htm"/>
+			<HelpTOCNode Url="\HTML\class_statusbar.htm"/>
+			<HelpTOCNode Url="\HTML\class_tabcontrol.htm"/>
+			<HelpTOCNode Url="\HTML\class_threestate.htm"/>
+			<HelpTOCNode Url="\HTML\class_toolbar.htm"/>
+			<HelpTOCNode Url="\HTML\class_tooltip.htm"/>
+			<HelpTOCNode Url="\HTML\class_trackbar.htm"/>
+			<HelpTOCNode Url="\HTML\class_treeitem.htm"/>
+			<HelpTOCNode Url="\HTML\class_treeview.htm"/>
+			<HelpTOCNode Url="\HTML\class_updown.htm"/>
+		</HelpTOCNode>
+    </HelpTOCNode>
+    <ToolData Name="MSTOCEXPST" Value="Expanded"/>
+    
+    
+    
+    
+    <ToolData Name="MSTOCMRUDIR" Value="C:\Extended\Devel\WinAPI\Help\HTML\"/>
+    <ToolData Name="MSTOCMRUFT" Value="0"/></HelpTOC>

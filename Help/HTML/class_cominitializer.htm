@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>COMInitializer</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="COMInitializer"/>
+<MSHelp:RLTitle Title="COMInitializer"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_COMInitializer"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::COMInitializer"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::COMInitializer"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>COMInitializer</h1>
+
+<p>
+The <b>COMInitializer</b> class simplifies initialization of the COM library.
+Creating an object of this class, either statically or in the main application function,
+you no longer have to remember to initialize or uninitialize the COM library.
+</p>
+
+<p>
+The constructor of the <b>COMInitializer</b> class calls the
+<a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmf_a2c_36qt.htm"><b>CoInitialize(0)</b></a>
+function and the destructor calls the
+<a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmf_a2c_7vqd.htm"><b>CoUninitialize</b></a>
+function.
+</p>
+
+<p>
+The <b>COMInitializer</b> class is especially useful when using the
+<a href="class_iptr.htm"><b>IPtr&lt;T></b></a> class which simplifies the use of COM.
+</p>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="class_iptr.htm"><b>IPtr&lt;T></b></a>
+</p>
+
+</body>
+</html>

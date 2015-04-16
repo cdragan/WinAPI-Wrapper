@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Menu</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Menu"/>
+<MSHelp:RLTitle Title="Menu"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Menu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Menu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Menu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Load"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Load"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::AppendGeneric"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::AppendGeneric"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Append"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Append"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::CheckItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::CheckItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::CheckRadioItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::CheckRadioItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::CreatePopupMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::CreatePopupMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Delete"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Delete"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Destroy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Destroy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::EnableItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::EnableItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetDefaultItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetDefaultItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetItemCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetItemCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetItemID"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetItemID"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetItemInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetItemInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::GetSubMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::GetSubMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::InsertGeneric"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::InsertGeneric"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Insert"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Insert"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::IsMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::IsMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::Remove"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::Remove"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::SetDefaultItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::SetDefaultItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::SetInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::SetInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::SetItemBitmaps"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::SetItemBitmaps"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::SetItemInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::SetItemInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Menu::TrackPopupMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Menu::TrackPopupMenu"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Menu</h1>
+
+<p>
+The <b>Menu</b> class extends a <i>HMENU</i> object with C++ functionality.
+See <a href="ms-help://MS.MSDNVS/winui/menus_1gz7.htm">Menus Overview</a> for details.
+</p>
+
+<p>The <b>Menu</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Menu</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates an empty object or obtains a menu handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HMENU</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the menu handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Load</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_9wmt.htm"><b>LoadMenu</b></a></td>
+<td width="40%">Loads menu from a resource.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AppendGeneric</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_0met.htm"><b>AppendMenu</b></a></td>
+<td width="40%">Appends a menu in a generic way.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Append</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_0met.htm"><b>AppendMenu</b></a></td>
+<td width="40%">Appends a menu either with a string or with a bitmap. Another version of this function can also append popup menus.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AppendSeparator</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_0met.htm"><b>AppendMenu</b></a></td>
+<td width="40%">Appends a separator menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CheckItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_3wa5.htm"><b>CheckMenuItem</b></a></td>
+<td width="40%">Checks or unchecks a "check"-type menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CheckRadioItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_0371.htm"><b>CheckMenuRadioItem</b></a></td>
+<td width="40%">Checks a "radio"-type menu item in a given group.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_6vzp.htm"><b>CreateMenu</b></a></td>
+<td width="40%">Creates a new menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CreatePopupMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_45md.htm"><b>CreatePopupMenu</b></a></td>
+<td width="40%">Creates a new popup menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Delete</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_4mlx.htm"><b>DeleteMenu</b></a></td>
+<td width="40%">Deletes a menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Destroy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_88ad.htm"><b>DestroyMenu</b></a></td>
+<td width="40%">Destroys menu object.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EnableItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_90kt.htm"><b>EnableMenuItem</b></a></td>
+<td width="40%">Enables or disables a menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDefaultItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_5i5p.htm"><b>GetMenuDefaultItem</b></a></td>
+<td width="40%">Retrieves default menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_9pbj.htm"><b>GetMenuInfo</b></a></td>
+<td width="40%">Retrieves a <a href="ms-help://MS.MSDNVS/winui/menus_1vjm.htm"><b>MENUINFO</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_68z8.htm"><b>GetMenuItemCount</b></a></td>
+<td width="40%">Returns the number of menu items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemID</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_6skk.htm"><b>GetMenuItemID</b></a></td>
+<td width="40%">Retrieves command identifier of a menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_7rhr.htm"><b>GetMenuItemInfo</b></a>.</td>
+<td width="40%">Gets a <a href="ms-help://MS.MSDNVS/winui/menus_3n1u.htm"><b>MENUITEMINFO</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_08h1.htm"><b>GetMenuState</b></a></td>
+<td width="40%">Retrieves state of a menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_9mnb.htm"><b>GetMenuString</b></a></td>
+<td width="40%">Returns menu item string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSubMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_01yt.htm"><b>GetSubMenu</b></a></td>
+<td width="40%">Returns a sub-menu at a specific item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertGeneric</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_9yid.htm"><b>InsertMenu</b></a></td>
+<td width="40%">Inserts a generic menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Insert</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_9yid.htm"><b>InsertMenu</b></a></td>
+<td width="40%">Inserts a menu item either with a string or with a bitmap. Another version of this function can also append popup menus.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertSeparator</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_9yid.htm"><b>InsertMenu</b></a></td>
+<td width="40%">Inserts a separator menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_5eyd.htm"><b>IsMenu</b></a></td>
+<td width="40%">Checks whether the objects contains a valid menu handle to an existing menu object.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Remove</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_9jhx.htm"><b>RemoveMenu</b></a></td>
+<td width="40%">Removes a menu item or detaches a sub-menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDefaultItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_8431.htm"><b>SetMenuDefaultItem</b></a></td>
+<td width="40%">Sets default menu item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_71wv.htm"><b>SetMenuInfo</b></a></td>
+<td width="40%">Sets a <a href="ms-help://MS.MSDNVS/winui/menus_1vjm.htm"><b>MENUINFO</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemBitmaps</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_2gs3.htm"><b>SetMenuItemBitmaps</b></a></td>
+<td width="40%">Sets checked and unchecked state bitmaps.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_39f3.htm"><b>SetMenuItemInfo</b></a></td>
+<td width="40%">Sets a <a href="ms-help://MS.MSDNVS/winui/menus_3n1u.htm"><b>MENUITEMINFO</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TrackPopupMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_0hdi.htm"><b>TrackPopupMenu</b></a> <a href="ms-help://MS.MSDNVS/winui/menus_6xx4.htm"><b>TrackPopupMenuEx</b></a></td>
+<td width="40%">Executes a popupmenu loop.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/menus_1gz7.htm">Menus Overview</a>,
+<a href="ms-help://MS.MSDNVS/winui/menus_7uur.htm">Menu Functions</a>
+</p>
+
+</body>
+</html>

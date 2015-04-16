@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creating dialog boxes</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Creating dialog boxes"/>
+<MSHelp:RLTitle Title="Creating dialog boxes"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_Creating_Dialogs"/>
+<MSHelp:Keyword Index="K" Term="dialog boxes, creating [WinAPI Wrapper]"/>
+<MSHelp:Keyword Index="F" Term="dialog"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Creating dialog boxes</h1>
+
+<p>There are two kinds of dialog boxes. The typical dialog boxes are modal - they hold the execution of the program.
+A modal dialog box has its own message loop and it disables all application windows.
+A dialog box can also be modeless. In this case the dialog box acts as a typical window,
+and has no message loop on its own. Modeless dialog boxes can be used as application
+windows while modal dialog boxes can be used as popup windows blocking all other windows.</p>
+
+<h3>Dialogs vs. windows</h3>
+
+<p>Creating dialog boxes with the WinAPI Wrapper is very similar to creating regular windows,
+because the dialog box classes are in fact derived from the <a href="class_window.htm"><b>Window</b></a> class.
+See <a href="usage_window.htm">Creating windows and controls</a> for more information on
+how to create regular windows.</p>
+
+<p>The main difference between dialog boxes and regular windows is that dialog boxes
+don't receive certain messages, like for instance <i>WM_CREATE</i>, <i>WM_PAINT</i>,
+<i>WM_CLOSE</i>, <i>WM_KEYDOWN</i> or <i>WM_KEYUP</i>. Dialog boxes receive
+<i>WM_INITDIALOG</i> instead of <i>WM_CREATE</i> during creation. Dialog boxes are
+build from dialog box templates, typically stored in application resources.</p>
+
+<p>Another difference is that <b>HandleMessage</b> in dialog boxes doesn't have to
+call its ancestor's version (there is no <b>DefWindowProc</b> for dialog boxes).</p>
+
+<h3>Modal dialogs</h3>
+
+<p>Modal dialog boxes are derived from the <a href="class_dialog.htm"><b>Dialog</b></a>
+class and modeless dialog boxes are derived from the <a href="class_modelessdialog.htm"><b>ModelessDialog</b></a> class.
+Modal dialog boxes have a <b>Go</b> function that is called to execute them and they
+call the <b>EndDialog</b> function to destroy themselves, while modeless dialog boxes
+are much more like regular windows (they destroy themselves calling <b>Destroy</b>).</p>
+
+<p>The following example shows a simple modal dialog box:</p>
+
+<pre>class MyDialog: public <b>Dialog</b> {
+public:
+    <b>MyDialog(): Dialog( IDD_MYDIALOG ) { }</b>
+    virtual void OnCommand( int nIdentifier, int nNotifyCode, HWND hwndControl ) {
+        switch ( nIdentifier ) {
+
+        case IDOK:
+            <b>EndDialog();</b>
+            break;
+
+        }
+    }
+};</pre>
+
+<p>To pop a dialog defined above and wait until the user closes it (perhaps clicking "OK"), you would call:</p>
+
+<pre>MyDialog dlg;
+dlg.Go();</pre>
+
+<p>The <b>Go</b> function returns "return code" that is the argument of the <b>EndDialog</b> function.
+Notice that the modal dialog is created statically. This is possible, because the dialog
+dies right before the <b>Go</b> function returns, but it does not destroy the dialog object.
+This way the dialog can "return" additional values entered by the user <i>within</i> the actual dialog object.</p>
+
+<h3>Modeless dialogs</h3>
+
+<p>A typical modeless dialog is shown below:</p>
+
+<pre>class MyDialog: public <b>ModelessDialog</b> {
+public:
+    MyDialog( HWND hwndParent = 0 ) {
+        <b>Create( IDD_DIALOG, hwndParent );</b>
+    }
+    virtual void OnCommand( int nIdentifier, int nNotifyCode, HWND hwndControl ) {
+        switch ( nIdentifier ) {
+
+        case IDOK:
+            <b>Destroy();</b>
+            break;
+
+        }
+    }
+private:
+    ~MyDialog() { }
+};</pre>
+
+<p>The main difference between the modeless dialog box class above and a modal dialog class
+is that the modeless dialog is created and destroyed like a regular window
+in the WinAPI Wrapper, unlike the modal dialog which object is created statically and
+its creation and destruction has nothing to do with the dialog object, but rather with
+the <b>Go</b> function. The following piece of code creates the dialog window defined above:</p>
+
+<pre>new MyDialog;</pre>
+
+<p>The object of the <b>MyDialog</b> class will be later destroyed (deleted) as a result
+of window destruction initiated by <b>Destroy</b>.</p>
+
+<p>The difference between a modeless dialog and a regular window is that the modeless
+dialog is - like any other dialog - created from a template (and thus it receives <i>WM_INITDIALOG</i>
+instead of <i>WM_CREATE</i>) and that it does not have to propagate unhandled messages
+to the ancestor of <b>HandleMessage</b>.</p>
+
+<h4>See Also</h4>
+
+<p>
+<a href="usage_window.htm">Creating Windows</a>,
+<a href="class_dialog.htm"><b>Dialog</b></a>,
+<a href="class_modelessdialog.htm"><b>ModelessDialog</b></a>
+</p>
+
+</body>
+</html>

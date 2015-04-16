@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Introducing WinAPI Wrapper</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Introduction"/>
+<MSHelp:RLTitle Title="Introduction"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Intro"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Introduction"/>
+<MSHelp:Keyword Index="F" Term="WinAPI, Wrapper"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Introducing WinAPI Wrapper</h1>
+
+<p>
+WinAPI (Windows Application Programming Interface) was designed as an API for the C language.
+However, modern C++ language offers capabilities that make programming much simpler in than in C,
+such as simplified function calling for objects, auto object deallocation through destructor,
+default function argument values, etc. The following call is common to a Windows application
+written in C:
+</p>
+
+<pre>ShowWindow( hWnd, SW_SHOWNORMAL );</pre>
+
+<p>Suppose similar was possible in C++:</p>
+
+<pre>window.Show( SW_SHOWNORMAL );</pre>
+
+<p>or using default parameter (SW_SHOWNORMAL is the default):</p>
+
+<pre>window.Show();</pre>
+
+<p>
+The above C++ call is simplier than the equivalent C code.
+Because, for instance, all window functions in the WinAPI take handle to a window as the
+first parameter, we could easily convert them to C++. Now imagine what potential has
+the <a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm">CreateWindowEx</a> function in conjunction with default parameters! (Especially because it is
+very clumsy having 12 parameters).
+</p>
+
+<p>
+The WinAPI Wrapper is a set of C++ classes that extend the Windows API into the C++ world.
+The Wrapper's classes are very light; they have only neccessary fields (for example
+the GenericWindow class has only one field: HWND) and almost all of their functions are inline
+and directly translate into actual WinAPI function calls.
+</p>
+
+<p>
+The WinAPI Wrapper is <strong>not</strong> a replacement of or competition to the
+<a href="ms-help://MS.MSDNVS/vccore/html/vcorimfcoverview.htm">MFC</a> (Microsoft Foundation Class) library.
+It is something very different, indeed. The WinAPI Wrapper makes the WinAPI a C++ API and
+does not provide any extra functionality nor it does not change any WinAPI functionality.
+The Wrapper enhances the process of creation of a Windows application using pure WinAPI.
+Instead of using the WinAPI in a regular way writing a C application, you can use the
+WinAPI Wrapper and write your application very quickly in C++, like you can do using MFC, but
+with almost no extra overhead.
+</p>
+
+<p>
+This overview contains the following topics:
+<dl>
+<dt><a href="License.txt">License</a></dt>
+<dd>Please read the License Agreement before using the WinAPI Wrapper library.</dd>
+<dt><a href="basics.htm">Basic ideas</a></dt>
+<dd>Describes the ideas behind the WinAPI Wrapper, how it works and what are its design goals.</dd>
+<dt><a href="sample.htm">Sample program</a></dt>
+<dd>Discusses a simple "Hello, World!" application that uses the WinAPI Wrapper. Ideal if you want to see how easy it is to use the Wrapper.</dd>
+<dt><a href="usage.htm">Usage guide</a></dt>
+<dd>Shows the most common ways to use the WinAPI Wrapper.</dd>
+<dt><a href="wizard.htm">AppWizard</a></dt>
+<dd>Describes the AppWizard of the WinAPI Wrapper for the Microsoft Visual C++ .NET.</dd>
+<dt><a href="classes.htm">Class reference</a></dt>
+<dd>Lists classes the WinAPI Wrapper consists of and describes their contents and purpose.</dd>
+</dl>
+</p>
+
+<H4>See Also</H4>
+
+<P><A HREF="ms-help://MS.MSDNVS/winui/winuserstart_88bp.htm">Windows User Interface Overview</A>, <a href="ms-help://MS.MSDNVS/vccore/html/vcorimfcoverview.htm">MFC Overview</a></P>
+
+</body>
+</html>

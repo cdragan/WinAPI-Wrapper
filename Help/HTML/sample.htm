@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Sample program</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Sample Program"/>
+<MSHelp:RLTitle Title="Sample Program"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Sample"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Sample Program"/>
+<MSHelp:Keyword Index="F" Term="WinAPI, Wrapper"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Sample program</h1>
+
+<p>The following program is written using the WinAPI Wrapper.</p>
+
+<pre>#include &lt;winapi.h>
+
+using namespace WinAPI;
+
+class MainWindow: public Window {
+public:
+    MainWindow() {
+        Create( "Hello, World!" );
+    }
+protected:
+    virtual void OnDestroy() {
+        PostQuitMessage( 0 );
+    }
+    virtual void OnPaint() {
+        PaintDC dc( *this );
+        dc.TextOut( WPoint(50,50), "Hello, World!" );
+    }
+private:
+    virtual ~MainWindow() { }
+};
+
+namespace {
+    Application< MainWindow > app;
+}</pre>
+
+<p>
+Let's discuss the construction of the program. In the first line the WinAPI Wrapper main
+header is included. This header includes further headers - <i>windows.h</i>, <i>commctrl.h</i>
+and a few other necessary headers.
+</p>
+
+<p>
+In the second line the WinAPI Wrapper classes are put in the global namespace.
+Note that the regular WinAPI functions, declarations, etc. are already in the global
+namespace, because the <i>winapi.h</i> header does not include them in the WinAPI
+namespace but rather in the global namespace.
+</p>
+
+<p>
+Then the main window class is defined. The main window class, inherited from the <a href="class_window.htm"><b>Window</b></a> class,
+serves exactly the same purpose as the <i>WindowProc</i> in C.
+</p>
+
+<p>
+The constructor of the main window class creates the window. This is required by the
+<a href="class_application.htm"><b>Application</b></a> template class. In the example, only window title is passed
+to the <b>Window::Create</b> function - other arguments have their default values
+(for example the <i>dwStyle</i> is <i>WS_OVERLAPPEDWINDOW</i>). Typically you also
+register your own <i>WNDCLASS</i> (using the Wrapper's <a href="class_windowclass.htm"><b>WindowClass</b></a> class),
+but in this example the default <i>WNDCLASS</i> is used.
+</p>
+
+<p>
+The two methods of the <b>MainWindow</b> class handle incoming messages. The
+<b>OnDestroy</b> method is called in response to <i>WM_DESTROY</i> message, and
+because it is in the main application window, it calls <a href="ms-help://MS.MSDNVS/winui/messques_0tgl.htm"><b>PostQuitMessage</b></a> to
+break processing of the message queue.
+</p>
+
+<p>
+The <b>OnPaint</b> method, called in response to <i>WM_PAINT</i>, calls in turn <b>TextOut</b> on the <b>PaintDC</b> object.
+The <a href="class_paintdc.htm"><b>PaintDC</b></a> class calls <b>BeginPaint</b> in the constructor and
+<b>EndPaint</b> in the destructor.
+</p>
+
+<p>
+Every window should also process the <i>WM_CREATE</i> message and return <i>TRUE</i> in it
+in order to be successfuly created,
+but here it is done by default in the <b>Window</b> class.
+</p>
+
+<p>
+Finally the application object is created. The object is of class <a href="class_application.htm"><b>Application</b></a>,
+which is a template class. Its template argument is the main window class. The application
+object is created within the anonymous namespace, although it is not necessary.
+The application object is used by the default main procedure <b>WinMain</b>
+(defined inside the WinAPI Wrapper) and it
+creates the main window (calling the constructor of the main window class that should
+create the window, and then calling <b>Window::Show</b> and <b>Window::Update</b>) and
+then processes the message loop (using <a href="class_messagequeue.htm"><b>MessageQueue</b></a> class).
+</p>
+
+<p>
+No part of the above program is necessary to be written using the WinAPI Wrapper. You may choose to use only some parts of
+the WinAPI Wrapper and code the rest in regular C WinAPI or even in MFC.
+</p>
+
+<p>
+Summing up, the above program when written using WinAPI Wrapper has the following
+advantages over writing it in regular C WinAPI:
+<ul>
+<li>A C++ class instead of a C <b>WindowProc</b> procedure enables windows to have their own
+data (including controls, displayed data, etc.). In C, you have one <b>WindowProc</b>
+procedure and you have to develop special data sharing techniques when having multiple
+windows. With the WinAPI Wrapper every new window you create has its own C++ class,
+so every window has its local, non-shared data.
+<li>In the sample application there are only three function calls, which are necessary:
+<b>Window::Create</b> - creates the main window, <b>PostQuitMessage</b> stops the message loop
+when the main window is destroyed and <b>DC::TextOut</b> draws "Hello, World!" in
+response to the <i>WM_PAINT</i> message, while <b>PaintDC</b> object allocates
+the paint DC. No other calls are necessary - all the typical code is already implemented
+by the WinAPI Wrapper.
+<li>No need to pass loads of miscellaneous parameters that clutter code. You can pass
+only necessary and meaningful arguments - all the others are the defaults.
+<li>One <b>Application</b> object (there can be only one per application) that takes
+care of window creation and message processing. You can replace it at any level with
+your own message loop.
+<li>At any point you can quit using the WinAPI Wrapper and use whatever other API you want
+(the pure WinAPI or MFC for instance). For example you can skip the Wrapper's <b>WinMain</b>
+procedure and write your own one.
+</ul>
+</p>
+
+</body>
+</html>

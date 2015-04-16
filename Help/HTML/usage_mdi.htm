@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>MDI applications</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="MDI applications"/>
+<MSHelp:RLTitle Title="MDI applications"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_MDI"/>
+<MSHelp:Keyword Index="K" Term="MDI applications, building with WinAPI Wrapper"/>
+<MSHelp:Keyword Index="F" Term="mdi"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>MDI applications</h1>
+
+<p>
+A typical MDI application has one main window, called the <i>frame window</i>. The <i>frame window</i>
+has a special child - the <i>client window</i>. The <i>MDI children</i>, that typically represent
+documents, are displayed within the <i>client window</i> and they are its children.
+</p>
+
+<p>
+The WinAPI Wrapper simplifies the process of creating an MDI application.
+The <i>frame window</i>, which is the application's main window, is derived from
+the <a href="class_mdiframewindow.htm"><b>MDIFrameWindow</b></a> class and the
+<a href="class_mdichildwindow.htm"><b>MDIChildWindow</b></a> class.
+</p>
+
+<p>
+There are the differences between the MDI windows and regular windows derived directly
+from <a href="class_window.htm"><b>Window</b></a>. While processing the <i>WM_CREATE</i>
+command in the <i>MDI frame window</i>, you must call the <b>CreateClient</b> function
+to create the <i>client window</i>.</p>
+
+<p>The other difference is that if you want to create
+your own <i>WNDCLASS</i>'es for your <i>MDI children</i>, you have to use the
+<a href="class_mdichildwindowclass.htm"><b>MDIChildWindowClass</b></a> instead of the
+<a href="class_windowclass.htm"><b>WindowClass</b></a> class. See <a href="usage_windowclass.htm">Using
+custom window classes</a> for details.
+</p>
+
+<p>The third difference is that you must call <b>MDIFrameWindow::OnCommand</b>
+in the <i>frame window</i> class while processing the <i>WM_COMMAND</i> message. You
+have to propagate this message in order for the MDI framework to work correctly.
+If you don't, things like maximizing <i>child windows</i> etc. won't work.
+</p>
+
+<p>The following example shows a simple <i>frame window</i> and one <i>child window</i>:</p>
+
+<pre>class DocumentWindow: public MDIChildWindow {
+public:
+    DocumentWindow( HWND hwndParent ) {
+        Create( "Sample Document", hwndParent );
+    }
+};
+
+class MainWindow: public MDIFrameWindow {
+public:
+    MainWindow() {
+        Create( "Sample Title" );
+    }
+protected:
+    virtual bool OnCreate( LPCREATESTRUCT lpCreateStruct = 0 ) {
+
+        // Create the client window (this is a must)
+        CreateClient( GetClientRect() );
+
+        // Create an MDI child
+        (new DocumentWindow( GetClientWindow() ))->Show();
+        return true;
+    }
+    virtual void OnDestroy() {
+        PostQuitMessage( 0 );
+    }
+private:
+    virtual ~MainWindow() { }
+};</pre>
+
+<h4>See Also</h4>
+
+<p>
+<a href="usage_window.htm">Creating Windows</a>,
+<a href="ms-help://MS.MSDNVS/winui/mdocint_6crp.htm">Multiple Document Interface Overview</a>
+</p>
+
+</body>
+</html>

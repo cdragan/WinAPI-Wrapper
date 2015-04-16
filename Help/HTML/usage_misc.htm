@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Miscellaneous wrapper classes</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Miscellaneous wrapper classes"/>
+<MSHelp:RLTitle Title="Miscellaneous wrapper classes"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_Misc"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Miscellaneous wrapper classes</h1>
+
+<p>This topic describes several miscellaneous classes in the WinAPI Wrapper.</p>
+
+<h3>File</h3>
+
+<p>The <a href="class_file.htm"><b>File</b></a> class provides simplified functionality for files. Here are several examples of creating a file object:</p>
+
+<pre>File file( "myfile.bin" );                     // Open the file if it exists (defaults to OPEN_EXISTING)
+if ( ! file.IsOpen() ) /*...*/;                // Check if the file was opened successfuly
+
+File file( "myfile.bin", CREATE_ALWAYS );      // Create the file (removing all its contents if needed)
+
+File file;                                     // Empty file object
+file.SetTo( "myfile.bin", OPEN_ALWAYS );       // Open the file or create it if it does not exist
+</pre>
+
+<p>After creating a file object you can perform miscellaneous operations on it:</p>
+
+<pre>char* buf = new char[ 1024 ];                  // Allocate buffer
+file.Seek( 4096 );                             // Set file pointer at 4096 bytes from the beginning
+file.Read( buf, 1024 );                        // Read 1024 bytes to the buffer
+for ( int i=0; i &lt; 1024; i++ ) buf[i] ^= 0xFF; // XOR the contents of the buffer
+file.Seek( -1024, FILE_CUR );                  // Move file pointer back to the beginning of the read buffer
+file.Write( buf, 1024 );                       // Write the buffer
+file.Truncate();                               // Truncate the file at the end of the buffer
+const int size = file.GetFileSize();           // Remember file size
+file.Close();                                  // Close file (optional, done by the destructor)
+</pre>
+
+<h3>FindFile</h3>
+
+<p>The <a href="class_findfile.htm"><b>FindFile</b></a> class simplifies searching for files.
+The following code uses it to find all <i>.cpp</i> files in the current directory.</p>
+
+<pre>list< string > files;                          // List of filenames
+FindFile finder( "*.cpp" );                    // Find the first file
+const WIN32_FIND_DATA& fd = finder.GetFindData();
+if ( finder.IsOpen() ) do {                    // If the first file was found start looking for more
+    files.push_back( fd.cFileName );           // Add found filename to the list
+} while( finder.FindNext() );                  // Find next file
+finder.Close();                                // Close find handle (optional, done by the destructor)
+</pre>
+
+<h3>FileMapping</h3>
+
+<p>The <a href="class_filemapping.htm"><b>FileMapping</b></a> provides means to treat a file like it was a buffer in memory.</p>
+
+<pre>{   File file( "myfile.bin" );                 // Open a file for reading
+    FileMapping mapping( file );               // Create mapping for the file
+    FileMapping::Map map( mapping );           // Map the file into memory
+    char* buf = map;                           // Obtain pointer to the buffer/map
+    const int size = map.GetSize();            // Obtain size of the buffer/map
+    int sum = 0;
+    for ( int i=0; i &lt; size; i++ )             // Sum up all bytes of the file
+        sum += static_cast<unsigned char>( buf[ i ] );
+}                                              // Automatically close mappings and file
+</pre>
+
+<h3>FileTime</h3>
+
+<p>The <a href="class_filetime.htm"><b>FileTime</b></a> class is a wrapper for <b>FILETIME</b> type.</p>
+
+<pre>FileTime time;                                 // Create time object
+time.ObtainLocalTime();                        // Get current local time
+string hms = time.FormatTime();                // Format hour:minute string
+MessageBox( 0, hms.c_str(), "Time", 0 );       // Display a message box with current time
+</pre>
+
+<h3>GetFileNameDialog</h3>
+
+<p>The <a href="class_getfilenamedialog.htm"><b>GetFileNameDialog</b></a> class helps to
+ask the user to select one or more files.</p>
+
+<pre>GetFileNameDialog dlg;                         // Prepare dialog object
+if ( dlg.GoOpen() )                            // Run "Open File" dialog box
+    MessageBox( 0, dlg.GetFileName(),          // Display selected file name
+        "Selected File", 0 );
+</pre>
+
+<h3>GetFolderDialog</h3>
+
+<p>The <a href="class_getfolderdialog.htm"><b>GetFolderDialog</b></a> class helps to
+ask the user to select a folder.</p>
+
+<pre>GetFolderDialog dlg;                           // Prepare dialog object
+if ( dlg.Go() )                                // Run "Browse for Folder" dialog box
+    MessageBox( 0, dlg.GetFolderName(),        // Display selected folder path
+        "Selected Folder", 0 );
+</pre>
+
+<h3>ImageList and AutoImageList</h3>
+
+<p>The <a href="class_imagelist.htm"><b>ImageList</b></a> class and its autodestructible
+version <a href="class_autoimagelist.htm"><b>AutoImageList</b></a> help in creating, loading
+and managing image lists for common controls.</p>
+
+<pre>AutoImageList imlist;                          // Create empty image list object
+imlist.LoadImage( IDB_TOOLBAR, 16, 0 );        // Load an image list for a toolbar with 16-pixel wide buttons
+</pre>
+
+<h3>Menu</h3>
+
+<p>The <a href="class_menu.htm"><b>Menu</b></a> class simplifies the use of menus.</p>
+
+<pre>Menu menu;                                     // Create empty menu object
+menu.Load( IDM_POPUP );                        // Load a menu from resource
+menu.TrackPopupMenu( pt, hWnd );               // Pop up the loaded menu at some point pt
+</pre>
+
+<h3>RegKey</h3>
+
+<p>The <a href="class_regkey.htm"><b>RegKey</b></a> class helps to access and modify registry keys.</p>
+
+<pre>RegKey key;                                    // Prepare key object
+key.OpenMachine( "SOFTWARE\\Chris Dragan\\Test" );// Open a key in HKEY_LOCAL_MACHINE
+string val;
+key.QueryValue( "ExecPath", &amp;val );            // Get string value "ExecPath"
+int cnt = 2;
+key.SetValue( "Counter", cnt );                // Set value "Counter"
+</pre>
+
+<h3>Socket and Address</h3>
+
+<p>The <a href="class_socket.htm"><b>Socket</b></a> class together with <a href="class_address.htm"><b>Address</b></a> simplifies
+the use of BSD sockets.</p>
+
+<h3>WPoint, WSize and WRect</h3>
+
+<p>The <a href="class_wpoint.htm"><b>WPoint</b></a>, <a href="class_wsize.htm"><b>WSize</b></a> and
+<a href="class_wrect.htm"><b>WRect</b></a> classes enhance structures <b>POINT</b>, <b>SIZE</b> and <b>RECT</b>,
+respectively, with additional, useful functionality. For example:</p>
+
+<pre>WPoint pt( 10, 20 );                           // x = 10, y = 20
+pt += WPoint( 5, 0 );                          // x = 15, y = 20
+WSize size( 5, 5 );                            // cx = 5, cy = 5
+WRect rc1( pt, size );                         // left = 15, top = 20, right = 20, bottom = 25
+WRect rc2( pt, 10, 10 );                       // left = 15, top = 20, right = 25, bottom = 30
+rc1.InsetBy( 1, 2 );                           // left = 16, top = 22, right = 19, bottom = 23
+WSize final = rc1.GetSize();                   // cx = 3, cy = 1
+</pre>
+
+<h4>See Also</h4>
+
+<p>
+<a href="classes.htm">Class Reference</a>
+</p>
+
+</body>
+</html>

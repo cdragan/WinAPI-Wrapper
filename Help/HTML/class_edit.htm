@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Edit</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Edit"/>
+<MSHelp:RLTitle Title="Edit"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Edit"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::Edit"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::Edit"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::CanUndo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::CanUndo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::CharFromPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::CharFromPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::EmptyUndoBuffer"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::EmptyUndoBuffer"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::FormatLines"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::FormatLines"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetFirstVisibleLine"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetFirstVisibleLine"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetHandle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetHandle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetLimitText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetLimitText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetLine"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetLine"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetLineCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetLineCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetMargins"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetMargins"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetModify"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetModify"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetPasswordChar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetPasswordChar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::GetThumb"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::GetThumb"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::LimitText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::LimitText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::LineFromChar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::LineFromChar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::LineIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::LineIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::LineLength"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::LineLength"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::LineScroll"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::LineScroll"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::PosFromChar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::PosFromChar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::ReplaceSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::ReplaceSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::Scroll"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::Scroll"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::ScrollCaret"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::ScrollCaret"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetHandle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetHandle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetLimitText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetLimitText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetMargins"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetMargins"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetModify"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetModify"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetPasswordChar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetPasswordChar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetReadOnly"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetReadOnly"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetRectNP"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetRectNP"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::SetTabStops"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::SetTabStops"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Edit::Undo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Edit::Undo"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Edit</h1>
+
+<p>
+The <b>Edit</b> class extends the Edit standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/winui/editcon_4uwj.htm">Edit Controls Overview</a> for details.
+</p>
+
+<p>The <b>Edit</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Edit</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CanUndo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_3wtr.htm"><b>EM_CANUNDO</b></a></td>
+<td width="40%">Determines whether there are any undoable actions.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CharFromPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_0ss3.htm"><b>EM_CHARFROMPOS</b></a></td>
+<td width="40%">Finds the closest character to a specified pixel.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EmptyUndoBuffer</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_4ble.htm"><b>EM_EMPTYUNDOBUFFER</b></a></td>
+<td width="40%">Empties the undo buffer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FormatLines</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_3ynn.htm"><b>EM_FMTLINES</b></a></td>
+<td width="40%">Sets whether the edit control should insert CR-CR-LF sequences on broken line ends.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFirstVisibleLine</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_6vdx.htm"><b>EM_GETFIRSTVISIBLELINE</b></a></td>
+<td width="40%">Retrieves the index of the first visible line.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHandle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_15np.htm"><b>EM_GETHANDLE</b></a></td>
+<td width="40%">Returns memory handle of the edit buffer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLimitText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_83xw.htm"><b>EM_GETLIMITTEXT</b></a></td>
+<td width="40%">Returns maximum number of characters that the user can enter.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLine</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_41r9.htm"><b>EM_GETLINE</b></a></td>
+<td width="40%">Returns a line of text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLineCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_94s4.htm"><b>EM_GETLINECOUNT</b></a></td>
+<td width="40%">Returns number of lines in the edit box.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetMargins</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_3fjn.htm"><b>EM_GETMARGINS</b></a></td>
+<td width="40%">Returns margin sizes.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetModify</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_9sah.htm"><b>EM_GETMODIFY</b></a></td>
+<td width="40%">Checks whether the contents of the edit were modified.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPasswordChar</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_1rci.htm"><b>EM_GETPASSWORDCHAR</b></a></td>
+<td width="40%">Returns the current password character.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_7e7o.htm"><b>EM_GETRECT</b></a></td>
+<td width="40%">Returns the <a href="ms-help://MS.MSDNVS/winui/editcon_7v1h.htm">formatting rectangle</a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_6ap8.htm"><b>EM_GETSEL</b></a></td>
+<td width="40%">Retrieves starting and ending positions of the currente selection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetThumb</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_0vtu.htm"><b>EM_GETTHUMB</b></a></td>
+<td width="40%">Returns the position of the scrollbox.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LimitText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_3kl0.htm"><b>EM_LIMITTEXT</b></a></td>
+<td width="40%">Sets the maximum number of characters the user can enter.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LineFromChar</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_3meq.htm"><b>EM_LINEFROMCHAR</b></a></td>
+<td width="40%">Returns line index of the line containing the character with the specified index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LineIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_51a0.htm"><b>EM_LINEINDEX</b></a></td>
+<td width="40%">Returns character index of the first character in a line.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LineLength</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_4bqg.htm"><b>EM_LINELENGTH</b></a></td>
+<td width="40%">Returns the length of a line.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LineScroll</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_6eek.htm"><b>EM_LINESCROLL</b></a></td>
+<td width="40%">Scrolls the text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PosFromChar</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_8ylu.htm"><b>EM_POSFROMCHAR</b></a></td>
+<td width="40%">Returns client coordinates of a specified character (index).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ReplaceSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_719o.htm"><b>EM_REPLACESEL</b></a></td>
+<td width="40%">Replaces selection with a string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Scroll</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_3p0s.htm"><b>EM_SCROLL</b></a></td>
+<td width="40%">Scrolls the text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ScrollCaret</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_3sfo.htm"><b>EM_SCROLLCARET</b></a></td>
+<td width="40%">Scrolls until the caret is visible.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHandle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_4fl1.htm"><b>EM_SETHANDLE</b></a></td>
+<td width="40%">Sets memory handle of the edit buffer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetLimitText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_8hv8.htm"><b>EM_SETLIMITTEXT</b></a></td>
+<td width="40%">The same as <b>LimitText</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetMargins</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_32sz.htm"><b>EM_SETMARGINS</b></a></td>
+<td width="40%">Sets margin sizes.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetModify</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_327t.htm"><b>EM_SETMODIFY</b></a></td>
+<td width="40%">Sets the modify flag.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPasswordChar</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_799u.htm"><b>EM_SETPASSWORDCHAR</b></a></td>
+<td width="40%">Sets password character.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetReadOnly</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_24c9.htm"><b>EM_SETREADONLY</b></a></td>
+<td width="40%">Enables or disables writing.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_9xh0.htm"><b>EM_SETRECT</b></a></td>
+<td width="40%">Sets the formatting rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetRectNP</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_2jqo.htm"><b>EM_SETRECTNP</b></a></td>
+<td width="40%">Same as <b>SetRect</b>, but does not redraw the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_4gmk.htm"><b>EM_SETSEL</b></a></td>
+<td width="40%">Selects a range of text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTabStops</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_13ar.htm"><b>EM_SETTABSTOPS</b></a></td>
+<td width="40%">Sets the tab stops.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Undo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/editcon_0jxr.htm"><b>EM_UNDO</b></a></td>
+<td width="40%">Undoes last user modification.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/editcon_4uwj.htm">Edit Controls Overview</a>
+<a href="ms-help://MS.MSDNVS/winui/editcon_3xyr.htm">Edit Control Messages</a>
+</p>
+
+</body>
+</html>

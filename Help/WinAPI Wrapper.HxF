@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE HelpFileList SYSTEM "ms-help://hx/resources/HelpFileList.DTD">
+<HelpFileList DTDVersion="1.0">
+	<File Url="HTML\License.txt"/>
+    <File Url="HTML\backsdk4.css"/>
+    <File Url="HTML\class_cominitializer.htm"/>
+    <File Url="HTML\class_iptr.htm"/>
+    <File Url="HTML\usage_iptr.htm"/>
+    </HelpFileList>

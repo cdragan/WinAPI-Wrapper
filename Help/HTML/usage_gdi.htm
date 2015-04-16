@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>GDI wrapper classes</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="GDI wrapper classes"/>
+<MSHelp:RLTitle Title="GDI wrapper classes"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_GDI"/>
+<MSHelp:Keyword Index="K" Term="GDI, WinAPI Wrapper"/>
+<MSHelp:Keyword Index="F" Term="gdi"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>GDI wrapper classes</h1>
+
+<p>The WinAPI Wrapper simplifies use of the Windows GDI (Graphics Device Interface) through
+several classes. There are two kinds of GDI support classes: DCs and GDI objects.</p>
+
+<h3>Device Contexts</h3>
+
+<p>All DCs are
+derived from the <a href="class_dc.htm"><b>DC</b></a> class and are non-copyable.
+They obtain a DC in constructor for some purpose and release it in the destructor.
+These classes include:
+<a href="class_compatibledc.htm"><b>CompatibleDC</b></a> (memory DC with properties of another DC),
+<a href="class_clientdc.htm"><b>ClientDC</b></a> (DC for window client area),
+<a href="class_windowdc.htm"><b>WindowDC</b></a> (DC for the entire window),
+<a href="class_dcex.htm"><b>DCEx</b></a> (special DC used for example during <i>WM_NCPAINT</i>),
+<a href="class_paintdc.htm"><b>PaintDC</b></a> (paint DC used during <i>WM_PAINT</i>).
+</p>
+
+<h3>GDI Objects</h3>
+
+<p>There are several classes that support GDI objects. All of them are derived from
+the <a href="class_gdiobject.htm"><b>GDIObject</b></a> class.</p>
+
+<p>A special class <a href="class_stockobject.htm"><b>StockObject</b></a> is used
+to get a predefined Windows GDI object. This kind of object cannot be released.</p>
+
+<pre>// Select default UI font
+SelectObject( hdc, StockObject( DEFAULT_GUI_FONT ) );</pre>
+
+<p>Other GDI object classes are further derived from the <a href="class_gdiobjectbase.htm"><b>GDIObjectBase</b></a> class
+and they are autodestructible. It means that the actual GDI objects live as long as the
+objects of their respective classes. For example:</p>
+
+<pre>{   Font font( "Arial" );                   // Create font
+    SelectObj sel( dc, font );              // Select the font into a dc
+    dc.TextOut( WPoint(20,10), "Sample" );  // Draw text using the selected font
+}                                           // Automatically deselect the font and delete it
+</pre>
+
+<p>The GDI object classes include <a href="class_bitmap.htm"><b>Bitmap</b></a>,
+<a href="class_brush.htm"><b>Brush</b></a>, <a href="class_font.htm"><b>Font</b></a>,
+<a href="class_pen.htm"><b>Pen</b></a>, <a href="class_region.htm"><b>Region</b></a>.</p>
+
+<h3>Selecting GDI objects</h3>
+
+<p>A special care should be taken when selecting objects into DCs, because these object
+must be later deselected in order to be able to free them. A special class <a href="class_selectobj.htm"><b>SelectObj</b></a>
+simplifies selecting object, because it automatically deselects objects in the destructor,
+but care must be taken not to use the class as a function (since the selector object would
+die in the next line of code being a temporary object). The following code shows good and
+bad use of this class:</p>
+
+<pre>// Correct
+SelectObj <b>sel</b>( dc, brush );
+
+// WRONG!!!
+SelectObj( dc, brush );
+</pre>
+
+<h4>See Also</h4>
+
+<p>
+<a href="classes.htm">Class Reference</a>
+</p>
+
+</body>
+</html>

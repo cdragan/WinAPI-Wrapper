@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>ProgressBar</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="ProgressBar"/>
+<MSHelp:RLTitle Title="ProgressBar"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_ProgressBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::ProgressBar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::ProgressBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::DeltaPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::DeltaPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::GetPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::GetPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::GetRangeLow"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::GetRangeLow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::GetRangeHigh"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::GetRangeHigh"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::SetBarColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::SetBarColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::SetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::SetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::SetPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::SetPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::SetRange"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::SetRange"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::SetStep"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::SetStep"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ProgressBar::StepIt"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ProgressBar::StepIt"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>ProgressBar</h1>
+
+<p>
+The <b>ProgressBar</b> class extends the ProgressBar standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/ProgBar.htm">Progress Bars Overview</a> for details.
+</p>
+
+<p>The <b>ProgressBar</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ProgressBar</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeltaPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_DELTAPOS.htm"><b>PBM_DELTAPOS</b></a></td>
+<td width="40%">Advances the current position by a specified amount.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_GETPOS.htm"><b>PBM_GETPOS</b></a></td>
+<td width="40%">Returns current progress position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRangeLow</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_GETRANGE.htm"><b>PBM_GETRANGE</b></a></td>
+<td width="40%">Returns low limit for allowable position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRangeHigh</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_GETRANGE.htm"><b>PBM_GETRANGE</b></a></td>
+<td width="40%">Returns high limit for allowable position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBarColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_SETBARCOLOR.htm"><b>PBM_SETBARCOLOR</b></a></td>
+<td width="40%">Sets progress bar color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_SETBKCOLOR.htm"><b>PBM_SETBKCOLOR</b></a></td>
+<td width="40%">Sets progress background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_SETPOS.htm"><b>PBM_SETPOS</b></a></td>
+<td width="40%">Sets progress position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetRange</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_SETRANGE.htm"><b>PBM_SETRANGE</b></a></td>
+<td width="40%">Sets allowable progress range.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetStep</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_SETSTEP.htm"><b>PBM_SETSTEP</b></a></td>
+<td width="40%">Sets progress increment for <b>StepIt</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>StepIt</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/Messages/PBM_STEPIT.htm"><b>PBM_STEPIT</b></a></td>
+<td width="40%">Increments progress by amount defined in <b>SetStep</b>.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/ProgBar.htm">Progress Bars Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ProgBar/RefList.htm">Progress Bar Reference</a>
+</p>
+
+</body>
+</html>

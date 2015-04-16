@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>ToolTip</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="ToolTip"/>
+<MSHelp:RLTitle Title="ToolTip"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_ToolTip"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::ToolTip"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::ToolTip"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::Activate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::Activate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::AddTool"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::AddTool"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::DelTool"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::DelTool"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::EnumTools"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::EnumTools"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::GetCurrentTool"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::GetCurrentTool"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::GetMargin"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::GetMargin"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::GetMaxTipWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::GetMaxTipWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::GetTipBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::GetTipBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::GetTipTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::GetTipTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::GetToolCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::GetToolCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::GetToolInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::GetToolInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::HitTest"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::HitTest"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::NewToolRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::NewToolRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::Pop"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::Pop"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::RelayEvent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::RelayEvent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::SetDelayTime"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::SetDelayTime"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::SetMargin"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::SetMargin"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::SetMaxTipWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::SetMaxTipWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::SetTipBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::SetTipBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::SetTipTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::SetTipTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::SetToolInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::SetToolInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::TrackActivate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::TrackActivate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::TrackPosition"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::TrackPosition"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::Update"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::Update"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::UpdateTipText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::UpdateTipText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ToolTip::WindowFromPoint"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ToolTip::WindowFromPoint"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>ToolTip</h1>
+
+<p>
+The <b>ToolTip</b> class extends the ToolTip standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/ToolTipIntro.htm">ToolTips Overview</a> for details.
+</p>
+
+<p>The <b>ToolTip</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ToolTip</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Activate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_ACTIVATE.htm"><b>TTM_ACTIVATE</b></a></td>
+<td width="40%">Activates or deactivates the tooltip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddTool</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_ADDTOOL.htm"><b>TTM_ADDTOOL</b></a></td>
+<td width="40%">Adds a tool/control for which a tooltip will be displayed.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DelTool</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_DELTOOL.htm"><b>TTM_DELTOOL</b></a></td>
+<td width="40%">Removes a tool from the tooltips list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EnumTools</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_ENUMTOOLS.htm"><b>TTM_ENUMTOOLS</b></a></td>
+<td width="40%">Returns information about a tool.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCurrentTool</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_GETCURRENTTOOL.htm"><b>TTM_GETCURRENTTOOL</b></a></td>
+<td width="40%">Returns the currently used tool.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetMargin</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_GETMARGIN.htm"><b>TTM_GETMARGIN</b></a></td>
+<td width="40%">Returns the tooltip window margins.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetMaxTipWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_GETMAXTIPWIDTH.htm"><b>TTM_GETMAXTIPWIDTH</b></a></td>
+<td width="40%">Returns maximum tooltip window width.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTipBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_GETTIPBKCOLOR.htm"><b>TTM_GETTIPBKCOLOR</b></a></td>
+<td width="40%">Returns tooltip window background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTipTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_GETTIPTEXTCOLOR.htm"><b>TTM_GETTIPTEXTCOLOR</b></a></td>
+<td width="40%">Returns tooltip window text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetToolCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_GETTOOLCOUNT.htm"><b>TTM_GETTOOLCOUNT</b></a></td>
+<td width="40%">Returns number of registered tools.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetToolInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_GETTOOLINFO.htm"><b>TTM_GETTOOLINFO</b></a></td>
+<td width="40%">Returns tool configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HitTest</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_HITTEST.htm"><b>TTM_HITTEST</b></a></td>
+<td width="40%">Returns tool under specified screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>NewToolRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_NEWTOOLRECT.htm"><b>TTM_NEWTOOLRECT</b></a></td>
+<td width="40%">Sets a new bounding rectangle for a tool.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Pop</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_POP.htm"><b>TTM_POP</b></a></td>
+<td width="40%">Destroys displayed tooltip window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>RelayEvent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_RELAYEVENT.htm"><b>TTM_RELAYEVENT</b></a></td>
+<td width="40%">Passes a mouse message to the tooltip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDelayTime</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_SETDELAYTIME.htm"><b>TTM_SETDELAYTIME</b></a></td>
+<td width="40%">Set tooltip window times.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetMargin</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_SETMARGIN.htm"><b>TTM_SETMARGIN</b></a></td>
+<td width="40%">Sets tooltip window margins.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetMaxTipWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_SETMAXTIPWIDTH.htm"><b>TTM_SETMAXTIPWIDTH</b></a></td>
+<td width="40%">Sets maximum tooltip window width.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTipBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_SETTIPBKCOLOR.htm"><b>TTM_SETTIPBKCOLOR</b></a></td>
+<td width="40%">Sets tooltip window background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTipTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_SETTIPTEXTCOLOR.htm"><b>TTM_SETTIPTEXTCOLOR</b></a></td>
+<td width="40%">Sets tooltip window text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTitle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_SETTITLE.htm"><b>TTM_SETTITLE</b></a></td>
+<td width="40%">Adds an icon and title to the tooltip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetToolInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_SETTOOLINFO.htm"><b>TTM_SETTOOLINFO</b></a></td>
+<td width="40%">Sets tool configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TrackActivate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_TRACKACTIVATE.htm"><b>TTM_TRACKACTIVATE</b></a></td>
+<td width="40%">Activates or deactivates a tracking tooltip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TrackPosition</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_TRACKPOSITION.htm"><b>TTM_TRACKPOSITION</b></a></td>
+<td width="40%">Sets position of a tracking tooltip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Update</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_UPDATE.htm"><b>TTM_UPDATE</b></a></td>
+<td width="40%">Redraws current tool.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>UpdateTipText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_UPDATETIPTEXT.htm"><b>TTM_UPDATETIPTEXT</b></a></td>
+<td width="40%">Sets new tip text for a tool.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>WindowFromPoint</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/Messages/TTM_WINDOWFROMPOINT.htm"><b>TTM_WINDOWFROMPOINT</b></a></td>
+<td width="40%">Allows to display tooltip for another point.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/ToolTipIntro.htm">ToolTips Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolTip/RefList.htm">ToolTip Reference</a>
+</p>
+
+</body>
+</html>

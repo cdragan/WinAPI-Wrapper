@@ -1,0 +1,727 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>GenericWindow</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="GenericWindow"/>
+<MSHelp:RLTitle Title="GenericWindow"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_GenericWindow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GenericWindow"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GenericWindow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Show"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Show"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ShowAsync"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ShowAsync"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::IsVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::IsVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Update"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Update"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Redraw"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Redraw"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Invalidate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Invalidate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::InvalidateRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::InvalidateRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::InvalidateRgn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::InvalidateRgn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ValidateRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ValidateRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ValidateRgn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ValidateRgn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Destroy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Destroy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::BringToTop"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::BringToTop"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetForeground"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetForeground"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ChildWindowFromPoint"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ChildWindowFromPoint"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetLastActivePopup"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetLastActivePopup"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetNext"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetNext"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetPrev"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetPrev"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetFirst"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetFirst"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetLast"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetLast"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetChild"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetChild"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetTop"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetTop"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetParent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetParent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetParent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetParent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Close"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Close"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::IsIconic"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::IsIconic"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Open"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Open"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Enable"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Enable"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::IsEnabled"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::IsEnabled"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ShowOwnedPopups"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ShowOwnedPopups"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetClientRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetClientRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetWindowRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetWindowRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetWindowRectOnParent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetWindowRectOnParent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::IsChild"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::IsChild"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::IsWindow"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::IsWindow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::IsZoomed"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::IsZoomed"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetPlacement"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetPlacement"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetPlacement"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetPlacement"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetTextLength"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetTextLength"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Move"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Move"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::PostMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::PostMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SendMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SendMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SendMessageTimeout"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SendMessageTimeout"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::MessageBox"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::MessageBox"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SendDlgItemMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SendDlgItemMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetDlgCtrlID"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetDlgCtrlID"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetDlgItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetDlgItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetNextDlgGroupItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetNextDlgGroupItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetPrevDlgGroupItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetPrevDlgGroupItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetNextDlgTabItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetNextDlgTabItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetPrevDlgTabItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetPrevDlgTabItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetDlgItemInt"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetDlgItemInt"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetDlgItemUInt"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetDlgItemUInt"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetDlgItemInt"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetDlgItemInt"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetDlgItemText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetDlgItemText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetDlgItemText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetDlgItemText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::MapDialogRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::MapDialogRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::CheckDlgButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::CheckDlgButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::CheckRadioButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::CheckRadioButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::IsDlgButtonChecked"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::IsDlgButtonChecked"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::EnableScrollBar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::EnableScrollBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetScrollInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetScrollInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetScrollInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetScrollInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ShowScrollBar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ShowScrollBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::Scroll"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::Scroll"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetFont"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetFont"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ScreenToClient"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ScreenToClient"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::ClientToScreen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::ClientToScreen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetFocus"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetFocus"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetActive"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetActive"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetCapture"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetCapture"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::DrawMenuBar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::DrawMenuBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::GetSystemMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::GetSystemMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::SetMenu"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::SetMenu"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GenericWindow::DrawAnimatedRects"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GenericWindow::DrawAnimatedRects"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>GenericWindow</h1>
+
+<p>
+The <b>GenericWindow</b> class extends <i>HWND</i> window handle with C++ functionality.
+See <a href="ms-help://MS.MSDNVS/winui/windows_6t2r.htm">Windows Overview</a> for details.
+</p>
+
+<p>The <b>GenericWindow</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GenericWindow</b></td>
+<td width="30%">-</td>
+<td width="40%">Constructs an empty object with no valid window handle or obtains an existing window handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HWND</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns window handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Show</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_2tdj.htm"><b>ShowWindow</b></a></td>
+<td width="40%">Shows or hides window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ShowAsync</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1rs3.htm"><b>ShowWindowAsync</b></a></td>
+<td width="40%">Show or hides a window on another thread.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_27z9.htm"><b>IsWindowVisible</b></a></td>
+<td width="40%">Checks whether the window is visible.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Update</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_4zef.htm"><b>UpdateWindow</b></a></td>
+<td width="40%">Repaints dirty areas of a window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Redraw</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_81pz.htm"><b>RedrawWindow</b></a></td>
+<td width="40%">Redraws specified areas of window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Invalidate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_7ano.htm"><b>InvalidateRect</b></a></td>
+<td width="40%">Makes whole client area dirty.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InvalidateRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_7ano.htm"><b>InvalidateRect</b></a></td>
+<td width="40%">Makes a specified rectangle on client area dirty.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InvalidateRgn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_4c32.htm"><b>InvalidateRgn</b></a></td>
+<td width="40%">Makes a region of client area dirty.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ValidateRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_9epg.htm"><b>ValidateRect</b></a></td>
+<td width="40%">Makes a rectangle on client area non-dirty.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ValidateRgn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_7t0u.htm"><b>ValidateRgn</b></a></td>
+<td width="40%">Makes a region of client area non-dirty.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Destroy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_856f.htm"><b>DestroyWindow</b></a></td>
+<td width="40%">Destroys the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>BringToTop</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_2b00.htm"><b>BringWindowToTop</b></a></td>
+<td width="40%">Makes the window the topmost window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetForeground</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1eev.htm"><b>SetForegroundWindow</b></a></td>
+<td width="40%">Makes the window a foreground window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ChildWindowFromPoint</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_40fs.htm"><b>ChildWindowFromPoint</b></a></td>
+<td width="40%">Finds the first child window that intersects the specified point.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLastActivePopup</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_160g.htm"><b>GetLastActivePopup</b></a></td>
+<td width="40%">Returns the last active popup window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNext</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_0p87.htm"><b>GetWindow</b></a></td>
+<td width="40%">Returns next sibling of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPrev</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_0p87.htm"><b>GetWindow</b></a></td>
+<td width="40%">Returns previous sibling of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFirst</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_0p87.htm"><b>GetWindow</b></a></td>
+<td width="40%">Returns first sibling of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLast</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_0p87.htm"><b>GetWindow</b></a></td>
+<td width="40%">Returns last sibling of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetChild</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_0p87.htm"><b>GetWindow</b></a></td>
+<td width="40%">Returns topmost sibling of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTop</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_82ev.htm"><b>GetTopWindow</b></a></td>
+<td width="40%">Returns topmost child of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetParent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_8ewk.htm"><b>GetParent</b></a></td>
+<td width="40%">Returns parent of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetParent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1otw.htm"><b>SetParent</b></a></td>
+<td width="40%">Sets parent of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Close</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_96wn.htm"><b>CloseWindow</b></a></td>
+<td width="40%">Minimizes window. (Mislieading function name!)</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsIconic</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1e77.htm"><b>IsIconic</b></a></td>
+<td width="40%">Checks if the window is minimized.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Open</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_6otq.htm"><b>OpenIcon</b></a></td>
+<td width="40%">Restores a minimized window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Enable</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/keybinpt_9m0n.htm"><b>EnableWindow</b></a></td>
+<td width="40%">Enables or disables window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsEnabled</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/keybinpt_47ms.htm"><b>IsWindowEnabled</b></a></td>
+<td width="40%">Checks whether the window is enabled.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ShowOwnedPopups</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_504z.htm"><b>ShowOwnedPopups</b></a></td>
+<td width="40%">Shows or hides all popups.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetClientRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_0f5g.htm"><b>GetClientRect</b></a></td>
+<td width="40%">Returns the rectangle of client area (in client coordinates).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetWindowRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_471w.htm"><b>GetWindowRect</b></a></td>
+<td width="40%">Returns the rectangle of the whole window in screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetWindowRectOnParent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_471w.htm"><b>GetWindowRect</b></a></td>
+<td width="40%">Returns the rectangle of the whole window in its parent's client coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsChild</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_71wk.htm"><b>IsChild</b></a></td>
+<td width="40%">Checks whether another window is the child of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsWindow</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_8nuf.htm"><b>IsWindow</b></a></td>
+<td width="40%">Checks whether the handle is a valid window handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsZoomed</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_4ntw.htm"><b>IsZoomed</b></a></td>
+<td width="40%">Checks whether the window is maximized.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPlacement</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_79bo.htm"><b>GetWindowPlacement</b></a></td>
+<td width="40%">Returns the window placement in form of <a href="ms-help://MS.MSDNVS/winui/windows_9lki.htm"><b>WINDOWPLACEMENT</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPlacement</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_9v90.htm"><b>SetWindowPlacement</b></a></td>
+<td width="40%">Sets the window placement in form of <a href="ms-help://MS.MSDNVS/winui/windows_9lki.htm"><b>WINDOWPLACEMENT</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextLength</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_0294.htm"><b>GetWindowTextLength</b></a></td>
+<td width="40%">Returns the length of the window title string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_5gms.htm"><b>GetWindowText</b></a></td>
+<td width="40%">Returns window title.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_07w4.htm"><b>SetWindowText</b></a></td>
+<td width="40%">Sets window title.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Move</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_92nr.htm"><b>MoveWindow</b></a></td>
+<td width="40%">Changes position and dimensions of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_2blf.htm"><b>SetWindowPos</b></a></td>
+<td width="40%">Changes position, dimensions or Z-order of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PostMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/messques_87mt.htm"><b>PostMessage</b></a></td>
+<td width="40%">Puts a message in the window thread's queue, but does not execute it immediately.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SendMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/messques_8ht1.htm"><b>SendMessage</b></a></td>
+<td width="40%">Invokes window procedure in order to process the specified message.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SendMessageTimeout</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/messques_9l4k.htm"><b>SendMessageTimeout</b></a></td>
+<td width="40%">The same as <b>SendMessage</b>, but if the window is on another thread the function waits as long as the timeout lets it to.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MessageBox</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_76bc.htm"><b>MessageBox</b></a></td>
+<td width="40%">Displayes a message box as the child of the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SendDlgItemMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_7u05.htm"><b>SendDlgItemMessage</b></a></td>
+<td width="40%">Calls <b>SendMessage</b> for a control with the specified identifier.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDlgCtrlID</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_2zz8.htm"><b>GetDlgCtrlID</b></a></td>
+<td width="40%">Retrieves the identifier of the window (assuming it is a control).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDlgItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_7k8d.htm"><b>GetDlgItem</b></a></td>
+<td width="40%">Gets window handle of a specific control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNextDlgGroupItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_38h9.htm"><b>GetNextDlgGroupItem</b></a></td>
+<td width="40%">Gets the next control in the group.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPrevDlgGroupItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_38h9.htm"><b>GetNextDlgGroupItem</b></a></td>
+<td width="40%">Gets the previous control in the group.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNextDlgTabItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_1uzx.htm"><b>GetNextDlgTabItem</b></a></td>
+<td width="40%">Gets the next control that can be navigated with TAB.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPrevDlgTabItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_1uzx.htm"><b>GetNextDlgTabItem</b></a></td>
+<td width="40%">Gets the previous control that can be navigated with TAB.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDlgItemInt</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_454k.htm"><b>GetDlgItemInt</b></a></td>
+<td width="40%">Gets value in a control as a signed integer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDlgItemUInt</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_454k.htm"><b>GetDlgItemInt</b></a></td>
+<td width="40%">Gets value in a control as an unsigned integer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDlgItemInt</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_8wdw.htm"><b>SetDlgItemInt</b></a></td>
+<td width="40%">Sets an integer value to a control (either signed or unsigned).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDlgItemText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_64xg.htm"><b>GetDlgItemText</b></a></td>
+<td width="40%">Retrieves text from a control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDlgItemText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_0lis.htm"><b>SetDlgItemText</b></a></td>
+<td width="40%">Sets text to a control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MapDialogRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_4hf8.htm"><b>MapDialogRect</b></a></td>
+<td width="40%">Converts a rectangle from dialog base units to screen units.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CheckDlgButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/buttons_5a5q.htm"><b>CheckDlgButton</b></a></td>
+<td width="40%">Checks or unchecks a button (e.g. a checkbox).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CheckRadioButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/buttons_7lpq.htm"><b>CheckRadioButton</b></a></td>
+<td width="40%">Checks or unchecks a button (e.g. a radio button).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsDlgButtonChecked</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/buttons_0a3o.htm"><b>IsDlgButtonChecked</b></a></td>
+<td width="40%">Checks whether a button is checked.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EnableScrollBar</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/scrolbar_59yq.htm"><b>EnableScrollBar</b></a></td>
+<td width="40%">Enables or disabled window scrollbars.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetScrollInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/scrolbar_52b3.htm"><b>GetScrollInfo</b></a></td>
+<td width="40%">Retrieves parameters of a scrollbar in form of a <a href="ms-help://MS.MSDNVS/winui/scrolbar_5ib6.htm"><b>SCROLLINFO</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetScrollInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/scrolbar_9tkf.htm"><b>SetScrollInfo</b></a></td>
+<td width="40%">Sets parameters of a scrollbar in form of a <a href="ms-help://MS.MSDNVS/winui/scrolbar_5ib6.htm"><b>SCROLLINFO</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ShowScrollBar</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/scrolbar_6rzm.htm"><b>ShowScrollBar</b></a></td>
+<td width="40%">Shows or hides a window scrollbar.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Scroll</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/scrolbar_0jaw.htm"><b>ScrollWindow</b></a></td>
+<td width="40%">Scrolls contents of window's client area.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetFont</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_7v90.htm"><b>WM_SETFONT</b></a></td>
+<td width="40%">Sends the <b>WM_SETFONT</b> message to set the window font.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFont</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_5bzo.htm"><b>WM_GETFONT</b></a></td>
+<td width="40%">Sends the <b>WM_GETFONT</b> message in order to retrieve the window font.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetIcon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_3o6m.htm"><b>WM_SETICON</b></a></td>
+<td width="40%">Sends the <b>WM_SETICON</b> message to set the window icon.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetIcon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_14xa.htm"><b>WM_GETICON</b></a></td>
+<td width="40%">Retrieves window icon throught the <b>WM_GETICON</b> message.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ScreenToClient</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/cordspac_5oxg.htm"><b>ScreenToClient</b></a></td>
+<td width="40%">Converts a point or a rectangle from screen to client coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ClientToScreen</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/cordspac_2tny.htm"><b>ClientToScreen</b></a></td>
+<td width="40%">Converts a point or a rectangle from client to window coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetFocus</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/keybinpt_8yb7.htm"><b>SetFocus</b></a></td>
+<td width="40%">Sets keyboard focus to the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetActive</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/keybinpt_57w7.htm"><b>SetActiveWindow</b></a></td>
+<td width="40%">Makes the window active.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCapture</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mousinpt_4fol.htm"><b>SetCapture</b></a></td>
+<td width="40%">Makes the window capture all mouse input.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_7y45.htm"><b>GetMenu</b></a></td>
+<td width="40%">Returns window's main menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DrawMenuBar</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_29ma.htm"><b>DrawMenuBar</b></a></td>
+<td width="40%">Redraws the window's main menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSystemMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_5i7p.htm"><b>GetSystemMenu</b></a></td>
+<td width="40%">Gets the window's system menu.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetMenu</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_0hdh.htm"><b>SetMenu</b></a></td>
+<td width="40%">Assigns a new main menu to the window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DrawAnimatedRects</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_6qnn.htm"><b>DrawAnimatedRects</b></a></td>
+<td width="40%">Draws an animation of a window being maximized or minimized.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetObject&lt;T></b></td>
+<td width="30%">-</td>
+<td width="40%">Obtains pointer to a window object associated with the window. Use this template function very carefully when you are absolutely sure that you have a handle to a <a href="class_window.htm">Window</a>-derived object.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/windows_6t2r.htm">Windows Overview</a>,
+<a href="ms-help://MS.MSDNVS/winui/windows_8qyb.htm">Window Functions</a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE HelpAttributes>
+<HelpAttributes DTDVersion="1.0">
+   <AttName Name="Product" Display="Yes" UIString="Product" AttType="Enum">
+      <AttVal Name="WinAPIWrapper" Display="Yes" UIString="WinAPI Wrapper" />
+   </AttName>
+</HelpAttributes>

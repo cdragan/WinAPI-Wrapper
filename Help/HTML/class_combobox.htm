@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>ComboBox</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="ComboBox"/>
+<MSHelp:RLTitle Title="ComboBox"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_ComboBox"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::ComboBox"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::ComboBox"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::AddString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::AddString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::InsertString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::InsertString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::DeleteString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::DeleteString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::ResetContent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::ResetContent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::FindString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::FindString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::FindStringExact"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::FindStringExact"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::Dir"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::Dir"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetCurSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetCurSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetCurSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetCurSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SelectString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SelectString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::LimitText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::LimitText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetDroppedWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetDroppedWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetDroppedState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetDroppedState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetDroppedControlRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetDroppedControlRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetDroppedWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetDroppedWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetEditSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetEditSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetEditSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetEditSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetExtendedUI"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetExtendedUI"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetExtendedUI"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetExtendedUI"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetHorizontalExtent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetHorizontalExtent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetHorizontalExtent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetHorizontalExtent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetItemData"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetItemData"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetItemData"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetItemData"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetItemHeight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetItemHeight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetItemHeight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetItemHeight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetLBTextLength"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetLBTextLength"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetLBText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetLBText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetLocale"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetLocale"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetLocale"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetLocale"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetTopIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetTopIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::SetTopIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::SetTopIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::ShowDropDown"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::ShowDropDown"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ComboBox::GetComboBoxInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ComboBox::GetComboBoxInfo"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>ComboBox</h1>
+
+<p>
+The <b>ComboBox</b> class extends the ComboBox standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/winui/combobox_77eb.htm">Combo Boxes Overview</a> for details.
+</p>
+
+<p>The <b>ComboBox</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ComboBox</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_4c4n.htm"><b>CB_ADDSTRING</b></a></td>
+<td width="40%">Adds a string to the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_7izr.htm"><b>CB_INSERTSTRING</b></a></td>
+<td width="40%">Inserts a string into the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_3fjb.htm"><b>CB_DELETESTRING</b></a></td>
+<td width="40%">Deletes a string from the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ResetContent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_80s4.htm"><b>CB_RESETCONTENT</b></a></td>
+<td width="40%">Clears the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FindString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_1yhz.htm"><b>CB_FINDSTRING</b></a></td>
+<td width="40%">Returns index of a strings that starts with the specified portion.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FindStringExact</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_37as.htm"><b>CB_FINDSTRINGEXACT</b></a></td>
+<td width="40%">Returns index of a specific string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Dir</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_9h9u.htm"><b>CB_DIR</b></a></td>
+<td width="40%">Fills the combo box list with contents of a specific directory.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_21v8.htm"><b>CB_GETCOUNT</b></a></td>
+<td width="40%">Returns the number of items in the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCurSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_2g4s.htm"><b>CB_GETCURSEL</b></a></td>
+<td width="40%">Returns the index of the currently selected item in the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCurSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_5q24.htm"><b>CB_SETCURSEL</b></a></td>
+<td width="40%">Selects a specific item in the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SelectString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_1euf.htm"><b>CB_SELECTSTRING</b></a></td>
+<td width="40%">Selects a specific string in the combo box list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LimitText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_99pw.htm"><b>CB_LIMITTEXT</b></a></td>
+<td width="40%">Limits the allowable length of the user-entered string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDroppedWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_9mt0.htm"><b>CB_GETDROPPEDWIDTH</b></a></td>
+<td width="40%">Returns the minimum allowable width of the combo box's listbox.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDroppedState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_7rol.htm"><b>CB_GETDROPPEDSTATE</b></a></td>
+<td width="40%">Determines whether the combo box is dropped.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDroppedControlRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_4lpk.htm"><b>CB_GETDROPPEDCONTROLRECT</b></a></td>
+<td width="40%">Returns screen coordinates of the combo box in dropped state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDroppedWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_03mw.htm"><b>CB_SETDROPPEDWIDTH</b></a></td>
+<td width="40%">Sets the minimum allowable width of the combo box's listbox in a dropped state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetEditSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_2p4c.htm"><b>CB_GETEDITSEL</b></a></td>
+<td width="40%">Gets starting and ending string index of the current selection in the edit box.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetEditSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_2cdo.htm"><b>CB_SETEDITSEL</b></a></td>
+<td width="40%">Selects a range of text in the edit box.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetExtendedUI</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_6kvd.htm"><b>CB_GETEXTENDEDUI</b></a></td>
+<td width="40%">Checks which combo box UI is currently used (default or extended).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetExtendedUI</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_1c4p.htm"><b>CB_SETEXTENDEDUI</b></a></td>
+<td width="40%">Sets the combo box UI (default or extended).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHorizontalExtent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_6zck.htm"><b>CB_GETHORIZONTALEXTENT</b></a></td>
+<td width="40%">Returns the amount by which the list box can be scrolled horizontally.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHorizontalExtent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_3ylw.htm"><b>CB_SETHORIZONTALEXTENT</b></a></td>
+<td width="40%">Sets the amount by which the list box can be scrolled horizontally.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemData</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_5mch.htm"><b>CB_GETITEMDATA</b></a></td>
+<td width="40%">Returns item-specific user data.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemData</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_2yxt.htm"><b>CB_SETITEMDATA</b></a></td>
+<td width="40%">Sets item-specific user data.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemHeight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_5tro.htm"><b>CB_GETITEMHEIGHT</b></a></td>
+<td width="40%">Returns item height.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemHeight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_0l10.htm"><b>CB_SETITEMHEIGHT</b></a></td>
+<td width="40%">Sets item height.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLBTextLength</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_16pa.htm"><b>CB_GETLBTEXTLEN</b></a></td>
+<td width="40%">Returns length of a string in the list box.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLBText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_6bjo.htm"><b>CB_GETLBTEXT</b></a></td>
+<td width="40%">Returns string of a list box item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLocale</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_55np.htm"><b>CB_GETLOCALE</b></a></td>
+<td width="40%">Returns current locale.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetLocale</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_8fl1.htm"><b>CB_SETLOCALE</b></a></td>
+<td width="40%">Sets locale.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTopIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_5hko.htm"><b>CB_GETTOPINDEX</b></a></td>
+<td width="40%">Returns index of the first visible list box item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTopIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_2u60.htm"><b>CB_SETTOPINDEX</b></a></td>
+<td width="40%">Makes a list box item the first displayed item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ShowDropDown</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_6yb2.htm"><b>CB_SHOWDROPDOWN</b></a></td>
+<td width="40%">Shows or hides the dropping part of the combo box (the listbox).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetComboBoxInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/combobox_2r5b.htm"><b>CB_GETCOMBOBOXINFO</b></a></td>
+<td width="40%">Returns combo box information in form of the <a href="ms-help://MS.MSDNVS/winui/combobox_8yya.htm"><b>COMBOBOXINFO</b></a> structure.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/combobox_77eb.htm">Combo Boxes Overview</a>,
+<a href="ms-help://MS.MSDNVS/winui/combobox_7icz.htm">Combo Box Messages</a>
+</p>
+
+</body>
+</html>

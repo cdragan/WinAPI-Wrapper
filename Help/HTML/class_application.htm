@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Application<T></TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Application<T>"/>
+<MSHelp:RLTitle Title="Application<T>"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Application"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Application"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Application"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Application::Run"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Application::Run"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ApplicationBase::Run"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ApplicationBase::Run"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Application&lt;T></h1>
+
+<p>
+In order to create a working application, you have to create a single object of the
+<b>Application&lt;T></b> class. You can create this object in a local, anonymous namespace,
+because it is not directly referenced. You cannot create more than one object of
+this class.
+</p>
+
+<p>
+After you create that object, your application can run. The <b>Application&lt;T></b> class
+simplifies the process of creating an application, because it does all the complex, default
+work for you - it creates the main window and processes the message queue. It is a very
+light class, because it is template and inline. If you use the <b>Application&lt;T></b> class,
+there is the <a href="ms-help://MS.MSDNVS/winui/windows_64ku.htm"><b>WinMain</b></a>
+function created for you that handles your application object, so you can take care
+of other things and not bother about it.
+</p>
+
+<p>
+The <b>Application&lt;T></b> class has four arguments:
+</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="20%">Argument name</th>
+<th align="left" width="40%">Default value</th>
+<th align="left" width="40%">Meaning</th>
+</tr>
+
+<tr valign="top">
+<td width="20%"><b>_Window</b></td>
+<td width="40%">-</td>
+<td width="40%">This is a mandatory argument. It is the class of your main window, that must be derived from the <a href="class_window.htm"><b>Window</b></a> class (in can be even a distant successor).</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><b>_Accelerator</b></td>
+<td width="40%">AcceleratorTraits< _Window ></td>
+<td width="40%">This optional class processes accelerator messages. See the Remarks section for details.</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><b>_InitShutdown</b></td>
+<td width="40%">ApplicationInitShutdownTraits</td>
+<td width="40%">This class has optional initialization and shutdown code. You can enter here your own class, that has <b>Init()</b> and <b>Quit()</b> functions.</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><b>_CreateWindow</b></td>
+<td width="40%">ApplicationWindowTraits< _Window ></td>
+<td width="40%">This class is responsible for creating your main window. Typically you don't have any interest in replacing the default class with your own.</td>
+</tr>
+
+</table>
+
+<p>
+Using the <b>Application&lt;T></b> class is optional and you can easily create regular
+working application without it and have your own <a href="ms-help://MS.MSDNVS/winui/windows_64ku.htm"><b>WinMain</b></a> function.
+</p>
+
+<h3>Remarks</h3>
+
+<p>
+In order to process accelerators, you have to provide an appropriate class.
+The class you provide must have one function of the form:
+<pre>bool ProcessAccel( MessageQueue& queue, _Window* p_window )</pre> where the
+<b>_Window</b> parameter is your main window's class. This function must process
+accelerators and return <i>false</i> if it doesn't succeed, so that other messages
+can be further processed.
+</p>
+
+<p>The following default classes are available for accelerator processing:
+<ul>
+<li><b>AcceleratorTraits&lt; class _Window ></b> - This is the default and it does not process any accelerators.</li>
+<li><b>AccelFromResource&lt; class _Window, int id ></b> - Processes accelerators loaded from a resource with index <i>id</i>.</li>
+<li><b>ModelessDialogAccel&lt; class _Window ></b> - Processes dialog box messages (if the main application window is a modeless dialog box).</li>
+<li><b>MDIAccel&lt; _Window ></b> - Processes MDI accelerators if the main window is an MDI frame window.</li>
+<li><b>MDIAccelFromResource&lt; class _Window, int id ></b> - Processes MDI accelerators and accelerators from a resource.</li>
+</ul>
+</p>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>
+</p>
+
+</body>
+</html>

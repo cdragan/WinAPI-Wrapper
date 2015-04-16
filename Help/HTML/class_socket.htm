@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Socket</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Socket"/>
+<MSHelp:RLTitle Title="Socket"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Socket"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Socket"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Socket"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::IsValid"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::IsValid"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::GetError"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::GetError"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Bind"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Bind"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Connect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Connect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::GetPeerName"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::GetPeerName"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::GetSockName"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::GetSockName"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Listen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Listen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Accept"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Accept"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Select"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Select"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Send"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Send"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Receive"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Receive"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::SendTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::SendTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::ReceiveFrom"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::ReceiveFrom"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::SetBlocking"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::SetBlocking"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Socket::Close"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Socket::Close"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Socket</h1>
+
+<p>
+The <b>Socket</b> class simplifies the use of BSD sockets (<a href="ms-help://MS.MSDNVS/winsock/apistart_9g1e.htm">Windows Sockets 2</a>).
+</p>
+
+<p>The <b>Socket</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Socket</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_2qr6.htm"><b>socket</b></a></td>
+<td width="40%">Creates an empty socket, a socket object from an existing socket handle or a new socket using <b>socket</b> function.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator=</b></td>
+<td width="30%">-</td>
+<td width="40%">Moves socket handle from one object to another.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>~Socket</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_60z6.htm"><b>shutdown</b></a> <a href="ms-help://MS.MSDNVS/winsock/wsapiref_714i.htm"><b>closesocket</b></a></td>
+<td width="40%">Calls <b>Close()</b></td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsValid</b></td>
+<td width="30%">-</td>
+<td width="40%">Checks whether the socket handle is valid.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetError</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/vclib/html/_crt__doserrno.2c_.errno.2c_._sys_errlist.2c_.and__sys_nerr.htm"><b>errno</b></a></td>
+<td width="40%">Returns error code after the last socket operation failed.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Bind</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_6vzm.htm"><b>bind</b></a></td>
+<td width="40%">Binds an address to the socket.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Connect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_8m7m.htm"><b>connect</b></a></td>
+<td width="40%">Makes connection to a specified address/port pair.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPeerName</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_8woi.htm"><b>getpeername</b></a></td>
+<td width="40%">Returns address (name) to which the socket is connected.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSockName</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_273m.htm"><b>getsockname</b></a></td>
+<td width="40%">Returns socket's address (name).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Listen</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_07hu.htm"><b>listen</b></a></td>
+<td width="40%">Waits for an incoming connection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Accept</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_13aq.htm"><b>accept</b></a></td>
+<td width="40%">Accepts an incoming connection making a new socket with the connection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Select</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_1ab6.htm"><b>select</b></a></td>
+<td width="40%">Waits until there is anything to read from the socket (any data has been received).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Send</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_6quq.htm"><b>send</b></a></td>
+<td width="40%">Sends data over a connection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Receive</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_2i9e.htm"><b>recv</b></a></td>
+<td width="40%">Receives data sent over a connection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SendTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_4sqa.htm"><b>sendto</b></a></td>
+<td width="40%">Sends data to a specified address/port without a connection,</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ReceiveFrom</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_88oi.htm"><b>recvfrom</b></a></td>
+<td width="40%">Receives data on a nonconnected socket.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBlocking</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_6ik2.htm"><b>WSAIoctl</b></a></td>
+<td width="40%">Puts socket into a blocking or nonblocking state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Close</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_60z6.htm"><b>shutdown</b></a> <a href="ms-help://MS.MSDNVS/winsock/wsapiref_714i.htm"><b>closesocket</b></a></td>
+<td width="40%">Shuts down a connection and destroys the socket.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winsock/apistart_9g1e.htm">Windows Sockets Overview</a>,
+<a href="ms-help://MS.MSDNVS/winsock/ovrvw3_1436.htm">Socket Functions</a>
+</p>
+
+</body>
+</html>

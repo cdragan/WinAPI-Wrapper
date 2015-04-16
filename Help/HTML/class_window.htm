@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Window</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Window"/>
+<MSHelp:RLTitle Title="Window"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Window"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::HandleMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::HandleMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnCreate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnCreate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnClose"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnClose"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnDestroy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnDestroy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnCommand"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnCommand"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnNotify"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnNotify"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnPaint"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnPaint"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnMouseMove"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnMouseMove"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnMouseDown"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnMouseDown"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnMouseUp"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnMouseUp"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnMouseDblClk"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnMouseDblClk"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnKeyDown"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnKeyDown"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Window::OnKeyUp"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Window::OnKeyUp"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Window</h1>
+
+<p>
+The <b>Window</b> class is a C++ extension to the <a href="ms-help://MS.MSDNVS/winui/winprocs_53xf.htm"><b>WindowProc</b></a> C user procedure.
+The class is derived from <a href="class_genericwindow.htm"><b>GenericWindow</b></a>.
+See the Remarks section for information how to use this class.
+</p>
+
+<p>The <b>Window</b> class has the following methods:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI Message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HandleMessage</b></td>
+<td width="30%">all</td>
+<td width="40%">Corresponds to <a href="ms-help://MS.MSDNVS/winui/winprocs_53xf.htm"><b>WindowProc</b></a> and processes all other messages not processes by the other methods below. In pure wrapper mode this method processes ALL messages.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnCreate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_41d1.htm"><b>WM_CREATE</b></a></td>
+<td width="40%">Called when the window is being created. Typically creates child windows (controls, etc.).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnClose</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_5uhx.htm"><b>WM_CLOSE</b></a></td>
+<td width="40%">Called when the window is begin requested to close. Calls <b>Window::Destroy()</b> is the user accepts the destruction. Rarely used for main application windows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnDestroy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_414p.htm"><b>WM_DESTROY</b></a></td>
+<td width="40%">Called during the destruction of the window. In a main application window typically calls <a href="ms-help://MS.MSDNVS/winui/messques_0tgl.htm"><b>PostQuitMessage</b></a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnCommand</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/menus_8wh0.htm"><b>WM_COMMAND</b></a></td>
+<td width="40%">Processes commands coming from miscellaneous controls (buttons, menus, toolbars, etc.).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnNotify</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Common/Messages/WM_NOTIFY.htm"><b>WM_NOTIFY</b></a></td>
+<td width="40%">Usually called when changes occur in children (controls).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnPaint</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_88ac.htm"><b>WM_PAINT</b></a></td>
+<td width="40%">Repaints the dirty regions of window client area, typically using <a href="class_paintdc.htm"><b>PaintDC</b></a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_2pk5.htm"><b>WM_SIZE</b></a></td>
+<td width="40%">Obtains information while the window is being resized.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnMouseMove</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mousinpt_5085.htm"><b>WM_MOUSEMOVE</b></a></td>
+<td width="40%">Receives mouse movement notification.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnMouseDown</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mousinpt_8uum.htm"><b>WM_LBUTTONDOWN</b></a> <a href="ms-help://MS.MSDNVS/winui/mousinpt_7j5a.htm"><b>WM_RBUTTONDOWN</b></a> <a href="ms-help://MS.MSDNVS/winui/mousinpt_3mwe.htm"><b>WM_MBUTTONDOWN</b></a></td>
+<td width="40%">Called when a mouse button is depressed.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnMouseUp</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mousinpt_9po0.htm"><b>WM_LBUTTONUP</b></a> <a href="ms-help://MS.MSDNVS/winui/mousinpt_1cmo.htm"><b>WM_RBUTTONUP</b></a> <a href="ms-help://MS.MSDNVS/winui/mousinpt_1nhs.htm"><b>WM_MBUTTONUP</b></a></td>
+<td width="40%">Called when a mouse button is released.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnMouseDblClk</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mousinpt_0qjv.htm"><b>WM_LBUTTONDBLCLK</b></a> <a href="ms-help://MS.MSDNVS/winui/mousinpt_346j.htm"><b>WM_RBUTTONDBLCLK</b></a> <a href="ms-help://MS.MSDNVS/winui/mousinpt_64tn.htm"><b>WM_MBUTTONDBLCLK</b></a></td>
+<td width="40%">Called when a mouse button is depressed a short period of time after the first depression.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnKeyDown</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/keybinpt_9l7y.htm"><b>WM_KEYDOWN</b></a></td>
+<td width="40%">Called when a key on a keyboard is depressed.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnKeyUp</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/keybinpt_45dc.htm"><b>WM_KEYUP</b></a></td>
+<td width="40%">Called when a key on a keyboard is released.</td>
+</tr>
+
+</table>
+
+<h3>Remarks</h3>
+
+<p>
+Using the <b>Window</b> class simplifies the process of implementing window functionality.
+When using it, the following rules must be taken into account:
+<ul>
+<li>Messages that would normally be processed by <b>WindowProc</b> are handled by
+the methods of the <b>Window</b> class.
+<li>In pure wrapper mode, the <b>OnXXX</b> methods do not exist and all messages go
+to the <b>HandleMessage</b> method.
+<li>The object of the <b>Window</b>-derived class <b>must</b> be created dynamically with
+the <b>new</b> operator. It <b>may not</b> be destroyed using the <b>delete</b> operator.
+<li>The object of the <b>Window</b>-derived class is always automatically destroyed when
+the window is destroyed, i.e. after processing the last message, which is
+<a href="ms-help://MS.MSDNVS/winui/windows_5ho9.htm"><b>WM_NCDESTROY</b></a>.
+<li>If you derive a class from <b>Window</b> and you do not intend to derive from
+it more (i.e. you create a <i>final</i> class), you should call <b>Create</b> in
+the constructor. However if you still are going to derive from it, don't call <b>Create</b>,
+because the method in the latter class will not be called at all during the construction.
+<li>To specify your own window class for the window, you must use the
+<a href="class_windowclass.htm"><b>WindowClass</b></a> class in order for the message
+dispatch mechanizm to work.
+</ul>
+</p>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="class_genericwindow.htm"><b>GenericWindow</b></a>,
+<a href="ms-help://MS.MSDNVS/winui/winprocs_1iyb.htm">Window Procedures Overview</a>,
+<a href="ms-help://MS.MSDNVS/winui/winprocs_90tv.htm">Window Procedure Functions</a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>ImageList</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="ImageList"/>
+<MSHelp:RLTitle Title="ImageList"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_ImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::ImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::ImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Duplicate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Duplicate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Destroy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Destroy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::LoadImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::LoadImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Add"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Add"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::AddMasked"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::AddMasked"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::AddIcon"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::AddIcon"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Replace"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Replace"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Remove"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Remove"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::SetIconSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::SetIconSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::GetIconSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::GetIconSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::GetIcon"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::GetIcon"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Copy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Copy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Draw"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Draw"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::GetImageCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::GetImageCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::SetImageCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::SetImageCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::GetImageInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::GetImageInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::Merge"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::Merge"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::SetOverlayImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::SetOverlayImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::BeginDrag"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::BeginDrag"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::DragEnter"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::DragEnter"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::DragLeave"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::DragLeave"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::DragMove"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::DragMove"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::DragShowNolock"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::DragShowNolock"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::EndDrag"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::EndDrag"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::SetDragCursorImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::SetDragCursorImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::GetDragImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::GetDragImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::SetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::SetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ImageList::GetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ImageList::GetBkColor"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>ImageList</h1>
+
+<p>
+The <b>ImageList</b> class is a wrapper for <i>HIMAGELIST</i> objects.
+This is a non-destructive class - it does not destroy the image list object.
+For a destructive version see <a href="class_autoimagelist.htm"><b>AutoImageList</b></a>.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/ImageList.htm">Image Lists Overview</a> for details.
+</p>
+
+<p>The <b>ImageList</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ImageList</b></td>
+<td width="30%">-</td>
+<td width="40%">Assigns an empty or an existing image list handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HIMAGELIST</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns image list handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Create.htm"><b>ImageList_Create</b></a></td>
+<td width="40%">Creates an image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Duplicate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Duplicate.htm"><b>ImageList_Duplicate</b></a></td>
+<td width="40%">Makes a copy of the image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Destroy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Destroy.htm"><b>ImageList_Destroy</b></a></td>
+<td width="40%">Destroys image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LoadImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_LoadImage.htm"><b>ImageList_LoadImage</b></a></td>
+<td width="40%">Loads an image from either a file or a resource.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Add</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Add.htm"><b>ImageList_Add</b></a></td>
+<td width="40%">Adds a <i>HBITMAP</i> to the image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddMasked</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_AddMasked.htm"><b>ImageList_AddMasked</b></a></td>
+<td width="40%">Adds a <i>HBITMAP</i> to the image list and creates a mask for it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddIcon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/macros/ImageList_AddIcon.htm"><b>ImageList_AddIcon</b></a></td>
+<td width="40%">Adds a <i>HICON</i> to the image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Replace</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Replace.htm"><b>ImageList_Replace</b></a> <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_ReplaceIcon.htm"><b>ImageList_ReplaceIcon</b></a></td>
+<td width="40%">Replaces an image with <i>HBITMAP</i> or <i>HICON</i>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Remove</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Remove.htm"><b>ImageList_Remove</b></a></td>
+<td width="40%">Removes an image from image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetIconSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_SetIconSize.htm"><b>ImageList_SetIconSize</b></a></td>
+<td width="40%">Sets image dimensions and removes all existing images.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetIconSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_GetIconSize.htm"><b>ImageList_GetIconSize</b></a></td>
+<td width="40%">Obtains image size.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetIcon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_GetIcon.htm"><b>ImageList_GetIcon</b></a></td>
+<td width="40%">Gets an image as an <i>HICON</i>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Copy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Copy.htm"><b>ImageList_Copy</b></a></td>
+<td width="40%">Makes a copy of an image.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Draw</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Draw.htm"><b>ImageList_Draw</b></a> <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_DrawEx.htm"><b>ImageList_DrawEx</b></a></td>
+<td width="40%">Draws an image on a <i>HDC</i>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetImageCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_GetImageCount.htm"><b>ImageList_GetImageCount</b></a></td>
+<td width="40%">Returns number of images in image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetImageCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_SetImageCount.htm"><b>ImageList_SetImageCount</b></a></td>
+<td width="40%">Resizes image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetImageInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_GetImageInfo.htm"><b>ImageList_GetImageInfo</b></a></td>
+<td width="40%">Retrieves <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/structures/IMAGEINFO.htm"><b>IMAGEINFO</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Merge</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_Merge.htm"><b>ImageList_Merge</b></a></td>
+<td width="40%">Merges two images.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetOverlayImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_SetOverlayImage.htm"><b>ImageList_SetOverlayImage</b></a></td>
+<td width="40%">Selects overlay image and its mask.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>BeginDrag</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_BeginDrag.htm"><b>ImageList_BeginDrag</b></a></td>
+<td width="40%">Begins image drag operation creating a drag image.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DragEnter</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_DragEnter.htm"><b>ImageList_DragEnter</b></a></td>
+<td width="40%">Enters image drag operation mode locking all window drawing. Use this right after <b>BeginDrag</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DragLeave</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_DragLeave.htm"><b>ImageList_DragLeave</b></a></td>
+<td width="40%">Ends image drag operation mode unlocking all window drawing.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DragMove</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_DragMove.htm"><b>ImageList_DragMove</b></a></td>
+<td width="40%">Moves dragged image after mouse move.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DragShowNolock</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_DragShowNolock.htm"><b>ImageList_DragShowNolock</b></a></td>
+<td width="40%">Shows or hides dragged image.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EndDrag</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_EndDrag.htm"><b>ImageList_EndDrag</b></a></td>
+<td width="40%">Finishes drag operation by destroying the dragged image. Call this after <b>DragLeave</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDragCursorImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_SetDragCursorImage.htm"><b>ImageList_SetDragCursorImage</b></a></td>
+<td width="40%">Creates drag image combining the image with mouse cursor.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDragImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_GetDragImage.htm"><b>ImageList_GetDragImage</b></a></td>
+<td width="40%">Returns temporary image list used for dragging.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_SetBkColor.htm"><b>ImageList_SetBkColor</b></a></td>
+<td width="40%">Sets background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/functions/ImageList_GetBkColor.htm"><b>ImageList_GetBkColor</b></a></td>
+<td width="40%">Gets background color.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/ImageList.htm">Image Lists Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ImageList/RefList.htm">Image List Reference</a>
+</p>
+
+</body>
+</html>

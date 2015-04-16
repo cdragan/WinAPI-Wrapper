@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>COM interface pointers</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="COM interface pointers"/>
+<MSHelp:RLTitle Title="COM interface pointers"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_COM"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>COM interface pointers</h1>
+
+<p>This topic describes how to use <b>IPtr&lt;T></b> safe COM interface pointers.</p>
+
+<p>In general you use the <b>IPtr&lt;T></b> pointer like a regular <b>T*</b> pointer,
+which means you can normally access interface functions using the -> operator. But
+the <b>IPtr&lt;T></b> simplifies pointer management.</p>
+
+<h3>Initializing COM library</h3>
+
+<p>The first thing you have to do in every COM program is the initialization of the
+COM library. Normally, you have to remember to uninitialize it on time, e.g. when
+you program ends. But you can also use the <a href="class_cominitializer.htm"><b>COMInitializer</b></a>
+class which frees you from this responsibility:</p>
+
+<pre>int main()
+{
+    COMInitializer _init();
+
+    /* ... COM code ... */
+
+    return 0;
+}
+
+</pre>
+
+<p>Note that if the scope in which the _init variable is defined ends (e.g. when you return from the
+function), the COM library is uninitialized in the destructor of the _init object.</p>
+
+<h3>Creating objects</h3>
+
+<p>The basic functionality of a COM program is creating of COM object instances.
+The following code creates an instance of the FilterGraph object from DirectShow.
+</p>
+
+<pre>IPtr&lt;IGraphBuilder> p_graph( CLSID_FilterGraph );
+
+</pre>
+
+<p>The constructor of the pointer has also second argument, that defaults
+to <b>__uuid(T)</b>, where <b>T</b> is the interface class (in this case IGraphBuilder,
+so the second argument finally resolves to <i>IID_IGraphBuilder</i>). The constructor has also
+other arguments (with their default values), that it passes to the
+<a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmf_a2c_1nad.htm"><b>CoCreateInstance</b></a>
+function in order to create the object.</p>
+
+<p>The following examples are all equivalent to the above code:</p>
+
+<pre>IPtr&lt;IGraphBuilder> p_graph( CLSID_FilterGraph, IID_IGraphBuilder );
+
+IPtr&lt;IGraphBuilder> p_graph;
+p_graph.CreateInstance( CLSID_FilterGraph );
+
+IPtr&lt;IGraphBuilder> p_graph;
+CoCreateInstance( CLSID_FilterGraph, 0, CLSCTX_INPROC_SERVER, IID_IGraphBuilder, p_graph.GetVPP() );
+
+</pre>
+
+<p>The last, clumsy example follows the actual COM syntax, but it is fully equivalent to all
+three previous examples as all resolve to the same code when compiled.</p>
+
+<h3>Obtaining interfaces</h3>
+
+<p>Another important functionality in a COM application is obtaining interfaces to objects.
+With the <b>IPtr&lt;T></b> pointer it can be as simple as this:</p>
+
+<pre>IPtr&lt;IMediaControl> p_control = p_graph;
+
+</pre>
+
+<p>The above code uses the <i>p_graph</i> pointer defined before. Because the filter graph
+exposes the IMediaControl interface, we can query for it. Either the constructor or the
+assignment operator, when fed with a non-matching pointer, call the
+<a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_7fvp.htm"><b>IUnknown::QueryInterface</b></a>
+function on the object to obtain an appropriate interface. Of course this may fail when the
+object does not support the interface, in which case we end up with a zero pointer. We
+can test for it like follows:</p>
+
+<pre>if ( ! p_control.IsValid() )
+    return;
+
+</pre>
+
+<p>Because all objects are gracefully released by the <b>IPtr&lt;T></b> destructor, we
+don't have to worry about the releasing when returning from a function or generally
+exiting a scope.</p>
+
+<p>The following examples are equivalent to the first one:</p>
+
+<pre>IPtr&lt;IMediaControl> p_control( p_graph );
+
+IPtr&lt;IMediaControl> p_control( p_graph, IID_IMediaControl );
+
+IPtr&lt;IMediaControl> p_control;
+p_control = p_graph;
+
+IPtr&lt;IMediaControl> p_control;
+p_control.CreateInterface( p_graph );
+
+IPtr&lt;IMediaControl> p_control;
+p_graph->QueryInterface( IID_IMediaControl, p_control.GetVPP() );
+
+</pre>
+
+<p>And like before, the last example shows the most clumsy generic COM syntax.</p>
+
+<p>Compare the following two examples - the first one created using regular
+COM syntax, the second one using the <b>IPtr&lt;T></b> safe pointer:</p>
+
+<pre>IMediaControl* p_control = 0;
+p_graph->QueryInterface( IID_IMediaControl, reinterpret_cast&lt;void**>( &p_control ) );
+p_control->Run();
+p_control->Release(), p_control = 0;
+
+IPtr&lt;IMediaControl>( p_graph )->Run();
+
+</pre>
+
+<p>Note that in both examples, the <i>p_graph</i> object can be either <i>IGraphBuilder*</i>
+or <i>IPtr&lt;IGraphBuilder></i>.</p>
+
+<h3>Pointer assignment</h3>
+
+<p>You don't have to worry if you are assigning <b>IPtr&lt;T></b> pointers. The safe
+pointer class uses reference counting, fundamental property of COM. Both of the following
+examples are thus valid and do not introduce any memory leaks:</p>
+
+<pre>{   IPtr&lt;IMediaControl> ptr1( p_graph );
+    IPtr&lt;IMediaControl> ptr2 = ptr1;
+}
+
+{   IMediaControl* ptr1 = 0;
+    p_graph->QueryInterface( IID_IMediaControl, reinterpret_cast&lt;void**>( &ptr1 ) );
+    IPtr&lt;IMediaControl> ptr2 = ptr1;
+    ptr1->Release(), ptr1 = 0;
+}
+
+</pre>
+
+<h3>Releasing pointers</h3>
+
+<p>In COM, the <a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_59np.htm"><b>IUnknown::Release</b></a>
+method decrements the reference counter of an object, and if the counter reaches zero the
+object is release. When using the <b>IPtr&lt;T></b> safe pointers, you don't have to
+worry about releasing pointers, because the destructor automatically releases them.
+</p>
+
+<p>Sometimes you need to release a pointer before the current scope ends, i.e. before
+the <b>IPtr&lt;T>::~IPtr</b> destructor is called. You can do this explicitly.</p>
+
+<pre>IPtr&lt;IMediaControl> p_control = p_graph;
+/* ### do something ### */
+    // p_control.IsValid() == true
+p_control.Release();
+    // p_control.IsValid() == false
+/* ### do something else ### */
+
+</pre>
+
+<p>Explicitly releasing pointers automatically zeroes them.</p>
+
+<h3>Custom object creation</h3>
+
+<p>Sometimes COM objects or interfaces are obtained in a different way, e.g. they
+are output from other objects' functions. You can handle this using the <b>GetPP</b>
+function (or <b>GetVPP</b> if <i>void**</i> is needed). The following function
+enumerates DirectShow filters of a specified category:</p>
+
+<pre>template< class Enumerator >
+void EnumerateDevices( REFCLSID category, Enumerator& enumerator )
+{
+    // Create device enumerator object
+    IPtr&lt;ICreateDevEnum> p_devenum( CLSID_SystemDeviceEnum, CLSCTX_INPROC );
+
+    // Create iterator object
+    IPtr&lt;IEnumMoniker> p_enum_iterator;
+    p_devenum->CreateClassEnumerator( category, <b>p_enum_iterator.GetPP()</b>, 0 );
+    if ( ! p_enum_iterator.IsValid() ) return;
+
+    // Enumerate subsequent devices
+    IPtr&lt;IMoniker> p_entry;
+    while ( SUCCEEDED( p_enum_iterator->Next( 1, <b>p_entry.GetPP()</b>, 0 ) ) )
+        if ( enumerator( p_entry ) ) // break if enumerator has enough
+            break;
+}
+
+</pre>
+
+<h4>See Also</h4>
+
+<p>
+<a href="classes.htm">Class Reference</a>
+</p>
+
+</body>
+</html>

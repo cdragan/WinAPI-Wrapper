@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Trackbar</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Trackbar"/>
+<MSHelp:RLTitle Title="Trackbar"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Trackbar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::Trackbar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::Trackbar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetRangeMin"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetRangeMin"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetRangeMax"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetRangeMax"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetRange"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetRange"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::ClearSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::ClearSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::ClearTics"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::ClearTics"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetChannelRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetChannelRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetLineSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetLineSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetLineSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetLineSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetNumTics"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetNumTics"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetPageSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetPageSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetPageSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetPageSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetPTics"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetPTics"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetSelStart"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetSelStart"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetSelEnd"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetSelEnd"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetThumbLength"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetThumbLength"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetThumbRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetThumbRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetTic"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetTic"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetTicPos"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetTicPos"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetTic"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetTic"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetTicFreq"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetTicFreq"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetLeftBuddy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetLeftBuddy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetRightBuddy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetRightBuddy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetLeftBuddy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetLeftBuddy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::GetRightBuddy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::GetRightBuddy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetThumbLength"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetThumbLength"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetTipSide"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetTipSide"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Trackbar::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Trackbar::SetUnicodeFormat"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Trackbar</h1>
+
+<p>
+The <b>Trackbar</b> class extends the Trackbar standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/TrackBar.htm">Trackbars Overview</a> for details.
+</p>
+
+<p>The <b>Trackbar</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Trackbar</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETPOS.htm"><b>TBM_GETPOS</b></a></td>
+<td width="40%">Returns current position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRangeMin</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETRANGEMIN.htm"><b>TBM_GETRANGEMIN</b></a></td>
+<td width="40%">Returns the lower limit of allowable position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRangeMax</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETRANGEMAX.htm"><b>TBM_GETRANGEMAX</b></a></td>
+<td width="40%">Returns the upper limit of allowable position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETPOS.htm"><b>TBM_SETPOS</b></a></td>
+<td width="40%">Sets trackbar position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetRange</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETRANGEMIN.htm"><b>TBM_SETRANGEMIN</b></a> <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETRANGEMAX.htm"><b>TBM_SETRANGEMAX</b></a></td>
+<td width="40%">Sets allowable range of trackbar positions.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ClearSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_CLEARSEL.htm"><b>TBM_CLEARSEL</b></a></td>
+<td width="40%">Clears current selection range.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ClearTics</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_CLEARTICS.htm"><b>TBM_CLEARTICS</b></a></td>
+<td width="40%">Removes tick marks.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetChannelRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETCHANNELRECT.htm"><b>TBM_GETCHANNELRECT</b></a></td>
+<td width="40%">Returns rectangle for trackbar's channel.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLineSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETLINESIZE.htm"><b>TBM_GETLINESIZE</b></a></td>
+<td width="40%">Returns number of positions the trackbar moves in response to keyboard arrows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetLineSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETLINESIZE.htm"><b>TBM_SETLINESIZE</b></a></td>
+<td width="40%">Sets number of positions the trackbar moves in response to keyboard arrows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNumTics</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETNUMTICS.htm"><b>TBM_GETNUMTICS</b></a></td>
+<td width="40%">Returns number of tics.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPageSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETPAGESIZE.htm"><b>TBM_GETPAGESIZE</b></a></td>
+<td width="40%">Returns number of positions the trackbar moves in response to keyboard page up and down.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPageSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETPAGESIZE.htm"><b>TBM_SETPAGESIZE</b></a></td>
+<td width="40%">Sets number of positions the trackbar moves in response to keyboard page up and down.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPTics</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETPTICS.htm"><b>TBM_GETPTICS</b></a></td>
+<td width="40%">Retrieves a pointer to an array with positions of tics.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSelStart</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETSELSTART.htm"><b>TBM_GETSELSTART</b></a></td>
+<td width="40%">Returns the beginning of selection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSelEnd</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETSELEND.htm"><b>TBM_GETSELEND</b></a></td>
+<td width="40%">Returns the end of selection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetThumbLength</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETTHUMBLENGTH.htm"><b>TBM_GETTHUMBLENGTH</b></a></td>
+<td width="40%">Returns size of the thumb.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetThumbRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETTHUMBRECT.htm"><b>TBM_GETTHUMBRECT</b></a></td>
+<td width="40%">Returns the rectangle that contains the thumb.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTic</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETTIC.htm"><b>TBM_GETTIC</b></a></td>
+<td width="40%">Returns position of a specific tick mark.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTicPos</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETTICPOS.htm"><b>TBM_GETTICPOS</b></a></td>
+<td width="40%">Returns screen position of a specific tick mark.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTic</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETTIC.htm"><b>TBM_SETTIC</b></a></td>
+<td width="40%">Sets a tick mark at a specific position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTicFreq</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETTICFREQ.htm"><b>TBM_SETTICFREQ</b></a></td>
+<td width="40%">Sets tick marks with a specified frequency.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETTOOLTIPS.htm"><b>TBM_GETTOOLTIPS</b></a></td>
+<td width="40%">Returns the tool tip control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETUNICODEFORMAT.htm"><b>TBM_GETUNICODEFORMAT</b></a></td>
+<td width="40%">Returns unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetLeftBuddy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETBUDDY.htm"><b>TBM_SETBUDDY</b></a></td>
+<td width="40%">Sets the left buddy window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetRightBuddy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETBUDDY.htm"><b>TBM_SETBUDDY</b></a></td>
+<td width="40%">Sets the right buddy window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLeftBuddy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETBUDDY.htm"><b>TBM_GETBUDDY</b></a></td>
+<td width="40%">Returns the left buddy window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRightBuddy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_GETBUDDY.htm"><b>TBM_GETBUDDY</b></a></td>
+<td width="40%">Returns the right buddy window.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETSELSTART.htm"><b>TBM_SETSELSTART</b></a> <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETSELEND.htm"><b>TBM_SETSELEND</b></a></td>
+<td width="40%">Selects a range on the trackbar.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetThumbLength</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETTHUMBLENGTH.htm"><b>TBM_SETTHUMBLENGTH</b></a></td>
+<td width="40%">Sets thumb size.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTipSide</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETTIPSIDE.htm"><b>TBM_SETTIPSIDE</b></a></td>
+<td width="40%">Positions a tooptip control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETTOOLTIPS.htm"><b>TBM_SETTOOLTIPS</b></a></td>
+<td width="40%">Sets tooltip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/Messages/TBM_SETUNICODEFORMAT.htm"><b>TBM_SETUNICODEFORMAT</b></a></td>
+<td width="40%">Sets unicode format setting.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/TrackBar.htm">Trackbars Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TrackBar/RefList.htm">Trackbar Reference</a>
+</p>
+
+</body>
+</html>

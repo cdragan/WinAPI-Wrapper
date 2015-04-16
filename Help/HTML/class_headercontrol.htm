@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>HeaderControl</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="HeaderControl"/>
+<MSHelp:RLTitle Title="HeaderControl"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_HeaderControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::HeaderControl"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::HeaderControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::CreateDragImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::CreateDragImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::DeleteItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::DeleteItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::GetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::GetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::GetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::GetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::GetItemCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::GetItemCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::GetItemRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::GetItemRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::GetOrderArray"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::GetOrderArray"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::InsertItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::InsertItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::Layout"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::Layout"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::OrderToIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::OrderToIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::SetHotDivider"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::SetHotDivider"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::SetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::SetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::SetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::SetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::SetItemText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::SetItemText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::SetItemFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::SetItemFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::SetOrderArray"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::SetOrderArray"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::HeaderControl::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::HeaderControl::SetUnicodeFormat"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>HeaderControl</h1>
+
+<p>
+The <b>HeaderControl</b> class extends the HeaderControl standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Header.htm">Header Controls Overview</a> for details.
+</p>
+
+<p>The <b>HeaderControl</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related macro</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HeaderControl</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CreateDragImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_CreateDragImage.htm"><b>Header_CreateDragImage</b></a></td>
+<td width="40%">Creates an image for drag operation.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_DeleteItem.htm"><b>Header_DeleteItem</b></a></td>
+<td width="40%">Deletes an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_GetImageList.htm"><b>Header_GetImageList</b></a></td>
+<td width="40%">Returns the header's image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_GetItem.htm"><b>Header_GetItem</b></a></td>
+<td width="40%">Returns item data in form of the <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/structures/HDITEM.htm"><b>HDITEM</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_GetItemCount.htm"><b>Header_GetItemCount</b></a></td>
+<td width="40%">Returns number of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_GetItemRect.htm"><b>Header_GetItemRect</b></a></td>
+<td width="40%">Returns rectangle containing the item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetOrderArray</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_GetOrderArray.htm"><b>Header_GetOrderArray</b></a></td>
+<td width="40%">Returns order of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_GetUnicodeFormat.htm"><b>Header_GetUnicodeFormat</b></a></td>
+<td width="40%">Returns unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_InsertItem.htm"><b>Header_InsertItem</b></a></td>
+<td width="40%">Inserts a new item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Layout</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_Layout.htm"><b>Header_Layout</b></a></td>
+<td width="40%">Returns size and position of an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OrderToIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_OrderToIndex.htm"><b>Header_OrderToIndex</b></a></td>
+<td width="40%">Retrieves item index based on its order position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHotDivider</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_SetHotDivider.htm"><b>Header_SetHotDivider</b></a></td>
+<td width="40%">Makes an item look like the drop target.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_SetImageList.htm"><b>Header_SetImageList</b></a></td>
+<td width="40%">Sets new image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_SetItem.htm"><b>Header_SetItem</b></a></td>
+<td width="40%">Sets item data in form of the <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/structures/HDITEM.htm"><b>HDITEM</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_SetItem.htm"><b>Header_SetItem</b></a></td>
+<td width="40%">Sets item string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_SetItem.htm"><b>Header_SetItem</b></a></td>
+<td width="40%">Sets item format.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetOrderArray</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_SetOrderArray.htm"><b>Header_SetOrderArray</b></a></td>
+<td width="40%">Sets order of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Macros/Header_SetUnicodeFormat.htm"><b>Header_SetUnicodeFormat</b></a></td>
+<td width="40%">Sets unicode format setting.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/Header.htm">Header Controls Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Header/header_Header.htm">Header Control Reference</a>
+</p>
+
+</body>
+</html>

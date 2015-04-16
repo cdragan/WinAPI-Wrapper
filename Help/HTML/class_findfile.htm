@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>FindFile</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="FindFile"/>
+<MSHelp:RLTitle Title="FindFile"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_FindFile"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FindFile"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FindFile"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FindFile::FindFile"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FindFile::FindFile"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FindFile::IsOpen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FindFile::IsOpen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FindFile::FindNext"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FindFile::FindNext"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FindFile::GetFindData"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FindFile::GetFindData"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>FindFile</h1>
+
+<p>
+The <b>FindFile</b> class helps finding files using a filename pattern in a specific directory.
+It extends <i>HANDLE</i> objects - find handles. See
+<a href="ms-help://MS.MSDNVS/fileio/filesio_1mb7.htm">Searching for Files</a> for the details.
+</p>
+
+<p>The <b>FindFile</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FindFile</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_4qcl.htm"><b>FindFirstFile</b></a></td>
+<td width="40%">Find the first file using the specified pattern.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>~FindFile</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_45d1.htm"><b>FindClose</b></a></td>
+<td width="40%">Calls <b>Close</b> in order to close the find handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HANDLE</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the find handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsOpen</b></td>
+<td width="30%">-</td>
+<td width="40%">Validates the handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FindNext</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_4ndx.htm"><b>FindNextFile</b></a></td>
+<td width="40%">Finds next file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFindData</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns reference to the internal <a href="ms-help://MS.MSDNVS/fileio/filesio_4xv6.htm"><b>WIN32_FIND_DATA</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Close</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_45d1.htm"><b>FindClose</b></a></td>
+<td width="40%">Closes the handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_4qcl.htm"><b>FindFirstFile</b></a></td>
+<td width="40%">Starts a new search and finds the first file, closing the previous handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>begin</b><br><b>end</b></td>
+<td width="30%">-</td>
+<td width="40%">These functions return simple iterator objects that can be used in the same way that STL iterators are used to iterate over entries in a directory.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ForEach</b></td>
+<td width="30%">-</td>
+<td width="40%">This template function calls a specified handle object on every directory entry. See the implementation of <b>GetAll</b> to see how to use it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetAll</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns a list of all filenames or <b>WIN32_FIND_DATA</b> entries in a vector. There are two versions of these functions - member and static.</td>
+</tr>
+
+</table>
+
+<h3>Examples</h3>
+
+<p>Find all "cpp" files:</p>
+
+<pre>vector< string > filenames;
+FindFile finder( "*.cpp" );
+finder.GetAll( &filenames, FindFile::FILES );
+
+</pre>
+
+<p>The same effect as the above code:</p>
+
+<pre>vector< string > filenames;
+FindFile::GetAll( "*.cpp", &filenames, FindFile::FILES );
+
+</pre>
+
+<p>Finds all subdirectories and stores their full entry descriptions:</p>
+
+<pre>vector< WIN32_FIND_DATA > dirs;
+FindFile::GetAll( "*.*", &dirs, FindFile::DIRECTORIES );
+
+</pre>
+
+<p>Finds all files in the root directory C:\</p>
+
+<pre>vector< string > filenames;
+FindFile::GetAll( "C:\\*.*", &filenames, FindFile::FILES );
+
+</pre>
+
+<p>Displays all subsequent entries (files and directories) in a directory
+by passing them to an appropriate handler (cmdline application):</p>
+
+<pre>class MyHandler {
+public:
+    void operator()( const WIN32_FIND_DATA& fd ) {
+        const bool b_directory = (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0;
+        cout &lt;&lt; (b_directory ? "directory " : "file ") &lt;&lt; fd.cFileName &lt;&lt; endl;
+    }
+};
+
+FindFile finder( "*.*" );
+finder.ForEach( MyHandler() );
+
+</pre>
+
+<p>Achieves exactly the same thing, but displays only subdirectories:</p>
+
+<pre>FindFile::ForEach( "*.*", MyHandler(), FindFile::DIRECTORIES );
+
+</pre>
+
+<p>The same effect as above, but not using the template functions:</p>
+
+<pre>FindFile finder( "*.*" );
+if ( finder.IsOpen() ) do {
+    const WIN32_FIND_DATA& fd = finder.GetFindData();
+    const bool b_directory = (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0;
+    cout &lt;&lt; (b_directory ? "directory " : "file ") &lt;&lt; fd.cFileName &lt;&lt; endl;
+} while ( finder.FindNext() );
+
+</pre>
+
+<p>The same effect, but using iterators:</p>
+
+<pre>FindFile finder( "*.*" );
+for ( FindFile::iterator it=finder.begin(); it != finder.end(); it++ ) {
+    const WIN32_FIND_DATA& fd = it;
+    const bool b_directory = (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0;
+    cout &lt;&lt; (b_directory ? "directory " : "file ") &lt;&lt; fd.cFileName &lt;&lt; endl;
+}
+
+</pre>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="usage_misc.htm">Miscellaneous wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/fileio/filesio_1mb7.htm">Searching for Files</a>,
+<a href="ms-help://MS.MSDNVS/fileio/filesio_4xv6.htm"><b>WIN32_FIND_DATA</b></a>,
+<a href="ms-help://MS.MSDNVS/fileio/filesio_2xm7.htm">File I/O Overview</a>,
+<a href="ms-help://MS.MSDNVS/fileio/filesio_4lf7.htm">File I/O Functions</a>
+</p>
+
+</body>
+</html>

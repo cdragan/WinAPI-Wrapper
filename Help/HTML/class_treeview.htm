@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>TreeView</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="TreeView"/>
+<MSHelp:RLTitle Title="TreeView"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_TreeView"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::TreeView"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::TreeView"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::DeleteAllItems"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::DeleteAllItems"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::EndEditLabelNow"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::EndEditLabelNow"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetSelection"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetSelection"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetDropHilight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetDropHilight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetFirstVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetFirstVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetLastVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetLastVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetRoot"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetRoot"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetEditControl"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetEditControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetStateImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetStateImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetIndent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetIndent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetInsertMarkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetInsertMarkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetISearchString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetISearchString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetItemHeight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetItemHeight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetScrollTime"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetScrollTime"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::GetVisibleCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::GetVisibleCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::HitTest"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::HitTest"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetStateImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetStateImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetIndent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetIndent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetInsertMarkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetInsertMarkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetItemHeight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetItemHeight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetScrollTime"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetScrollTime"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeView::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeView::SetUnicodeFormat"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>TreeView</h1>
+
+<p>
+The <b>TreeView</b> class extends the TreeView standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/TreeView.htm">Tree-View Controls Overview</a> for details.
+</p>
+
+<p>The <b>TreeView</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related macro</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TreeView</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteAllItems</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_DeleteAllItems.htm"><b>TreeView_DeleteAllItems</b></a></td>
+<td width="40%">Removes all items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EndEditLabelNow</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_EndEditLabelNow.htm"><b>TreeView_EndEditLabelNow</b></a></td>
+<td width="40%">Ends editing label.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetBkColor.htm"><b>TreeView_GetBkColor</b></a></td>
+<td width="40%">Returns background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetCount.htm"><b>TreeView_GetCount</b></a></td>
+<td width="40%">Returns number of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSelection</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns selected item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDropHilight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns the item that is the drop target.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFirstVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns first visible item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLastVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns last visible item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRoot</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns root item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetEditControl</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetEditControl.htm"><b>TreeView_GetEditControl</b></a></td>
+<td width="40%">Returns edit control for editing label.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetImageList.htm"><b>TreeView_GetImageList</b></a></td>
+<td width="40%">Returns items image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetStateImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetImageList.htm"><b>TreeView_GetImageList</b></a></td>
+<td width="40%">Returns state image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetIndent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetIndent.htm"><b>TreeView_GetIndent</b></a></td>
+<td width="40%">Returns child-to-parent indenation.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetInsertMarkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetInsertMarkColor.htm"><b>TreeView_GetInsertMarkColor</b></a></td>
+<td width="40%">Returns the color of the insertion mark.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetISearchString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetISearchString.htm"><b>TreeView_GetISearchString</b></a></td>
+<td width="40%">Returns the incremental search string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemHeight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetItemHeight.htm"><b>TreeView_GetItemHeight</b></a></td>
+<td width="40%">Returns height of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetScrollTime</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetScrollTime.htm"><b>TreeView_GetScrollTime</b></a></td>
+<td width="40%">Returns scroll animation time.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetTextColor.htm"><b>TreeView_GetTextColor</b></a></td>
+<td width="40%">Returns text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Messages/TVM_GETTOOLTIPS.htm"><b>TVM_GETTOOLTIPS</b></a></td>
+<td width="40%">Returns ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Messages/TVM_GETUNICODEFORMAT.htm"><b>TVM_GETUNICODEFORMAT</b></a></td>
+<td width="40%">Returns unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetVisibleCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetVisibleCount.htm"><b>TreeView_GetVisibleCount</b></a></td>
+<td width="40%">Returns number of visible items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HitTest</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_HitTest.htm"><b>TreeView_HitTest</b></a></td>
+<td width="40%">Returns item under specified screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetBkColor.htm"><b>TreeView_SetBkColor</b></a></td>
+<td width="40%">Sets background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetImageList.htm"><b>TreeView_SetImageList</b></a></td>
+<td width="40%">Sets image list for items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetStateImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetImageList.htm"><b>TreeView_SetImageList</b></a></td>
+<td width="40%">Sets items state image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetIndent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetIndent.htm"><b>TreeView_SetIndent</b></a></td>
+<td width="40%">Sets child-to-parent indenation.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetInsertMarkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetInsertMarkColor.htm"><b>TreeView_SetInsertMarkColor</b></a></td>
+<td width="40%">Sets insertion mark color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemHeight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetItemHeight.htm"><b>TreeView_SetItemHeight</b></a></td>
+<td width="40%">Sets items height.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetScrollTime</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetScrollTime.htm"><b>TreeView_SetScrollTime</b></a></td>
+<td width="40%">Sets scroll animation time.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetTextColor.htm"><b>TreeView_SetTextColor</b></a></td>
+<td width="40%">Sets text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Messages/TVM_SETTOOLTIPS.htm"><b>TVM_SETTOOLTIPS</b></a></td>
+<td width="40%">Sets ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Messages/TVM_SETUNICODEFORMAT.htm"><b>TVM_SETUNICODEFORMAT</b></a></td>
+<td width="40%">Sets unicode format settings.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/TreeView.htm">Tree-View Controls Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/RefList.htm">Tree-View Control Reference</a>
+</p>
+
+</body>
+</html>

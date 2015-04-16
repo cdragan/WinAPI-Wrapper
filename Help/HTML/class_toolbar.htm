@@ -1,0 +1,738 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Toolbar</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Toolbar"/>
+<MSHelp:RLTitle Title="Toolbar"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Toolbar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::Toolbar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::Toolbar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::AddBitmap"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::AddBitmap"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::AddButtons"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::AddButtons"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::AddButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::AddButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::AddSeparator"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::AddSeparator"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::AddString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::AddString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::AddStrings"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::AddStrings"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::AutoSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::AutoSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::ButtonCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::ButtonCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::ButtonStructSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::ButtonStructSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::ChangeBitmap"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::ChangeBitmap"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::CheckButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::CheckButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::CommandToIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::CommandToIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::Customize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::Customize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::DeleteButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::DeleteButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::EnableButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::EnableButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetAnchorHighlight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetAnchorHighlight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetBitmap"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetBitmap"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetBitmapFlags"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetBitmapFlags"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetButtonInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetButtonInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetButtonSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetButtonSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetButtonText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetButtonText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetColorScheme"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetColorScheme"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetDisabledImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetDisabledImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetExtendedStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetExtendedStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetHotImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetHotImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetHotItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetHotItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetInsertMark"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetInsertMark"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetInsertMarkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetInsertMarkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetItemRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetItemRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetMaxSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetMaxSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetPadding"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetPadding"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetRows"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetRows"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetTextRows"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetTextRows"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::HideButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::HideButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::HitTest"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::HitTest"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::Indeterminate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::Indeterminate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::InsertButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::InsertButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::InsertMarkHitTest"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::InsertMarkHitTest"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::IsButtonChecked"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::IsButtonChecked"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::IsButtonEnabled"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::IsButtonEnabled"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::IsButtonHidden"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::IsButtonHidden"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::IsButtonHighlighted"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::IsButtonHighlighted"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::IsButtonIndeterminate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::IsButtonIndeterminate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::IsButtonPressed"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::IsButtonPressed"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::LoadImages"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::LoadImages"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::MapAccelerator"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::MapAccelerator"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::MarkButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::MarkButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::MoveButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::MoveButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::PressButton"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::PressButton"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::ReplaceBitmap"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::ReplaceBitmap"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::Save"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::Save"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::Restore"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::Restore"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetAnchorHighlight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetAnchorHighlight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetBitmapSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetBitmapSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetButtonInfo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetButtonInfo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetButtonSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetButtonSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetButtonWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetButtonWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetCmdID"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetCmdID"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetColorScheme"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetColorScheme"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetDisabledImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetDisabledImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetDrawTextFlags"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetDrawTextFlags"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetExtendedStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetExtendedStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetHotImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetHotImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetHotItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetHotItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetIndent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetIndent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetInsertMark"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetInsertMark"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetInsertMarkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetInsertMarkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetMaxTextRows"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetMaxTextRows"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetPadding"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetPadding"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetParent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetParent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetRows"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetRows"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Toolbar::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Toolbar::SetUnicodeFormat"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Toolbar</h1>
+
+<p>
+The <b>Toolbar</b> class extends the Toolbar standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/ToolBar.htm">Toolbars Overview</a> for details.
+</p>
+
+<p>The <b>Toolbar</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Toolbar</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddBitmap</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ADDBITMAP.htm"><b>TB_ADDBITMAP</b></a></td>
+<td width="40%">Adds images to the toolbar's image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddButtons</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ADDBUTTONS.htm"><b>TB_ADDBUTTONS</b></a></td>
+<td width="40%">Adds a series of buttons.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ADDBUTTONS.htm"><b>TB_ADDBUTTONS</b></a></td>
+<td width="40%">Adds a single button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddSeparator</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ADDBUTTONS.htm"><b>TB_ADDBUTTONS</b></a></td>
+<td width="40%">Adds a separator.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ADDSTRING.htm"><b>TB_ADDSTRING</b></a></td>
+<td width="40%">Adds a string from a resource to the toolbar's string list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddStrings</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ADDSTRING.htm"><b>TB_ADDSTRING</b></a></td>
+<td width="40%">Adds strings to the toolbar's string list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AutoSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_AUTOSIZE.htm"><b>TB_AUTOSIZE</b></a></td>
+<td width="40%">Automagically resizes the toolbar to account new buttons or parent window size change.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ButtonCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_BUTTONCOUNT.htm"><b>TB_BUTTONCOUNT</b></a></td>
+<td width="40%">Returns number of buttons.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ButtonStructSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_BUTTONSTRUCTSIZE.htm"><b>TB_BUTTONSTRUCTSIZE</b></a></td>
+<td width="40%">Sets size of the button structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ChangeBitmap</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_CHANGEBITMAP.htm"><b>TB_CHANGEBITMAP</b></a></td>
+<td width="40%">Changes button's bitmap.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CheckButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_CHECKBUTTON.htm"><b>TB_CHECKBUTTON</b></a></td>
+<td width="40%">Checks or unchecks checkbutton state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CommandToIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_COMMANDTOINDEX.htm"><b>TB_COMMANDTOINDEX</b></a></td>
+<td width="40%">Returns index of a button with the specified command.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Customize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_CUSTOMIZE.htm"><b>TB_CUSTOMIZE</b></a></td>
+<td width="40%">Opens the toolbar customization dialog.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_DELETEBUTTON.htm"><b>TB_DELETEBUTTON</b></a></td>
+<td width="40%">Deletes a button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EnableButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ENABLEBUTTON.htm"><b>TB_ENABLEBUTTON</b></a></td>
+<td width="40%">Enables or disables a button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetAnchorHighlight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETANCHORHIGHLIGHT.htm"><b>TB_GETANCHORHIGHLIGHT</b></a></td>
+<td width="40%">Returns anchor highlight.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBitmap</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETBITMAP.htm"><b>TB_GETBITMAP</b></a></td>
+<td width="40%">Returns button's image index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBitmapFlags</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETBITMAPFLAGS.htm"><b>TB_GETBITMAPFLAGS</b></a></td>
+<td width="40%">Returns bitmap flags.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETBUTTON.htm"><b>TB_GETBUTTON</b></a></td>
+<td width="40%">Returns button configuration in form of a <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/structures/TBBUTTON.htm"><b>TBBUTTON</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetButtonInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETBUTTONINFO.htm"><b>TB_GETBUTTONINFO</b></a></td>
+<td width="40%">Returns extended button configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetButtonSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETBUTTONSIZE.htm"><b>TB_GETBUTTONSIZE</b></a></td>
+<td width="40%">Returns button size.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetButtonText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETBUTTONTEXT.htm"><b>TB_GETBUTTONTEXT</b></a></td>
+<td width="40%">Returns button text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetColorScheme</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETCOLORSCHEME.htm"><b>TB_GETCOLORSCHEME</b></a></td>
+<td width="40%">Returns color scheme.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetDisabledImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETDISABLEDIMAGELIST.htm"><b>TB_GETDISABLEDIMAGELIST</b></a></td>
+<td width="40%">Returns disabled image list</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetExtendedStyle</b></td>.
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETEXTENDEDSTYLE.htm"><b>TB_GETEXTENDEDSTYLE</b></a></td>
+<td width="40%">Returns toolbar's extended style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHotImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETHOTIMAGELIST.htm"><b>TB_GETHOTIMAGELIST</b></a></td>
+<td width="40%">Returns hot image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHotItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETHOTITEM.htm"><b>TB_GETHOTITEM</b></a></td>
+<td width="40%">Returns index of the hot item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETIMAGELIST.htm"><b>TB_GETIMAGELIST</b></a></td>
+<td width="40%">Returns toolbar's image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetInsertMark</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETINSERTMARK.htm"><b>TB_GETINSERTMARK</b></a></td>
+<td width="40%">Returns current insertion mark.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetInsertMarkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETINSERTMARKCOLOR.htm"><b>TB_GETINSERTMARKCOLOR</b></a></td>
+<td width="40%">Returns color of the insertion mark.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETITEMRECT.htm"><b>TB_GETITEMRECT</b></a></td>
+<td width="40%">Returns button rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetMaxSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETMAXSIZE.htm"><b>TB_GETMAXSIZE</b></a></td>
+<td width="40%">Returns total size of all buttons and separators.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPadding</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETPADDING.htm"><b>TB_GETPADDING</b></a></td>
+<td width="40%">Returns padding.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETRECT.htm"><b>TB_GETRECT</b></a></td>
+<td width="40%">Returns button rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRows</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETROWS.htm"><b>TB_GETROWS</b></a></td>
+<td width="40%">Returns current number of rows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETSTATE.htm"><b>TB_GETSTATE</b></a></td>
+<td width="40%">Returns button state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetStyle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETSTYLE.htm"><b>TB_GETSTYLE</b></a></td>
+<td width="40%">Returns toolbar style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextRows</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETTEXTROWS.htm"><b>TB_GETTEXTROWS</b></a></td>
+<td width="40%">Returns maximum number of text rows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETTOOLTIPS.htm"><b>TB_GETTOOLTIPS</b></a></td>
+<td width="40%">Returns ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_GETUNICODEFORMAT.htm"><b>TB_GETUNICODEFORMAT</b></a></td>
+<td width="40%">Returns unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HideButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_HIDEBUTTON.htm"><b>TB_HIDEBUTTON</b></a></td>
+<td width="40%">Shows or hides a button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HitTest</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_HITTEST.htm"><b>TB_HITTEST</b></a></td>
+<td width="40%">Returns button (non-separator) index under the specified screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Indeterminate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_INDETERMINATE.htm"><b>TB_INDETERMINATE</b></a></td>
+<td width="40%">Sets or clears button indeterminate state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_INSERTBUTTON.htm"><b>TB_INSERTBUTTON</b></a></td>
+<td width="40%">Adds a new button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertMarkHitTest</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_INSERTMARKHITTEST.htm"><b>TB_INSERTMARKHITTEST</b></a></td>
+<td width="40%">Checks if the insert mark is under the specified screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsButtonChecked</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ISBUTTONCHECKED.htm"><b>TB_ISBUTTONCHECKED</b></a></td>
+<td width="40%">Checks if a button is checked.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsButtonEnabled</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ISBUTTONENABLED.htm"><b>TB_ISBUTTONENABLED</b></a></td>
+<td width="40%">Checks if a button is enabled.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsButtonHidden</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ISBUTTONHIDDEN.htm"><b>TB_ISBUTTONHIDDEN</b></a></td>
+<td width="40%">Checks if a button is hidden.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsButtonHighlighted</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ISBUTTONHIGHLIGHTED.htm"><b>TB_ISBUTTONHIGHLIGHTED</b></a></td>
+<td width="40%">Checks if a button is highlighted.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsButtonIndeterminate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ISBUTTONINDETERMINATE.htm"><b>TB_ISBUTTONINDETERMINATE</b></a></td>
+<td width="40%">Checks if a button is indeterminate.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsButtonPressed</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_ISBUTTONPRESSED.htm"><b>TB_ISBUTTONPRESSED</b></a></td>
+<td width="40%">Checks if a button is pressed.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LoadImages</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_LOADIMAGES.htm"><b>TB_LOADIMAGES</b></a></td>
+<td width="40%">Loads system-defined toolbar button images.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MapAccelerator</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_MAPACCELERATOR.htm"><b>TB_MAPACCELERATOR</b></a></td>
+<td width="40%">Returns index of a button corresponding to an accelerator.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MarkButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_MARKBUTTON.htm"><b>TB_MARKBUTTON</b></a></td>
+<td width="40%">Sets highlight state of a button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MoveButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_MOVEBUTTON.htm"><b>TB_MOVEBUTTON</b></a></td>
+<td width="40%">Changes placement of a button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PressButton</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_PRESSBUTTON.htm"><b>TB_PRESSBUTTON</b></a></td>
+<td width="40%">Simulates button press.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ReplaceBitmap</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_REPLACEBITMAP.htm"><b>TB_REPLACEBITMAP</b></a></td>
+<td width="40%">Replaces a bitmap.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Save</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SAVERESTORE.htm"><b>TB_SAVERESTORE</b></a></td>
+<td width="40%">Saves toolbar state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Restore</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SAVERESTORE.htm"><b>TB_SAVERESTORE</b></a></td>
+<td width="40%">Restores toolbar state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetAnchorHighlight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETANCHORHIGHLIGHT.htm"><b>TB_SETANCHORHIGHLIGHT</b></a></td>
+<td width="40%">Sets anchor highlight.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBitmapSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETBITMAPSIZE.htm"><b>TB_SETBITMAPSIZE</b></a></td>
+<td width="40%">Sets bitmap size.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetButtonInfo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETBUTTONINFO.htm"><b>TB_SETBUTTONINFO</b></a></td>
+<td width="40%">Sets button configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetButtonSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETBUTTONSIZE.htm"><b>TB_SETBUTTONSIZE</b></a></td>
+<td width="40%">Sets button size.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetButtonWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETBUTTONWIDTH.htm"><b>TB_SETBUTTONWIDTH</b></a></td>
+<td width="40%">Sets minimum and maximum button widths.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCmdID</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETCMDID.htm"><b>TB_SETCMDID</b></a></td>
+<td width="40%">Sets command identifier of a button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetColorScheme</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETCOLORSCHEME.htm"><b>TB_SETCOLORSCHEME</b></a></td>
+<td width="40%">Sets color scheme.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDisabledImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETDISABLEDIMAGELIST.htm"><b>TB_SETDISABLEDIMAGELIST</b></a></td>
+<td width="40%">Sets disabled image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetDrawTextFlags</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETDRAWTEXTFLAGS.htm"><b>TB_SETDRAWTEXTFLAGS</b></a></td>
+<td width="40%">Sets draw text flags.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetExtendedStyle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETEXTENDEDSTYLE.htm"><b>TB_SETEXTENDEDSTYLE</b></a></td>
+<td width="40%">Sets extended toolbar style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHotImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETHOTIMAGELIST.htm"><b>TB_SETHOTIMAGELIST</b></a></td>
+<td width="40%">Sets hot image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHotItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETHOTITEM.htm"><b>TB_SETHOTITEM</b></a></td>
+<td width="40%">Sets hot item index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETIMAGELIST.htm"><b>TB_SETIMAGELIST</b></a></td>
+<td width="40%">Sets new toolbar's image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetIndent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETINDENT.htm"><b>TB_SETINDENT</b></a></td>
+<td width="40%">Sets indentation for the first button.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetInsertMark</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETINSERTMARK.htm"><b>TB_SETINSERTMARK</b></a></td>
+<td width="40%">Positions the insertion mark.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetInsertMarkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETINSERTMARKCOLOR.htm"><b>TB_SETINSERTMARKCOLOR</b></a></td>
+<td width="40%">Sets insertion mark color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetMaxTextRows</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETMAXTEXTROWS.htm"><b>TB_SETMAXTEXTROWS</b></a></td>
+<td width="40%">Sets maximum number of text rows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPadding</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETPADDING.htm"><b>TB_SETPADDING</b></a></td>
+<td width="40%">Sets padding.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetParent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETPARENT.htm"><b>TB_SETPARENT</b></a></td>
+<td width="40%">Sets parent (for notification messages).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetRows</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETROWS.htm"><b>TB_SETROWS</b></a></td>
+<td width="40%">Sets number of button rows.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETSTATE.htm"><b>TB_SETSTATE</b></a></td>
+<td width="40%">Sets button state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetStyle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETSTYLE.htm"><b>TB_SETSTYLE</b></a></td>
+<td width="40%">Sets button style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETTOOLTIPS.htm"><b>TB_SETTOOLTIPS</b></a></td>
+<td width="40%">Sets ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/Messages/TB_SETUNICODEFORMAT.htm"><b>TB_SETUNICODEFORMAT</b></a></td>
+<td width="40%">Sets unicode format setting.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ToolBar/ToolBar.htm">Toolbars Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/commctls/toolbar/Messages.htm">Toolbar Messages</a>
+</p>
+
+</body>
+</html>

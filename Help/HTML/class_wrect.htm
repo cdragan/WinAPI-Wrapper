@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>WRect</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="WRect"/>
+<MSHelp:RLTitle Title="WRect"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_WRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::WRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::WRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::Width"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::Width"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::Height"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::Height"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::Size"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::Size"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::GetSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::GetSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::SetSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::SetSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::Contains"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::Contains"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::IsValid"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::IsValid"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::Intersects"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::Intersects"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::LeftTop"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::LeftTop"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::LeftBottom"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::LeftBottom"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::RightTop"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::RightTop"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::RightBottom"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::RightBottom"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::InsetBy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::InsetBy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::OffsetBy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::OffsetBy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::OffsetTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::OffsetTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::InsetBySelf"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::InsetBySelf"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::OffsetBySelf"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::OffsetBySelf"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::OffsetToSelf"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::OffsetToSelf"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::InsetByCopy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::InsetByCopy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::OffsetByCopy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::OffsetByCopy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::WRect::OffsetToCopy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::WRect::OffsetToCopy"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>WRect</h1>
+
+<p>
+The <b>WRect</b> class extends the <a href="ms-help://MS.MSDNVS/gdi/rectangl_6cqa.htm"><b>RECT</b></a>
+structure with C++ functionality.
+</p>
+
+<p>The <b>WRect</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="20%">Function</th>
+<th align="left" width="20%">Related WinAPI function</th>
+<th align="left" width="60%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>WRect</b></td>
+<td width="30%">-</td>
+<td width="40%">Builds <b>WRect</b> in miscellaneous ways.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator==</b></td>
+<td width="30%">-</td>
+<td width="40%">Tests two rectangles for equality.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator!=</b></td>
+<td width="30%">-</td>
+<td width="40%">Tests two rectangles for inequality.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator&</b></td>
+<td width="30%">-</td>
+<td width="40%">Calculates intersection of two rectangles.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator|</b></td>
+<td width="30%">-</td>
+<td width="40%">Calculates sum of two rectangles.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Width</b></td>
+<td width="30%">-</td>
+<td width="40%">Calculates width of the rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Height</b></td>
+<td width="30%">-</td>
+<td width="40%">Calculates height of the rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Size</b></td>
+<td width="30%">-</td>
+<td width="40%">Calculates size of the rectangle (in form of <a href="class_wsize.htm"><b>WSize</b></a>).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSize</b></td>
+<td width="30%">-</td>
+<td width="40%">Calculates dimensions of the rectangle (in form of <a href="class_wsize.htm"><b>WSize</b></a>).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetSize</b></td>
+<td width="30%">-</td>
+<td width="40%">Sets new dimensions of the rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Contains</b></td>
+<td width="30%">-</td>
+<td width="40%">Tests whether the rectangle contains point or another rectangle entirely.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsValid</b></td>
+<td width="30%">-</td>
+<td width="40%">Checks whether the rectangle is valid (has positive dimensions).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Intersects</b></td>
+<td width="30%">-</td>
+<td width="40%">Tests whether the rectangle intersects another rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LeftTop</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns left top corner as <a href="class_wpoint.htm"><b>WPoint</b></a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LeftBottom</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns left bottom corner as <a href="class_wpoint.htm"><b>WPoint</b></a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>RightTop</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns right top corner as <a href="class_wpoint.htm"><b>WPoint</b></a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>RightBottom</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns right bottom corner as <a href="class_wpoint.htm"><b>WPoint</b></a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsetBy</b></td>
+<td width="30%">-</td>
+<td width="40%">Shrinks the rectangle by given amounts in X and Y axes.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OffsetBy</b></td>
+<td width="30%">-</td>
+<td width="40%">Moves the rectangle by a given amount (adding X and Y values to respective borders).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OffsetTo</b></td>
+<td width="30%">-</td>
+<td width="40%">Moves the rectangle to a given left-top position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsetBySelf</b></td>
+<td width="30%" rowspan="3">-</td>
+<td width="40%" rowspan="3">These functions do the same job as the above functions, but they also return reference to the rectangle itself.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OffsetBySelf</b></td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OffsetToSelf</b></td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsetByCopy</b></td>
+<td width="30%" rowspan="3">-</td>
+<td width="40%" rowspan="3">These functions do the same job as the above functions, but they don't alter the actual rectangle, but return an altered copy of it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OffsetByCopy</b></td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OffsetToCopy</b></td>
+</tr>
+
+</table>
+
+<p>Several functions in this class have been inspired by similar functionality of
+the <b>Rect</b> class in the <font color="#00007F">B</font><font color="#FF0000">e</font>OS API.
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/gdi/rectangl_6cqa.htm"><b>RECT</b></a>
+</p>
+
+</body>
+</html>

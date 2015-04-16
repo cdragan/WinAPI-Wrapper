@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>The application object</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="The application object"/>
+<MSHelp:RLTitle Title="The application object"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_Application"/>
+<MSHelp:Keyword Index="K" Term="Application object [WinAPI Wrapper]"/>
+<MSHelp:Keyword Index="F" Term="application, object"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>The application object</h1>
+
+<p>A typical Windows application has a <a href="ms-help://MS.MSDNVS/winui/windows_64ku.htm"><b>WinMain</b></a> function in which it creates
+its main window and then processes the message loop to feed incoming messages into that window.</p>
+
+<pre>int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow )
+{
+    // Register window class
+    WNDCLASS wc = { /*...*/ };
+    RegisterClass( &amp;wc );
+
+    // Create main window
+    HWND hWnd = CreateWindowEx( 0, "title", "class", /*...*/ );
+    ShowWindow( hWnd, SW_SHOWNORMAL );
+    UpdateWindow( hWnd );
+
+    // Process messages
+    MSG msg;
+    while ( GetMessage( &msg, 0, 0, 0 ) )
+        TranslateMessage( &msg ),
+        DispatchMessage( &msg )
+    return 0;
+}</pre>
+
+<p>As you can see it is a really complex way to make your application running. With the WinAPI
+Wrapper you can throw all this code away in favor of a much simplier code:</p>
+
+<pre>namespace {
+    Application< MainWindow > app;
+}</pre>
+
+<p>The WinAPI Wrapper provides its own <b>WinMain</b> function. The application object
+you create registers for that function, so <b>WinMain</b> calls its <b>Run</b> method.
+The <b>Run</b> method of the application object creates the main window (you enter the
+class of the main window as the first template argument of the <a href="class_application.htm"><b>Application</b></a> class)
+and then it processes the message queue.</p>
+
+<p>In the above example the application object is created in a <i>.cpp</i> source file
+in an anonymous namespace, because there is no point in using this object in any way.
+Only the fact that it is created matters.</p>
+
+<p>Note that you can skip all this and just create the regular <b>WinMain</b> function.
+You can also use portions of the WinAPI Wrapper in a MFC application, that already
+has the MFC's <b>WinMain</b>.</p>
+
+<h3>Accelerators</h3>
+
+<p>The second template argument of the <a href="class_application.htm"><b>Application</b></a> class
+is the accelerator processor class. The accelerator processor is responsible for translating and dispatching
+accelerator messages and it is used in the <b>Application</b>'s message queue. The typical accelerator processor looks like follows:</p>
+
+<pre>template< class _Window >
+class AcceleratorTraits: public NonCopyAble {
+public:
+    bool ProcessAccel( MessageQueue& queue, _Window* p_window ) { return false; }
+};</pre>
+
+<p>This is the default accelerator processor. Every accelerator processor must have
+the <b>ProcessAccel</b> function. The function has two arguments: first is the <b>Application</b>'s
+message queue and second is the pointer to the main window, which must be of your main window class' type.
+The function returns <i>true</i> if it dispatched the message to the window or <i>false</i> if
+it didn't (in this case the <b>Application</b> object proceeds in the regular way).</p>
+
+<p>The default accelerator processor does not do anything. If you want to load
+an accelerator table from a resource, you have to use the <b>AccelFromResource</b>
+processor, like follows:</p>
+
+<pre>Application&lt; MainWindow, AccelFromResource&lt; MainWindow, IDR_MYACCTABLE > > app;</pre>
+
+<p>If you create an MDI application, the accelerators must be processed and
+dispatched in a different way. For this purpose you use either the <b>MDIAccel</b> or
+<b>MDIAccelFromResource</b> processor, depending on whether you want to load accelerators
+from a resource or not. For example:</p>
+
+<pre>Application&lt; MainWindow, MDIAccel&lt; MainWindow > > app;</pre>
+
+<h3>Modeless dialog boxes</h3>
+
+<p>If the main application window is a modeless dialog box it is advisable to build the
+application object using the <b>ModelessDialogAccel</b> accelerator processor class.
+This way the dialog-box specific keys (like for example <i>TAB</i>) can be correctly
+processed. The <b>ModelessDialogAccel</b> processor calls <b>IsDialogMessage</b> in order
+to process the dialog box keys.</p>
+
+<pre>Application&lt; MainWindow, ModelessDialogAccel&lt; MainWindow > > app;</pre>
+
+<p></p>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Examples</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Examples"/>
+<MSHelp:RLTitle Title="Examples"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_Examples"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Examples"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Examples</h1>
+
+<p>The following topic contains several examples showing how to create simple applications of different types. You can copy these examples to <i>.cpp</i> files and compile them and run (although you will need to have a dialog box defined for the dialog box-based application examples).</p>
+
+<h3>Application with a regular main window</h3>
+
+<pre>#include &lt;winapi.h>
+
+using namespace WinAPI;
+
+class MainWindow: public Window {
+public:
+    MainWindow() {
+        Create( "Example" );
+    }
+protected:
+    virtual void OnDestroy() {
+        PostQuitMessage( 0 );
+    }
+    virtual void OnPaint() {
+        PaintDC dc( *this );
+        dc.TextOut( WPoint( 50, 50 ), "Hello, World!" );
+    }
+private:
+    virtual ~MainWindow() { }
+};
+
+namespace {
+    Application< MainWindow > app;
+}</pre>
+
+<p>In this example first the main window class is defined and the the application object
+is created. The constructor of the main window class creates the actual window object.</p>
+
+<p>The main window processes two messages: in <b>OnDestroy</b> it processes the <i>WM_DESTROY</i>
+message and sends <i>WM_QUIT</i> to break the message queue; in <b>OnPaint</b> it
+processes the <i>WM_PAINT</i> message and draws "Hello, World!" text.</p>
+
+<p>The destructor of the <b>MainWindow</b> class is private. It is hidden, because the
+object of this class should never be explicitly deleted. It is deleted automatically
+when the window is destroyed.</p>
+
+<p>The application object takes care of creating the main window and processing the message loop.
+The object is hidden in an anonymous namespace, because there is no point in using it in any other way.</p>
+
+<h3>Modeless dialog-based application</h3>
+
+<pre>#include &lt;winapi.h>
+#include "resource.h"
+
+using namespace WinAPI;
+
+class MainWindow: public ModelessDialog {
+public:
+    MainWindow() {
+        Create( IDD_MAINWINDOW, 0 );
+    }
+protected:
+    virtual void OnDestroy() {
+        PostQuitMessage( 0 );
+    }
+    virtual void OnCommand( int nIdentifier, int nNotifyCode, HWND hwndControl ) {
+        switch ( nIdentifier ) {
+
+        case IDOK:
+        case IDCANCEL:
+            Destroy();
+            break;
+
+        }
+    }
+private:
+    virtual ~MainWindow() { }
+};
+
+namespace {
+    Application&lt; MainWindow, ModelessDialogAccel&lt; MainWindow > > app;
+}</pre>
+
+<p>The difference between this window and the one in the previous example is that
+this window is a modeless dialog box, and hence it is derived from the
+<a href="class_modelessdialog.htm"><b>ModelessDialog</b></a> class. The modeless
+dialog closes/destroys itself when the user clicks either "OK" or "Cancel" button
+on the dialog.</p>
+
+<h3>Modal dialog-based application</h3>
+
+<pre>#include &lt;winapi.h>
+#include "resource.h"
+
+using namespace WinAPI;
+
+class MainWindow: public Dialog {
+public:
+    MainWindow(): Dialog( IDD_MAINWINDOW ) { }
+protected:
+    virtual void OnCommand( int nIdentifier, int nNotifyCode, HWND hwndControl ) {
+        switch ( nIdentifier ) {
+
+        case IDOK:
+        case IDCANCEL:
+            EndDialog();
+            break;
+
+        }
+    }
+};
+
+int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd )
+{
+    MainWindow dlg;
+    dlg.Go();
+    return 0;
+}</pre>
+
+<p>Here the main application window is a modal dialog box and it is derived from the
+<a href="class_dialog.htm"><b>Dialog</b></a> class. The dialog closes itself when
+the user presses either "OK" or "Cancel" button on the dialog, and it does so calling
+the <b>EndDialog</b> function.</p>
+
+<p>In this type of application there is no message loop and the main window does not
+behave in a typical way, therefore there is no application object and there is a custom
+<b>WinMain</b> function instead. The <b>WinMain</b> function calls <b>Go</b> and thus creates the dialog box
+and waits until it is destroyed.</p>
+
+<h3>MDI application</h3>
+
+<pre>#include &lt;winapi.h>
+
+using namespace WinAPI;
+
+class DocumentWindow: public MDIChildWindow {
+public:
+    DocumentWindow( HWND hwndParent ) {
+        Create( "Sample Document", hwndParent );
+    }
+protected:
+    virtual void OnPaint() {
+        PaintDC dc( *this );
+        dc.TextOut( WPoint( 50, 50 ), "Hello, World!" );
+    }
+private:
+    virtual ~DocumentWindow() { }
+};
+
+class MainWindow: public MDIFrameWindow {
+public:
+    MainWindow() {
+        Create( "Example" );
+    }
+protected:
+    virtual void OnDestroy() {
+        PostQuitMessage( 0 );
+    }
+    virtual bool OnCreate( LPCREATESTRUCT lpCreateStruct = 0 ) {
+        CreateClient( GetClientRect() );
+        (new DocumentWindow( GetClientWindow() ))->Show();
+        return true;
+    }
+};
+
+namespace {
+    Application< MainWindow > app;
+}</pre>
+
+<p>The difference between the main window here and in the first example is that
+the main window here is an <i>MDI frame</i>, and hence its derived from the <a href="class_mdiframewindow.htm"><b>MDIFrameWindow</b></a> class.
+The <i>frame window</i> during processing the <i>WM_CREATE</i> message in <b>OnCreate</b> calls <b>CreateClient</b>
+to create the <i>MDI client window</i> and then creates one document window.
+</p>
+
+<p>The document window is a <i>MDI child window</i> and it is derived from the <a href="class_mdichildwindow.htm"><b>MDIChildWindow</b></a> class.
+It only paints "Hello, World!" in response to the <i>WM_PAINT</i> message.</p>
+
+<h4>See Also</h4>
+
+<p>
+<a href="usage_window.htm">Creating windows and controls</a>,
+<a href="usage_dialog.htm">Creating dialog boxes</a>,
+<a href="usage_mdi.htm">MDI applications</a>,
+<a href="usage_application.htm">The application object</a>
+</p>
+
+</body>
+</html>

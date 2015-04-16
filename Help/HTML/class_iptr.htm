@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>IPtr&lt;T></TITLE>
+<xml>
+<MSHelp:TOCTitle Title="IPtr<T>"/>
+<MSHelp:RLTitle Title="IPtr<T>"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_IPtr_T"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::Release"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::Release"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::IsValid"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::IsValid"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::GetVPP"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::GetVPP"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::GetVPPUnsafe"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::GetVPPUnsafe"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::Get"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::Get"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::GetPP"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::GetPP"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::CreateInstance"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::CreateInstance"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::CreateInterface"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::CreateInterface"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::IPtr::GetIUnknown"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::IPtr::GetIUnknown"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>IPtr&lt;T></h1>
+
+<p>
+The <b>IPtr&lt;T></b> class is a generic interface pointer template class, that simplifies
+the use of COM objects. It provides automation for object creation and releasing, obtaining
+interfaces, etc. See <a href="usage_iptr.htm">COM interface pointers</a> for information on
+how to use the <b>IPtr&lt;T></b>.
+</p>
+
+<p>The <b>IPtr&lt;T></b> class has the following functions:</p>
+
+<table ID="Table1">
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IPtr</b></td>
+<td width="30%"><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmf_a2c_1nad.htm"><b>CoCreateInstance</b></a></td>
+<td width="40%">The basic constructor either initializes the pointer with 0, or calls <b>CoCreateInstance</b> in order to create an object. The optional arguments are passed to <b>CoCreateInstance</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IPtr</b></td>
+<td width="30%"><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_7fvp.htm"><b>IUnknown::QueryInterface</b></a></td>
+<td width="40%">Another version of the constructor calls <b>IUnknown::QueryInterface</b> in order to obtain an interface to the object specified in the first argument of the constructor.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>~IPtr</b></td>
+<td width="30%"><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_59np.htm"><b>IUnknown::Release</b></a></td>
+<td width="40%">The destructor automatically releases the object if the pointer is non-zero.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsValid</b></td>
+<td width="30%">-</td>
+<td width="40%">Checks whether the pointer is non-zero.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CreateInstance</b></td>
+<td width="30%"><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmf_a2c_1nad.htm"><b>CoCreateInstance</b></a></td>
+<td width="40%">Explicitly calls <b>CoCreateInstance</b> in order to create an instance of a COM object.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CreateInterface</b></td>
+<td width="30%"><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_7fvp.htm"><b>IUnknown::QueryInterface</b></a></td>
+<td width="40%">Explicitly calls <b>IUnknown::QueryInterface</b> on the specified object in order to obtain an interface to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Release</b></td>
+<td width="30%"><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_59np.htm"><b>IUnknown::Release</b></a></td>
+<td width="40%">Releases the controlled object if the pointer is non-zero.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetIUnknown</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the pointer as <b>IUnknown*</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPP</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns <b>T**</b> pointer to the actual pointer. Useful when creating objects using specific functions. Currently controlled object is released before this function returns.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetVPP</b></td>
+<td width="30%">-</td>
+<td width="40%">Same as <b>GetPP</b>, but returns <b>void**</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetVPP_Unsafe</b></td>
+<td width="30%">-</td>
+<td width="40%">Same as <b>GetVPP</b>, but does not release the controlled object.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator T*</b><br><b>operator*</b><br><b>operator-></b><br><b>operator IUnknown*</b></td>
+<td width="30%">-</td>
+<td width="40%">These operators guarantee that the <b>IPtr&lt;T></b> pointer can be used like a regular <b>T*</b> interface pointer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator=</b></td>
+<td width="30%"><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_3rja.htm"><b>IUnknown::AddRef</b></a><br><a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_7fvp.htm"><b>IUnknown::QueryInterface</b></a></td>
+<td width="40%">If the source pointer has the same type as the destination pointer, a regular assignment operation occurs, plus the <b>IUnknown::AddRef</b> is called, taking advantage of the COM objects reference counting. If the two pointer types do not agree, <b>IUnknown::QueryInterface</b> is called in order to obtain an interface from the object pointed by the source pointer.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="usage_iptr.htm">COM interface pointers</a>,
+<a href="ms-help://MS.VSCC/MS.MSDNVS/com/comportal_3qn9.htm">COM overview</a>,
+<a href="ms-help://MS.VSCC/MS.MSDNVS/com/cmi_q2z_9dwu.htm">IUnknown</a>
+</p>
+
+</body>
+</html>

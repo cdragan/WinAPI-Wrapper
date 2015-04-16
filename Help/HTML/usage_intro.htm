@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Installation notes</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Installation notes"/>
+<MSHelp:RLTitle Title="Installation notes"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Installation"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Installation Notes"/>
+<MSHelp:Keyword Index="F" Term="WinAPI, Wrapper"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Installation notes</h1>
+
+<p>The WinAPI Wrapper library consists of a header file <b>winapi.h</b> and four
+static libraries for the Microsoft Visual Studio .NET.</p>
+
+<p>In a typical application project you refer directly to the header file and to
+one of the libraries. In order for your application to compile and link correctly,
+you have to give the compiler and the linker paths to the header and the libraries.
+Typically every compiler either has a commandline switch for this, or has a corresponding
+environment variable (for example called INCLUDE or LIB, respectively).
+</p>
+
+<p>If you use the WinAPI Wrapper library with Microsoft Visual Studio .NET and you
+used <b>setup.exe</b> to install the library, the header file and the libraries were
+automatically put by the installer in appropriate Visual Studio directories (in addition
+to the installation directory that you specified).
+</p>
+
+<p>You can force Microsoft Visual Studio (any version) to use the copies of the header
+and the libraries that are in your installation directory. For example, in the
+Microsoft Visual Studio .NET IDE, you select Tools/Options, then choose Projects/Directories
+and then select "Include files" and "Library files" to add the installation folder path.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>TreeItem</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="TreeItem"/>
+<MSHelp:RLTitle Title="TreeItem"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_TreeItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::TreeItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::TreeItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::CreateDragImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::CreateDragImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::Delete"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::Delete"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::EditLabel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::EditLabel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::EnsureVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::EnsureVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::Expand"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::Expand"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::ExpandPartial"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::ExpandPartial"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::Collapse"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::Collapse"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::CollapseReset"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::CollapseReset"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::Toggle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::Toggle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetChild"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetChild"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetNextSibling"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetNextSibling"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetPrevSibling"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetPrevSibling"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetNextVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetNextVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetPrevVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetPrevVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetParent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetParent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetItemText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetItemText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetItemImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetItemImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetItemParam"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetItemParam"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetItemState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetItemState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::GetItemRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::GetItemRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::InsertItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::InsertItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::InsertItemFirst"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::InsertItemFirst"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::InsertItemLast"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::InsertItemLast"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::InsertItemSort"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::InsertItemSort"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::Select"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::Select"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SelectDropTarget"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SelectDropTarget"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SelectItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SelectItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SelectSetFirstVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SelectSetFirstVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SetInsertMark"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SetInsertMark"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SetItemState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SetItemState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SetItemParam"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SetItemParam"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TreeItem::SortChildren"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TreeItem::SortChildren"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>TreeItem</h1>
+
+<p>
+The <b>TreeItem</b> class extends the <b>HTREEITEM</b> tree item handle with C++ functionality.
+It is typically created by functions of the <a href="class_treeview.htm"><b>TreeView</b></a> class.
+</p>
+
+<p>The <b>TreeItem</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related macro</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TreeItem</b></td>
+<td width="30%">-</td>
+<td width="40%">Constructs an object (either empty or from an existing handle).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HTREEITEM</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the tree item handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CreateDragImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_CreateDragImage.htm"><b>TreeView_CreateDragImage</b></a></td>
+<td width="40%">Creates a dragging bitmap.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Delete</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_DeleteItem.htm"><b>TreeView_DeleteItem</b></a></td>
+<td width="40%">Removes the and all its children.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EditLabel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_EditLabel.htm"><b>TreeView_EditLabel</b></a></td>
+<td width="40%">Initiates editing of the item label (editing by the user).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EnsureVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_EnsureVisible.htm"><b>TreeView_EnsureVisible</b></a></td>
+<td width="40%">Ensures an item is visible.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Expand</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_Expand.htm"><b>TreeView_Expand</b></a></td>
+<td width="40%">Expands the list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ExpandPartial</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_Expand.htm"><b>TreeView_Expand</b></a></td>
+<td width="40%">Partially expands the list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Collapse</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_Expand.htm"><b>TreeView_Expand</b></a></td>
+<td width="40%">Collapses the list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CollapseReset</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_Expand.htm"><b>TreeView_Expand</b></a></td>
+<td width="40%">Collapses the list and removes child items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Toggle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_Expand.htm"><b>TreeView_Expand</b></a></td>
+<td width="40%">Toggles between collapsed and expanded list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetChild</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns the first child item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNextSibling</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns next sibling item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPrevSibling</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns previous sibling item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNextVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns next visible item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPrevVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns previous visible item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetParent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetNextItem.htm"><b>TreeView_GetNextItem</b></a></td>
+<td width="40%">Returns parent item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetItem.htm"><b>TreeView_GetItem</b></a></td>
+<td width="40%">Returns the item configuration in form of <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/structures/TVITEM.htm"><b>TVITEM</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetItem.htm"><b>TreeView_GetItem</b></a></td>
+<td width="40%">TreeView_GetItem</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetItem.htm"><b>TreeView_GetItem</b></a></td>
+<td width="40%">Returns item image index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemParam</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetItem.htm"><b>TreeView_GetItem</b></a></td>
+<td width="40%">Returns item user parameter.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetItem.htm"><b>TreeView_GetItem</b></a></td>
+<td width="40%">Returns current item state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_GetItemRect.htm"><b>TreeView_GetItemRect</b></a></td>
+<td width="40%">Returns rectangle that contains the item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_InsertItem.htm"><b>TreeView_InsertItem</b></a></td>
+<td width="40%">Inserts a new item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertItemFirst</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_InsertItem.htm"><b>TreeView_InsertItem</b></a></td>
+<td width="40%">Inserts a new item at the beginning of the list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertItemLast</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_InsertItem.htm"><b>TreeView_InsertItem</b></a></td>
+<td width="40%">Inserts a new item at the end of the list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertItemSort</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_InsertItem.htm"><b>TreeView_InsertItem</b></a></td>
+<td width="40%">Inserts a new item in alphabetical order.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Select</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_Select.htm"><b>TreeView_Select</b></a></td>
+<td width="40%">Selects the item making it visible (and can do other things as well).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SelectDropTarget</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SelectDropTarget.htm"><b>TreeView_SelectDropTarget</b></a></td>
+<td width="40%">Redraws the item making it look like a drop target.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SelectItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SelectItem.htm"><b>TreeView_SelectItem</b></a></td>
+<td width="40%">Selects the specified item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SelectSetFirstVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SelectSetFirstVisible.htm"><b>TreeView_SelectSetFirstVisible</b></a></td>
+<td width="40%">Ensures that an item is visible. (See <b>Select</b>, <b>SelectItem</b> and <b>EnsureVisible</b>).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetInsertMark</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetInsertMark.htm"><b>TreeView_SetInsertMark</b></a></td>
+<td width="40%">Sets the insertion mark.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetItem.htm"><b>TreeView_SetItem</b></a></td>
+<td width="40%">Sets item configuration using the <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/structures/TVITEM.htm"><b>TVITEM</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetItem.htm"><b>TreeView_SetItem</b></a></td>
+<td width="40%">Sets item state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemParam</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SetItem.htm"><b>TreeView_SetItem</b></a></td>
+<td width="40%">Sets item user parameter.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SortChildren</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/Macros/TreeView_SortChildren.htm"><b>TreeView_SortChildren</b></a></td>
+<td width="40%">Sorts children alphabetically or using an user-specified compare function.</td>
+</tr>
+
+</table>
+
+<h3>Remarks</h3>
+There is some similarity between the <b>Select</b>, <b>SelectItem</b>, <b>EnsureVisible</b> and <b>SelectSetFirstVisible</b> functions.
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/TreeView.htm">Tree Views Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/TreeView/RefList.htm">Tree View Messages</a>
+</p>
+
+</body>
+</html>

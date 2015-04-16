@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>GetFileNameDialog</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="GetFileNameDialog"/>
+<MSHelp:RLTitle Title="GetFileNameDialog"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_GetFileNameDialog"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GetFileNameDialog"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GetFileNameDialog"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GoOpen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GoOpen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GoSave"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GoSave"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::SetFilterIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::SetFilterIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GetFilterIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GetFilterIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::SetFileName"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::SetFileName"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GetPathName"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GetPathName"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GetFileName"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GetFileName"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GetExtension"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GetExtension"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GetFileNameOffset"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GetFileNameOffset"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::GetFileNameDialog::GetExtensionOffset"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::GetFileNameDialog::GetExtensionOffset"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>GetFileNameDialog</h1>
+
+<p>
+The <b>GetFileNameDialog</b> class is an extension of the
+<a href="ms-help://MS.MSDNVS/winui/commdlg_1hma.htm"><b>OPENFILENAME</b></a> structure
+and it is derived from the structure.
+The common dialog box created by this class gets the user to select one or more files.
+For obtaining a folder name from the user use <a href="class_getfolderdialog.htm"><b>GetFolderDialog</b></a> class.
+</p>
+
+<p>The <b>GetFileNameDialog</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFileNameDialog</b></td>
+<td width="30%">-</td>
+<td width="40%">Constructs the <a href="ms-help://MS.MSDNVS/winui/commdlg_1hma.htm"><b>OPENFILENAME</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GoOpen</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/commdlg_3cbp.htm"><b>GetOpenFileName</b></a></td>
+<td width="40%">Opens the "Open" dialog.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GoSave</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/commdlg_7zqd.htm"><b>GetSaveFileName</b></a></td>
+<td width="40%">Opens the "Save" dialog.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetFilterIndex</b></td>
+<td width="30%"></td>
+<td width="40%">Sets initial index of the file type filter.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFilterIndex</b></td>
+<td width="30%">-</td>
+<td width="40%">Determines which filter the user chosen after GoXXX() function has been called.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetFileName</b></td>
+<td width="30%">-</td>
+<td width="40%">Sets initial file name.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPathName</b></td>
+<td width="30%">-</td>
+<td width="40%">Gets whole path to the file selected by the user.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFileName</b></td>
+<td width="30%">-</td>
+<td width="40%">Gets name of the file selected by the user.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetExtension</b></td>
+<td width="30%">-</td>
+<td width="40%">Gets extension of the file selected by the user.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetFileNameOffset</b></td>
+<td width="30%">-</td>
+<td width="40%">Gets offset of the file name in the file path.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetExtensionOffset</b></td>
+<td width="30%">-</td>
+<td width="40%">Gets offset of the extension in the file path.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/commdlg_1hma.htm"><b>OPENFILENAME</b></a>,
+<a href="class_getfolderdialog.htm"><b>GetFolderDialog</b></a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Address</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Address"/>
+<MSHelp:RLTitle Title="Address"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Address"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Address"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Address"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Address::Address"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Address::Address"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Address::SetPort"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Address::SetPort"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Address::GetAddress"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Address::GetAddress"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Address::GetPort"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Address::GetPort"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Address::GetSockAddr"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Address::GetSockAddr"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Address::GetName"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Address::GetName"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Address</h1>
+
+<p>
+The <b>Address</b> class is a helper class for sockets. It is an IP address in conjunction with a port number.
+</p>
+
+<p>The <b>Address</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Address</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_0q5u.htm"><b>gethostbyname</b></a></td>
+<td width="40%">Creates address object from IP and port, from name or from <a href="ms-help://MS.MSDNVS/winsock/strucetc_0d82.htm"><b>sockaddr</b></a>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator==</b></td>
+<td width="30%">-</td>
+<td width="40%">Compares two addresses for equality.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator!=</b></td>
+<td width="30%">-</td>
+<td width="40%">Compares two addresses for inequality.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPort</b></td>
+<td width="30%">-</td>
+<td width="40%">Sets new port.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetAddress</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns <b>in_addr</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPort</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns port number.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSockAddr</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns <b>sockaddr</b> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetName</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winsock/wsapiref_7wj6.htm"><b>gethostbyaddr</b></a></td>
+<td width="40%">Gets address name string.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winsock/apistart_9g1e.htm">Windows Sockets Overview</a>
+</p>
+
+</body>
+</html>

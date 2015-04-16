@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Pure wrapper</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Pure wrapper"/>
+<MSHelp:RLTitle Title="Pure wrapper"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_Pure"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Pure Wrapper"/>
+<MSHelp:Keyword Index="F" Term="pure"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Pure wrapper</h1>
+
+<p>The <a href="class_window.htm"><b>Window</b></a> class and its descendants have
+several methods - handlers for chosen messages. For all remaining messages as well
+as user-defined messages these classes have one common method: <b>HandleMessage</b>.
+</p>
+
+<p>It is possible to configure the WinAPI Wrapper so that the <b>Window</b>-based
+classes don't have these additional methods; in such case they have the one and only method
+<b>HandleMessage</b>. To configure the WinAPI Wrapper this way you need to <i>#define
+PURE_WRAPPER</i> before including the WinAPI Wrapper header. For example:</p>
+
+<pre>#define PURE_WRAPPER
+#include &lt;winapi.h>
+
+using namespace WinAPI;
+
+class MainWindow: public Window {
+public:
+    MainWindow() { Create( "Title" ); }
+    virtual int HandleMessage( int uMsg, int wParam, int lParam ) {
+        switch ( uMsg ) {
+
+        case WM_CREATE:
+            return 1;
+
+        case WM_DESTROY:
+            PostQuitMessage( 0 );
+            return 0;
+
+        case WM_PAINT:
+            {   PaintDC dc( *this );
+                dc.TextOut( WPoint( 50, 50 ), "Hello, World!" );
+            }
+            return 0;
+
+        default:
+            return Window::HandleMessage( uMsg, wParam, lParam );
+
+        }
+    }
+};
+
+namespace {
+    Application< MainWindow > app;
+}</pre>
+
+<p>As you can see in the pure wrapper configuration the <b>HandleMessage</b> method serves
+as a pure representation of the <b>WindowProc</b>. You have to handle in it messages such
+as <i>WM_CREATE</i>, <i>WM_INITDIALOG</i>, <i>WM_CLOSE</i>, <i>WM_DESTROY</i>,
+<i>WM_PAINT</i>, <i>WM_COMMAND</i>, <i>WM_NOTIFY</i>, <i>WM_SIZE</i>, etc.
+Compare the above example to the first example in the <a href="usage_samples.htm">Examples</a> section.
+</p>
+
+<p>Another very important thing in case of a pure wrapper is the inclusion of correct
+static library. The libraries for the pure wrapper have a <i>p</i> letter in their names,
+that is: <i>WinAPIp.lib</i> and <i>WinAPIpd.lib</i> (release and debug, respectively).
+See <a href="usage_project.htm">Creating a project</a>.</p>
+
+<h4>See Also</h4>
+
+<p>
+<a href="usage_samples.htm">Examples</a>,
+<a href="usage_project.htm">Creating a project</a>
+</p>
+
+</body>
+</html>

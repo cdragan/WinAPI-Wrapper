@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Thread</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Thread"/>
+<MSHelp:RLTitle Title="Thread"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Thread"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Thread"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Thread"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Run"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Run"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Suspend"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Suspend"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Resume"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Resume"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Exit"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Exit"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Sleep"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Sleep"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::SetPriority"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::SetPriority"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::GetPriority"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::GetPriority"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::SetAffinityMask"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::SetAffinityMask"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::SetIdealProcessor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::SetIdealProcessor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Thread::Terminate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Thread::Terminate"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Thread</h1>
+
+<p>
+The <b>Thread</b> class simplifies the use of threads.
+See <a href="ms-help://MS.MSDNVS/dllproc/prothred_0t83.htm">Multiple Threads</a> for details.
+</p>
+
+<p>The <b>Thread</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Thread</b></td>
+<td width="30%">-</td>
+<td width="40%">Does nothing. Use Create() to actually create the thread.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_4084.htm"><b>CreateThread</b></a></td>
+<td width="40%">Creates thread in either running (default) or suspended state. You can call it in the constructor of a derived (final) class.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>~Thread</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/synchro_4ldg.htm"><b>WaitForSingleObject</b></a> <a href="ms-help://MS.MSDNVS/helplib/handobj_289x.htm"><b>CloseHandle</b></a></td>
+<td width="40%">Waits until the thread terminates and then destroys all its remainings.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Run</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_9wkj.htm"><b>ThreadProc</b></a></td>
+<td width="40%">An abstract method for derived classes. It is called as the actual thread procedure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Suspend</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_7gkk.htm"><b>SuspendThread</b></a></td>
+<td width="40%">Suspends a running thread.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Resume</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_59no.htm"><b>ResumeThread</b></a></td>
+<td width="40%">Resumes a suspended thread.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Exit</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_531g.htm"><b>ExitThread</b></a></td>
+<td width="40%">Stops execution of a thread as if the thread procedure ended.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Sleep</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_7jxs.htm"><b>Sleep</b></a></td>
+<td width="40%">Suspends thread execution for a specified amount of time.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPriority</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_9f5l.htm"><b>SetThreadPriority</b></a></td>
+<td width="40%">Sets thread priority.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPriority</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_9uk9.htm"><b>GetThreadPriority</b></a></td>
+<td width="40%">Returns current thread priority.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetAffinityMask</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_017v.htm"><b>SetThreadAffinityMask</b></a></td>
+<td width="40%">Selects processors on which the thread can run.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetIdealProcessor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_1y9e.htm"><b>SetThreadIdealProcessor</b></a></td>
+<td width="40%">Selects the preferred processor for the thread.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Terminate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/dllproc/prothred_7h2c.htm"><b>TerminateThread</b></a></td>
+<td width="40%">Called from another thread breaks execution of the thread and kills it. The use of this function is strongly discouraged.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/dllproc/prothred_86sz.htm">Processes and Threads Overview</a>,
+<a href="ms-help://MS.MSDNVS/dllproc/prothred_3mgj.htm">Processes and Threads Functions</a>,
+<a href="ms-help://MS.MSDNVS/dllproc/prothred_0t83.htm">Multiple Threads</a>
+</p>
+
+</body>
+</html>

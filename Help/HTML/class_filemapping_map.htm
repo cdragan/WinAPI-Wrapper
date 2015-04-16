@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>FileMapping::Map</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="FileMapping::Map"/>
+<MSHelp:RLTitle Title="FileMapping::Map"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_FileMapping_Map"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping::Map"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping::Map"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping::Map::GetSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping::Map::GetSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::FileMapping::Map::Size"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::FileMapping::Map::Size"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>FileMapping::Map</h1>
+
+<p>
+The <b>FileMapping::Map</b> represents an area of memory that is a <b>mapped</b> file mapping.
+It is an utility class for the <a href="class_filemapping.htm"><b>FileMapping</b></a>.
+See <a href="ms-help://MS.MSDNVS/fileio/filemap_61d3.htm">File Mapping Overview</a> for details.
+</p>
+
+<p>The <b>FileMapping::Map</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FileMapping::Map</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filemap_8p9h.htm"><b>MapViewOfFile</b></a></td>
+<td width="40%">Maps a view of file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FileMapping::~Map</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filemap_9011.htm"><b>UnmapViewOfFile</b></a></td>
+<td width="40%">Unmaps a view of file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator void*</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns starting address of the mapped buffer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator char*</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns starting address of the mapped buffer.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator[]</b></td>
+<td width="30%">-</td>
+<td width="40%">Provides direct array access to the mapped buffer. (No offest validity check is performed)</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSize</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns size of the mapped area.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Size</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns size of the mapped area.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="class_filemapping.htm"><b>FileMapping</b></a>,
+<a href="ms-help://MS.MSDNVS/fileio/filemap_61d3.htm">File Mapping Overview</a>,
+<a href="ms-help://MS.MSDNVS/fileio/filemap_0583.htm">File Mapping Functions</a>
+</p>
+
+</body>
+</html>

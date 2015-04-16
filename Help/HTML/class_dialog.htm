@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Dialog</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Dialog"/>
+<MSHelp:RLTitle Title="Dialog"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Dialog"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Dialog"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Dialog"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Dialog::Dialog"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Dialog::Dialog"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Dialog::EndDialog"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Dialog::EndDialog"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Dialog::Go"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Dialog::Go"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Dialog::OnInitDialog"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Dialog::OnInitDialog"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Dialog</h1>
+
+<p>
+The <b>Dialog</b> class is derived from the <a href="class_window.htm"><b>Window</b></a> class.
+It is designed to handle modal dialogs and it extends the <a href="ms-help://MS.MSDNVS/winui/dlgboxes_5lib.htm"><b>DialogProc</b></a> C procedure with C++ functionality.
+For modeless dialogs use the <a href="class_modelessdialog.htm"><b>ModelessDialog</b></a>.
+See the Remarks section for details.
+</p>
+
+<p>The <b>Dialog</b> class has the following functions and methods:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI phenomena</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Dialog</b></td>
+<td width="30%">-</td>
+<td width="40%">Initializes the object with an identifier of the dialog resource.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EndDialog</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_9up3.htm"><b>EndDialog</b></a></td>
+<td width="40%">Destroys the dialog box. Use this for modal dialog boxes instead of <b>GenericWindow::Destroy()</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Go</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_4ib1.htm"><b>DialogBoxParam</b></a></td>
+<td width="40%">Executes the dialog box.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OnInitDialog</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_4n1j.htm"><b>WM_INITDIALOG</b></a></td>
+<td width="40%">This method is issued during the creation of the dialog box instead of <b>WM_CREATE</b>.</td>
+</tr>
+
+</table>
+
+<h3>Remarks</h3>
+<p>
+A dialog box never receives <b>WM_CREATE</b>, <b>WM_PAINT</b>, <b>WM_KEYDOWN</b> or <b>WM_KEYUP</b> messages,
+so the corresponding methods from <b>Window</b> are hidden in the <b>Dialog</b> class.
+The rest of the methods are the same as in <b>Window</b>. However, unlike a <b>Window</b>-derived
+object, objects based on <b>Dialog</b>-derived classes can be created statically and are
+not automatically destroyed - they must be destroyed explicitly.
+</p>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="class_window.htm"><b>Window</b></a>
+</p>
+
+</body>
+</html>

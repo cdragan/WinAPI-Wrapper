@@ -1,0 +1,518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>DC</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="DC"/>
+<MSHelp:RLTitle Title="DC"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_DC"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::CompatibleDC"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::CompatibleDC"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::ClientDC"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::ClientDC"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::WindowDC"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::WindowDC"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::DCEx"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::DCEx"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PaintDC"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PaintDC"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::DC"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::DC"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::IsValid"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::IsValid"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Cancel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Cancel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetPixel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetPixel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PatBlt"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PatBlt"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::BitBlt"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::BitBlt"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::StretchBlt"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::StretchBlt"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::FillRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::FillRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::FrameRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::FrameRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::InvertRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::InvertRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Ellipse"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Ellipse"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Rectangle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Rectangle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::RoundRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::RoundRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Chord"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Chord"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Pie"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Pie"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Polygon"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Polygon"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PolyPolygon"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PolyPolygon"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Arc"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Arc"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::AngleArc"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::AngleArc"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetArcDirection"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetArcDirection"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::MoveTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::MoveTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::LineTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::LineTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::Polyline"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::Polyline"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PolylineTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PolylineTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PolyBezier"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PolyBezier"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PolyBezierTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PolyBezierTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PolyDraw"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PolyDraw"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetBkMode"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetBkMode"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::GetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::GetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::GetBkMode"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::GetBkMode"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::InvertRgn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::InvertRgn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::PaintRgn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::PaintRgn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::FillRgn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::FillRgn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::FrameRgn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::FrameRgn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::DrawText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::DrawText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::TextOut"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::TextOut"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::GetTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::GetTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetTextAlign"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetTextAlign"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::GetTextAlign"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::GetTextAlign"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::GetTextExtentPoint"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::GetTextExtentPoint"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::GetTextExtentPoint32"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::GetTextExtentPoint32"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::GetTextMetrics"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::GetTextMetrics"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetStretchBltMode"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetStretchBltMode"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::SetBrushOrg"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::SetBrushOrg"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::DrawCaption"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::DrawCaption"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::DrawEdge"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::DrawEdge"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::DrawFocusRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::DrawFocusRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::DC::DrawFrameControl"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::DC::DrawFrameControl"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>DC</h1>
+
+<p>
+The <b>DC</b> class extends Device Context with C++ functionality.
+See <a href="ms-help://MS.MSDNVS/gdi/devcons_0g6r.htm">Device Contexts Overview</a> for details.
+</p>
+
+<p>
+The <b>DC</b> class does not contain any create/delete functionality. This functionality
+is supplied by appropriate autodestructive classes:
+</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="33%">Class</th>
+<th align="left" width="33%">Constructor calls:</th>
+<th align="left" width="33%">Destructor calls:</th>
+</tr>
+
+<tr valign="top">
+<td width="33%"><a href="class_compatibledc.htm"><b>CompatibleDC</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/devcons_499f.htm"><b>CreateCompatibleDC</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/devcons_2p2b.htm"><b>DeleteDC</b></a></td>
+</tr>
+
+<tr valign="top">
+<td width="33%"><a href="class_clientdc.htm"><b>ClientDC</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/devcons_4esj.htm"><b>GetDC</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/devcons_66hv.htm"><b>ReleaseDC</b></a></td>
+</tr>
+
+<tr valign="top">
+<td width="33%"><a href="class_windowdc.htm"><b>WindowDC</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_0hcz.htm"><b>GetWindowDC</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/devcons_66hv.htm"><b>ReleaseDC</b></a></td>
+</tr>
+
+<tr valign="top">
+<td width="33%"><a href="class_dcex.htm"><b>DCEx</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/devcons_76wo.htm"><b>GetDCEx</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/devcons_66hv.htm"><b>ReleaseDC</b></a></td>
+</tr>
+
+<tr valign="top">
+<td width="33%"><a href="class_paintdc.htm"><b>PaintDC</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_7b78.htm"><b>BeginPaint</b></a></td>
+<td width="33%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_1th0.htm"><b>EndPaint</b></a></td>
+</tr>
+
+</table>
+
+<p>The <b>DC</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DC</b></td>
+<td width="30%">-</td>
+<td width="40%">Assigns an existing <i>HDC</i> handle to the object.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsValid</b></td>
+<td width="30%">-</td>
+<td width="40%">Checks whether the handle kept by the object is nonzero.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HDC</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the <i>HDC</i> handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Cancel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/devcons_0677.htm"><b>CancelDC</b></a></td>
+<td width="40%">Cancels any pending DC operations.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPixel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/bitmaps_3030.htm"><b>SetPixel</b></a></td>
+<td width="40%">Sets a pixel to a specified color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PatBlt</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/brushes_9vuc.htm"><b>PatBlt</b></a></td>
+<td width="40%">Paints a rectangle using the specified brush.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>BitBlt</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/bitmaps_0fzo.htm"><b>BitBlt</b></a></td>
+<td width="40%">Bit block transfer (e.g. copy from one DC to another).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>StretchBlt</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/bitmaps_9cok.htm"><b>StretchBlt</b></a></td>
+<td width="40%">Bit block transfer with stretching/skewing capability.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FillRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_6i0k.htm"><b>FillRect</b></a></td>
+<td width="40%">Fills a rectangle with a brush.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FrameRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_4jec.htm"><b>FrameRect</b></a></td>
+<td width="40%">Draws a border around a rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InvertRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_8lh0.htm"><b>InvertRect</b></a></td>
+<td width="40%">Inverts a rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Ellipse</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_417p.htm"><b>Ellipse</b></a></td>
+<td width="40%">Draws an ellipse.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Rectangle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_6kth.htm"><b>Rectangle</b></a></td>
+<td width="40%">Draws a rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>RoundRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_98dw.htm"><b>RoundRect</b></a></td>
+<td width="40%">Draws a rectangle with rounded corners.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Chord</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_2gys.htm"><b>Chord</b></a></td>
+<td width="40%">Draws a chord.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Pie</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_85np.htm"><b>Pie</b></a></td>
+<td width="40%">Draws a pie.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Polygon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_0u26.htm"><b>Polygon</b></a></td>
+<td width="40%">Draws a polygon.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PolyPolygon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fillshap_3fhq.htm"><b>PolyPolygon</b></a></td>
+<td width="40%">Draws a list of polygons.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Arc</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_6uoz.htm"><b>Arc</b></a></td>
+<td width="40%">Draws an elliptic arc.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AngleArc</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_6ijn.htm"><b>AngleArc</b></a></td>
+<td width="40%">Draws a line segment arc.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetArcDirection</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_87ce.htm"><b>SetArcDirection</b></a></td>
+<td width="40%">Sets drawing direction for rectangle and arc drawing functions.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MoveTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_4660.htm"><b>MoveToEx</b></a></td>
+<td width="40%">Moves pen to a specified location.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>LineTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_7567.htm"><b>LineTo</b></a></td>
+<td width="40%">Draws a line segment from the current pen location to a new location (and moves the pen).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Polyline</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_10bp.htm"><b>Polyline</b></a></td>
+<td width="40%">Draws a list of line segments.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PolylineTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_34dr.htm"><b>PolylineTo</b></a></td>
+<td width="40%">Draws a list of line segments taking into account the current pen position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PolyBezier</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_2d2q.htm"><b>PolyBezier</b></a></td>
+<td width="40%">Draws a list of Bezier curves.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PolyBezierTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_9vjj.htm"><b>PolyBezierTo</b></a></td>
+<td width="40%">Draws a list of Bezier curves taking into account the current pen position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PolyDraw</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/linecurv_6tyv.htm"><b>PolyDraw</b></a></td>
+<td width="40%">Draws a list of segments and Bezier curves.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_433m.htm"><b>SetBkColor</b></a></td>
+<td width="40%">Sets the current background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkMode</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_47hh.htm"><b>SetBkMode</b></a></td>
+<td width="40%">Sets the current background mix mode.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_4fua.htm"><b>GetBkColor</b></a></td>
+<td width="40%">Returns current background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBkMode</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_0xk5.htm"><b>GetBkMode</b></a></td>
+<td width="40%">Returns current background mix mode.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InvertRgn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_91ke.htm"><b>InvertRgn</b></a></td>
+<td width="40%">Inverts colors of a specified region.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PaintRgn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_2vfy.htm"><b>PaintRgn</b></a></td>
+<td width="40%">Paints a region with current brush.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FillRgn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_5vvy.htm"><b>FillRgn</b></a></td>
+<td width="40%">Fills a region with specified brush.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FrameRgn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_1y5q.htm"><b>FrameRgn</b></a></td>
+<td width="40%">Draws a border around a region.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DrawText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_0odw.htm"><b>DrawText</b></a></td>
+<td width="40%">Draws formatted text in a rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TextOut</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_5yd0.htm"><b>TextOut</b></a></td>
+<td width="40%">Draws text at the specified point.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_8bsi.htm"><b>SetTextColor</b></a></td>
+<td width="40%">Sets current text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_7xv6.htm"><b>GetTextColor</b></a></td>
+<td width="40%">Returns current text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTextAlign</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_20by.htm"><b>SetTextAlign</b></a></td>
+<td width="40%">Sets text alignment.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextAlign</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_1mem.htm"><b>GetTextAlign</b></a></td>
+<td width="40%">Returns current text alignment.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextExtentPoint</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_15kk.htm"><b>GetTextExtentExPoint</b></a></td>
+<td width="40%">Calculates number of characters of a string that will fit in a specified rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextExtentPoint32</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_8smq.htm"><b>GetTextExtentPoint32</b></a></td>
+<td width="40%">Calculates width and height of a specified string taking into account current font.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextMetrics</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/fontext_6rlf.htm"><b>GetTextMetrics</b></a></td>
+<td width="40%">Returns font metrics in a <a href="ms-help://MS.MSDNVS/gdi/fontext_7ss2.htm"><b>TEXTMETRIC</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetStretchBltMode</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/bitmaps_6cth.htm"><b>SetStretchBltMode</b></a></td>
+<td width="40%">Sets streching mode for <b>StretchBlt</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBrushOrg</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/brushes_9c1k.htm"><b>SetBrushOrgEx</b></a></td>
+<td width="40%">Sets brush origin.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DrawCaption</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_1mwe.htm"><b>DrawCaption</b></a></td>
+<td width="40%">Draws window caption.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DrawEdge</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_6aat.htm"><b>DrawEdge</b></a></td>
+<td width="40%">Draws an edge.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DrawFocusRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_6ng4.htm"><b>DrawFocusRect</b></a></td>
+<td width="40%">Draws a focus rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DrawFrameControl</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/pantdraw_4b3g.htm"><b>DrawFrameControl</b></a></td>
+<td width="40%">Draws frame of a windows control.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/gdi/devcons_0g6r.htm">Device Contexts Overview</a>,
+<a href="ms-help://MS.MSDNVS/gdi/devcons_7e2b.htm">Device Context Functions</a>
+</p>
+
+</body>
+</html>

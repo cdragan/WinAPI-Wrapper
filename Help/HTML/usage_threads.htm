@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Multithreading</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Multithreading"/>
+<MSHelp:RLTitle Title="Multithreading"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_Multithreading"/>
+<MSHelp:Keyword Index="K" Term="threading, support in WinAPI Wrapper"/>
+<MSHelp:Keyword Index="F" Term="thread"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Multithreading</h1>
+
+<p>The WinAPI Wrapper supports multithreading through three basic classes:
+<a href="class_thread.htm"><b>Thread</b></a>, <a href="class_semaphore.htm"><b>Semaphore</b></a> and
+<a href="class_criticalsection.htm"><b>CriticalSection</b></a>. These classes are sufficient
+for almost every multithreading logic or framework.</p>
+
+<h3>Thread</h3>
+
+<p>Typicaly a Windows thread is represented by one function. The function is executed "in parallel"
+with other threads and with the main thread. Normally it is difficult to create threads and
+to pass them their private data. The WinAPI Wrapper simplifies this through the
+<a href="class_thread.htm"><b>Thread</b></a> class. The <b>Thread</b> class has one
+abstract method: <b>Run</b>. To create a thread you have to:</p>
+
+<ol>
+<li>Derive a class from the <b>Thread</b> class.</li>
+<li>Override the <b>Run</b> method that will be the thread function.</li>
+<li>Create an object of your class.</li>
+<li>Call its <b>Thread::Create</b> function to make the thread running.</li>
+</ol>
+
+<p>The contents of the class are private to every thread created with that class.
+You can use miscellaneous functions of the thread (such as <b>SetPriority</b> or <b>Suspend</b>).
+</p>
+
+<p>The thread is not created/run by the constructor of the <b>Thread</b> class, but rather
+by its <b>Create</b> function. The <b>Create</b> function should not be called
+by the constructor of the derived classes, unless you are absolutely sure it won't
+spoil anything (you should take into account further derived classes and further
+initialization after <b>Create</b>).</p>
+
+<p>The destructor of the <b>Thread</b> class waits until the thread finishes (until its
+<b>Run</b> method exits). Therefore the thread object exists at least as long as the
+actual thread runs.</p>
+
+<p>Example:</p>
+
+<pre>#include &lt;winapi.h>
+
+using namespace WinAPI;
+
+class SomeDialog: public Dialog {
+    /*...*/
+};
+
+class MyThread: public Thread {
+public:
+    MyThread() { }
+private:
+    virtual void Run() {
+        SomeDialog dlg;
+        dlg.Go();
+    }
+};
+
+int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow )
+{
+    MyThread thread;
+    thread.Create();
+    return 0;
+}</pre>
+
+<p>The above example example is only for educational purposes. The thread is run after
+its object has been created in <b>WinMain</b>. The thread only creates some hypothetical
+dialog box and waits until the user closes it. The <b>WinMain</b> function would exit
+after calling thread's <b>Create</b> function, but it waits on the destructor of
+<b>MyThread</b> for the created thread to exit.</p>
+
+<h3>Semaphore</h3>
+
+<p>Semaphores are the most common way of synchronizing between threads and to
+count access to resources. The <a href="class_semaphore.htm"><b>Semaphore</b></a> class
+has two functions: <b>Acquire</b> (decrements semaphore's count waiting for it to
+become nonzero if it is zero) and <b>Release</b> (increments semaphore's count). The
+actual Windows semaphore object is created in the constructor and destroyed in the
+destructor of the <b>Semaphore</b> class. Semaphore objects are non-copyable, so you can
+only pass references or pointers to them.</p>
+
+<h3>CriticalSection</h3>
+
+<p>Critical sections are more widely known as mutexes. Critical sections are actually
+special cases of mutexes, because they are local to one process and they synchronize
+only threads of one process.</p>
+
+<p>Critical sections are usually used to guard access to resources, so that only one
+thread at one time accesses a particular guarder resource. To gain access to the
+guarded resource a thread must call <b>CriticalSection::Enter</b> and to release
+the resource for use by other threads it calls <b>CriticalSection::Leave</b>.
+</p>
+
+<p>The access to a critical section is simplified by the <a href="class_criticalsection_lock.htm"><b>CriticalSection::Lock</b></a> class.
+Creating the object of the lock class locks the resource guarded by the specified critical section.
+The destructor of the lock class releases the critical section automatically. For example:</p>
+
+<pre>class SomeResource: public CriticalSection {
+public:
+    void SomeOperation();
+};
+
+void SomeResource::SomeOperation()
+{
+    CriticalSection::Lock lock( *this );
+
+    /* Perform some operations on the resource here */
+}</pre>
+
+<p>The above is a classic example of a guarded resource. The resource for simplicity is
+derived from the <b>CriticalSection</b> (so that it is easier to lock it than it would
+be if the critical section was contained within the resource class as its field).
+Calling the <b>SomeOperation</b> function automatically locks the resource for the
+period of executing this function, because a lock is created on entry and it is destroyed
+(releases the resource) when the function exits.</p>
+
+<h3>Windows with threads</h3>
+
+<p>It is sometimes a good idea to create a window with a thread through inheritance.
+This way the thread obtains full access to the contents of the window and vice versa.
+The following example shows a progress dialog, that contains one progress bar and
+a cancel button. The thread that is the part of the window performs some time-consuming
+task, but it doesn't block the user interface, and even the user can break the task in the middle.</p>
+
+<pre>class ProgressDialog: public Dialog, public Thread {
+    ProgressBar progress;
+    volatile bool b_break_requested;
+public:
+    ProgressDialog(): Dialog( IDD_PROGRESS ) { }
+protected:
+    virtual bool OnInitDialog( HWND hwndFocus, LPARAM lParam ) {
+
+        // Clear the request-to-break flag
+        b_break_requested = false;
+
+        // Initialize progress bar
+        progress = ProgressBar( GetDlgItem( IDC_PROGRESSBAR ) );
+        progress.SetRange( 0, 100 );
+        progress.SetPos( 0 );
+
+        // Start the thread
+        Thread::Create();
+    }
+    virtual void OnCommand( int nIdentifier, int nNotifyCode, HWND hwndControl ) {
+        switch ( nIdentifier ) {
+
+        case IDCANCEL:
+            b_break_requested = true;
+            break;
+
+        case ID_TASK_FINISHED:
+            EndDialog();
+            break;
+
+        }
+    }
+private:
+    virtual void Run() {
+
+        // Perform 100 time-consuming steps of some task
+        for ( int istep=0; istep &lt; 100; istep++ ) {
+
+            // See if the user requested to quit
+            if ( b_break_requested ) break;
+
+            // Perform some time-consuming step of a task
+            /*...*/
+
+            // Set progress on the progressbar
+            progress.SetPos( istep + 1 );
+        }
+
+        // Signal the end of processing so that the dialog may close
+        PostMessage( WM_COMMAND, ID_TASK_FINISHED );
+    }
+};</pre>
+
+<p>The above example dialog box consists of three methods. In the <b>OnInitDialog</b> method (<i>WM_INITDIALOG</i>)
+the dialog is initialized and it sets the range of the progress bar (to 100 steps of a task) and
+clears the request-to-break flag; then it calls <b>Thread::Create</b> to start its auxiliary thread.
+</p>
+
+<p>In the <b>Run</b> method (which is run on the auxiliary thread "parallel" to the UI thread)
+the dialog performs some time-consuming task in 100 steps. During every step it not only
+display the progress of the task, but it also checks whether the user has pressed
+the "Cancel" button to cancel the task (if he did, the task is stopped).</p>
+
+<p>In the <b>OnCommand</b> method the dialog receives <i>IDCANCEL</i> from the "Cancel"
+button and sets the request-to-break flag if the user pressed it. The <i>ID_TASK_FINISHED</i>
+command is sent by the thread if it finished the task - in this case the dialog simply closes.
+so that the <b>Dialog::Go</b> function returns.</p>
+
+<h4>See Also</h4>
+
+<p>
+<a href="classes.htm">Class Reference</a>
+</p>
+
+</body>
+</html>

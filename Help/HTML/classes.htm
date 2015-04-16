@@ -1,0 +1,637 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>WinAPI Wrapper classes</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Class Reference"/>
+<MSHelp:RLTitle Title="Class Reference"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Classes"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Class Reference"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>WinAPI Wrapper classes</h1>
+
+<p>The following classes are part of the WinAPI Wrapper.</p>
+
+<p>The classes have several types:
+<ul>
+<li><b>helper</b> - A helper class. Making objects of this class makes no sense.
+<li><b>autodestr.</b> - An autodestructive class. The destructor of the class destroys
+the actual Windows object that the class enhances.
+<li><b>transparent</b> - A transparent class. The class provides simplified WinAPI
+functionality for Windows objects but does not destroy them.
+<li><b>alloc only</b> - A class that serves the purpose of allocating new objects only.
+The class does not destroy the objects, because they are indestructible (like window
+classes).
+<li><b>dynamic</b> - A dynamically allocated class. You don't use this class directly,
+but rather derive your own classes from it. Later on, you dynamically allocate objects
+of your derived class and you <b>never</b> create them statically (e.g. on the stack).
+<li><b>extractable</b> - An autodestructive class with an option of extracting the
+object from it to avoid its destruction through the destructor.
+</ul>
+</p>
+
+<p>
+The class hierarchy is not represented by a diagram because it is not really
+a real class hierarchy, except maybe for the windowing classes. Some classes are simply
+derived from <b>NonCopyAble</b> just to prevent copying their objects.
+</p>
+
+<p>
+The descriptions of functions are very brief. You can find complex descriptions
+in the WinAPI documentation, which is referenced by appropriate links aside by
+each function. The function arguments are not described, because most of the times
+their naming and meaning is exactly the same as of the related WinAPI functions and
+you have appropriate tools in your development environment to view the lists or
+arguments as tooltips or you can quick jump to the definitions in the header file.
+</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="20%">Class</th>
+<th align="left" width="10%">Type</th>
+<th align="left" width="35%">Base classes</th>
+<th align="left" width="35%">Related WinAPI object</th>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_noncopyable.htm"><b>NonCopyAble</b></a></td>
+<td width="10%">helper</td>
+<td width="35%">-</td>
+<td width="35%">-</td>
+</tr>
+
+<tr valign="top">
+<th colspan="4" align="left">Miscellaneous classes</th>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_address.htm"><b>Address</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">in_addr</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_application.htm"><b>Application&lt;T></b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%"><i>multiple</i></td>
+<td width="35%">-</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_autoimagelist.htm"><b>AutoImageList</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">ImageList, NonCopyAble</td>
+<td width="35%">HIMAGELIST (autonomic)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_cominitializer.htm"><b>COMInitializer</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">COM library</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_criticalsection.htm"><b>CriticalSection</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">CRITICAL_SECTION</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_criticalsection_lock.htm"><b>CriticalSection::Lock</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">CRITICAL_SECTION</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_file.htm"><b>File</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">HANDLE (file object)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_filemapping.htm"><b>FileMapping</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">HANDLE (file mapping)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_filemapping_map.htm"><b>FileMapping::Map</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">HANDLE (mapped view of file)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_filetime.htm"><b>FileTime</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">FILETIME</td>
+<td width="35%">FILETIME</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_findfile.htm"><b>FindFile</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">HANDLE, WIN32_FIND_DATA (file finder)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_getfilenamedialog.htm"><b>GetFileNameDialog</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">OPENFILENAME</td>
+<td width="35%">GetOpenFileName()/GetSaveFileName()</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_getfolderdialog.htm"><b>GetFolderDialog</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">BROWSEINFO</td>
+<td width="35%">SHBrowseForFolder()</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_imagelist.htm"><b>ImageList</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">HIMAGELIST</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_iptr.htm"><b>IPtr&lt;T></b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">IPtrBase</td>
+<td width="35%">COM interface pointer</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_menu.htm"><b>Menu</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">HMENU</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_messagequeue.htm"><b>MessageQueue</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">MSG</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_regkey.htm"><b>RegKey</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">HKEY</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_semaphore.htm"><b>Semaphore</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">HANDLE (semaphore)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_socket.htm"><b>Socket</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">SOCKET</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_thread.htm"><b>Thread</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">HANDLE (thread)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_wpoint.htm"><b>WPoint</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">POINT</td>
+<td width="35%">POINT</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_wsize.htm"><b>WSize</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">SIZE</td>
+<td width="35%">SIZE</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_wrect.htm"><b>WRect</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">RECT</td>
+<td width="35%">RECT</td>
+</tr>
+
+<tr>
+<th colspan="4" align="left">Windowing classes</th>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_windowclass.htm"><b>WindowClass</b></a></td>
+<td width="10%">alloc only</td>
+<td width="35%">NonCopyAble</td>
+<td width="35%">WNDCLASS (generic window class)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_genericwindow.htm"><b>GenericWindow</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">HWND</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_desktopwindow.htm"><b>DesktopWindow</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">GenericWindow</td>
+<td width="35%">HWND (GetDesktopWindow())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_foregroundwindow.htm"><b>ForegroundWindow</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">GenericWindow</td>
+<td width="35%">HWND (GetForegroundWindow())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_window.htm"><b>Window</b></a></td>
+<td width="10%">dynamic</td>
+<td width="35%">GenericWindow, NonCopyAble</td>
+<td width="35%">WindowProc (generic window)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_dialog.htm"><b>Dialog</b></a></td>
+<td width="10%">dynamic</td>
+<td width="35%">Window</td>
+<td width="35%">DialogProc (modal dialog)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_modelessdialog.htm"><b>ModelessDialog</b></a></td>
+<td width="10%">dynamic</td>
+<td width="35%">Dialog</td>
+<td width="35%">DialogProc (modeless dialog)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_mdiframewindow.htm"><b>MDIFrameWindow</b></a></td>
+<td width="10%">dynamic</td>
+<td width="35%">Window</td>
+<td width="35%">WindowProc (MDI frame window)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_mdichildwindowclass.htm"><b>MDIChildWindowClass</b></a></td>
+<td width="10%">alloc only</td>
+<td width="35%">WindowClass</td>
+<td width="35%">WNDCLASS (window class for MDI children)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_mdichildwindow.htm"><b>MDIChildWindow</b></a></td>
+<td width="10%">dynamic</td>
+<td width="35%">Window</td>
+<td width="35%">WindowProc (MDI child window)</td>
+</tr>
+
+<tr>
+<th colspan="4" align="left">GDI classes</th>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_dc.htm"><b>DC</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">HDC (generic DC)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_compatibledc.htm"><b>CompatibleDC</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">DC, NonCopyAble</td>
+<td width="35%">HDC (CreateCompatibleDC())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_clientdc.htm"><b>ClientDC</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">DC, NonCopyAble</td>
+<td width="35%">HDC (GetDC())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_windowdc.htm"><b>WindowDC</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">DC, NonCopyAble</td>
+<td width="35%">HDC (GetWindowDC())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_dcex.htm"><b>DCEx</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">DC, NonCopyAble</td>
+<td width="35%">HDC (GetDCEx())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_paintdc.htm"><b>PaintDC</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">DC, NonCopyAble</td>
+<td width="35%">HDC (BeginPaint())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_selectobj.htm"><b>SelectObj</b></a></td>
+<td width="10%">autodestr.</td>
+<td width="35%">DC, NonCopyAble</td>
+<td width="35%">HGDIOBJ (SelectObject())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_gdiobject.htm"><b>GDIObject</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">HGDIOBJ (generic)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_stockobject.htm"><b>StockObject</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">GDIObject</td>
+<td width="35%">HGDIOBJ (GetStockObject())</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_gdiobjectbase.htm"><b>GDIObjectBase</b></a></td>
+<td width="10%">extractable</td>
+<td width="35%">GDIObject, NonCopyAble</td>
+<td width="35%">HGDIOBJ (generic base class)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_bitmap.htm"><b>Bitmap</b></a></td>
+<td width="10%">extractable</td>
+<td width="35%">GDIObjectBase</td>
+<td width="35%">HBITMAP</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_brush.htm"><b>Brush</b></a></td>
+<td width="10%">extractable</td>
+<td width="35%">GDIObjectBase</td>
+<td width="35%">HBRUSH</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_font.htm"><b>Font</b></a></td>
+<td width="10%">extractable</td>
+<td width="35%">GDIObjectBase</td>
+<td width="35%">HFONT</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_pen.htm"><b>Pen</b></a></td>
+<td width="10%">extractable</td>
+<td width="35%">GDIObjectBase</td>
+<td width="35%">HPEN</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_region.htm"><b>Region</b></a></td>
+<td width="10%">extractable</td>
+<td width="35%">GDIObjectBase</td>
+<td width="35%">HRGN</td>
+</tr>
+
+<tr>
+<th colspan="4" align="left">Controls</th>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_control.htm"><b>Control</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">GenericWindow</td>
+<td width="35%">HWND (generic control)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_button.htm"><b>Button</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">"BUTTON"</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_checkbox.htm"><b>CheckBox</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Button</td>
+<td width="35%">"BUTTON" (BS_AUTOCHECKBOX)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_defpushbutton.htm"><b>DefPushButton</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Button</td>
+<td width="35%">"BUTTON" (BS_DEFPUSHBUTTON)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_radiobutton.htm"><b>RadioButton</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Button</td>
+<td width="35%">"BUTTON" (BS_AUTORADIOBUTTON)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_threestate.htm"><b>ThreeState</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Button</td>
+<td width="35%">"BUTTON" (BS_AUTO3STATE)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_combobox.htm"><b>ComboBox</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">"COMBOBOX"</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_comboboxex.htm"><b>ComboBoxEx</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">ComboBox</td>
+<td width="35%">WC_COMBOBOXEX</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_edit.htm"><b>Edit</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">"EDIT"</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_groupbox.htm"><b>GroupBox</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Button</td>
+<td width="35%">"BUTTON" (BS_GROUPBOX)</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_headercontrol.htm"><b>HeaderControl</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">WC_HEADER</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_hotkey.htm"><b>HotKey</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">HOTKEY_CLASS</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_listbox.htm"><b>ListBox</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">"LISTBOX"</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_listview.htm"><b>ListView</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">WC_LISTVIEW</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_pager.htm"><b>Pager</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">WC_PAGESCROLLER</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_progressbar.htm"><b>ProgressBar</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">PROGRESS_CLASS</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_rebar.htm"><b>Rebar</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">REBARCLASSNAME</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_static.htm"><b>Static</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">"STATIC"</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_scrollbar.htm"><b>ScrollBar</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">"SCROLLBAR"</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_statusbar.htm"><b>StatusBar</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">STATUSCLASSNAME</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_tabcontrol.htm"><b>TabControl</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">WC_TABCONTROL</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_toolbar.htm"><b>Toolbar</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">TOOLBARCLASSNAME</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_tooltip.htm"><b>ToolTip</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">TOOLTIP_CLASS</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_trackbar.htm"><b>Trackbar</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">TRACKBAR_CLASS</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_treeitem.htm"><b>TreeItem</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">-</td>
+<td width="35%">HTREEITEM</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_treeview.htm"><b>TreeView</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">WC_TREEVIEW</td>
+</tr>
+
+<tr valign="top">
+<td width="20%"><a href="class_updown.htm"><b>UpDown</b></a></td>
+<td width="10%">transparent</td>
+<td width="35%">Control</td>
+<td width="35%">UPDOWN_CLASS</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>
+</p>
+
+</body>
+</html>

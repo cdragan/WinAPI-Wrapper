@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Region</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Region"/>
+<MSHelp:RLTitle Title="Region"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Region"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Region"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Region"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Region::Region"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Region::Region"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Region::SetRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Region::SetRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Region::IsPtInside"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Region::IsPtInside"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Region::GetData"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Region::GetData"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Region::OffsetBy"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Region::OffsetBy"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::Region::GetBox"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::Region::GetBox"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Region</h1>
+
+<p>
+The <b>Region</b> class provides automatic management (creating and destroying) of region GDI objects.
+It is derived from the <a href="class_gdiobjectbase.htm"><b>GDIObjectBase</b></a> class.
+See <a href="ms-help://MS.MSDNVS/gdi/regions_7ab7.htm">Regions Overview</a> for details.
+</p>
+
+<p>The <b>Region</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Region</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_8u9g.htm"><b>CreateRectRgnIndirect</b></a> <a href="ms-help://MS.MSDNVS/gdi/regions_6q3y.htm"><b>CreatePolygonRgn</b></a> <a href="ms-help://MS.MSDNVS/gdi/regions_2c32.htm"><b>ExtCreateRegion</b></a></td>
+<td width="40%">Creates a region.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HRGN</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the region handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_8nqm.htm"><b>SetRectRgn</b></a></td>
+<td width="40%">Converts region to a rectangular region of the specified dimensions.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsPtInside</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_3bn2.htm"><b>PtInRegion</b></a></td>
+<td width="40%">Determines whether a point is inside the region.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetData</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_3i01.htm"><b>GetRegionData</b></a></td>
+<td width="40%">Obtains region description in form of a <a href="ms-help://MS.MSDNVS/gdi/regions_6702.htm"><b>RGNDATA</b></a> structure.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>OffsetBy</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_0m26.htm"><b>OffsetRgn</b></a></td>
+<td width="40%">Moves region by the specified amounts in X and Y directions.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBox</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/gdi/regions_19o8.htm"><b>GetRgnBox</b></a></td>
+<td width="40%">Returns a bounding rectangle of the region.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/gdi/regions_7ab7.htm">Regions Overview</a>,
+<a href="ms-help://MS.MSDNVS/gdi/regions_6o6r.htm">Region Functions</a>
+</p>
+
+</body>
+</html>

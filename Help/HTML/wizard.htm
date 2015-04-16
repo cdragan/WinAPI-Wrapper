@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>AppWizard</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="AppWizard"/>
+<MSHelp:RLTitle Title="AppWizard"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_AppWizard"/>
+<MSHelp:Keyword Index="K" Term="application wizards, and WinAPI Wrapper"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, AppWizard"/>
+<MSHelp:Keyword Index="F" Term="AppWizard"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>AppWizard</h1>
+
+<p>If the WinAPI Wrapper is used in Microsoft Visual Studio .NET environment, there
+is an additional AppWizard for it. The AppWizard creates a simple, skeleton application.
+It can serve educational purposes as well as for a quickstart project.</p>
+
+<p>The AppWizard appears under the name "WinAPI Wrapper" in the <i>Visual C++ Projects</i> section in the <i>New Project</i>
+dialog box. The AppWizard lets you select the following options when creating a skeleton application:
+
+<ul>
+<li><b>Application (or main window) type.</b> You can select either SDI (a regular main window derived
+from the <a href="class_window.htm"><b>Window</b></a> class), MDI (MDI application with main window
+derived from the <a href="class_mdiframewindow.htm"><b>MDIFrameWindow</b></a> class and a sample
+document window derived from the <a href="class_mdichildwindow.htm"><b>MDIChildWindow</b></a> class) or
+Dialog-based application (the main window is a modeless dialog derived from the <a href="class_modelessdialog.htm"><b>ModelessDialog</b></a>
+class).</li>
+<li><b>What message handlers to create.</b> With the regular WinAPI Wrapper settings
+to handle chosen messages there are methods created in the main window class (or in the document window class in case of
+an MDI application). If a pure wrapper configuration is used, however,
+there is only one method <b>HandleMessage</b> created, but chosen messages appear in its
+<i>switch</i> statement.</li>
+<li><b>Additional options.</b> You can choose to create an empty accelerator table
+and to take it into account in the message loop, you can select a pure wrapper configuration,
+you can drop support for STL in the WinAPI Wrapper header, you can make an application
+with precompiled headers (faster compile) or you can choose your application to be
+skinnable in Windows XP.</li>
+<li><b>Extended main window options.</b> You can choose to create custom window class,
+menu, toolbar on optional rebar or statusbar.</li>
+</ul></p>
+
+</body>
+</html>

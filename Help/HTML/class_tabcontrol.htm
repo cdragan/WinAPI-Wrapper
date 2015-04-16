@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>TabControl</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="TabControl"/>
+<MSHelp:RLTitle Title="TabControl"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_TabControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::TabControl"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::TabControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::AdjustRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::AdjustRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::DeleteAllItems"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::DeleteAllItems"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::DeleteItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::DeleteItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::DeselectAll"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::DeselectAll"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetCurFocus"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetCurFocus"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetCurSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetCurSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetExtendedStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetExtendedStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetItemText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetItemText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetItemImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetItemImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetItemParam"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetItemParam"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetItemState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetItemState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetItemCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetItemCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetItemRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetItemRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetRowCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetRowCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::HighlightItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::HighlightItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::HitTest"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::HitTest"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::InsertItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::InsertItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::RemoveImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::RemoveImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetCurFocus"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetCurFocus"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetCurSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetCurSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetExtendedStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetExtendedStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetItemState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetItemState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetItemExtra"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetItemExtra"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetItemSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetItemSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetMinTabWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetMinTabWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetPadding"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetPadding"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::TabControl::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::TabControl::SetUnicodeFormat"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>TabControl</h1>
+
+<p>
+The <b>TabControl</b> class extends the TabControl standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Tab.htm">Tab Controls Overview</a> for details.
+</p>
+
+<p>The <b>TabControl</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related macro</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TabControl</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AdjustRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_AdjustRect.htm"><b>TabCtrl_AdjustRect</b></a></td>
+<td width="40%">Calculates adjusted rectangle taking into account tab control's stuff.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteAllItems</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_DeleteAllItems.htm"><b>TabCtrl_DeleteAllItems</b></a></td>
+<td width="40%">Deletes all tabs.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_DeleteItem.htm"><b>TabCtrl_DeleteItem</b></a></td>
+<td width="40%">Deletes a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeselectAll</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_DeselectAll.htm"><b>TabCtrl_DeselectAll</b></a></td>
+<td width="40%">Deselects all tabs.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCurFocus</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetCurFocus.htm"><b>TabCtrl_GetCurFocus</b></a></td>
+<td width="40%">Returns index of currently focused tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCurSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetCurSel.htm"><b>TabCtrl_GetCurSel</b></a></td>
+<td width="40%">Returns index of currently selected tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetExtendedStyle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetExtendedStyle.htm"><b>TabCtrl_GetExtendedStyle</b></a></td>
+<td width="40%">Returns extended style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetImageList.htm"><b>TabCtrl_GetImageList</b></a></td>
+<td width="40%">Returns image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetItem.htm"><b>TabCtrl_GetItem</b></a></td>
+<td width="40%">Returns tab configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetItem.htm"><b>TabCtrl_GetItem</b></a></td>
+<td width="40%">Returns tab text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetItem.htm"><b>TabCtrl_GetItem</b></a></td>
+<td width="40%">Returns tab image index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemParam</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetItem.htm"><b>TabCtrl_GetItem</b></a></td>
+<td width="40%">Returns tab parameter.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetItem.htm"><b>TabCtrl_GetItem</b></a></td>
+<td width="40%">Returns tab state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetItemCount.htm"><b>TabCtrl_GetItemCount</b></a></td>
+<td width="40%">Returns number of tabs.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetItemRect.htm"><b>TabCtrl_GetItemRect</b></a></td>
+<td width="40%">Returns tab rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRowCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetRowCount.htm"><b>TabCtrl_GetRowCount</b></a></td>
+<td width="40%">Returns the number of rows of tabs.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetToolTips.htm"><b>TabCtrl_GetToolTips</b></a></td>
+<td width="40%">Returns ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_GetUnicodeFormat.htm"><b>TabCtrl_GetUnicodeFormat</b></a></td>
+<td width="40%">Returns unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HighlightItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_HighlightItem.htm"><b>TabCtrl_HighlightItem</b></a></td>
+<td width="40%">Highlights a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HitTest</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_HitTest.htm"><b>TabCtrl_HitTest</b></a></td>
+<td width="40%">Returns tab index at the specified screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_InsertItem.htm"><b>TabCtrl_InsertItem</b></a></td>
+<td width="40%">Inserts a new tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>RemoveImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_RemoveImage.htm"><b>TabCtrl_RemoveImage</b></a></td>
+<td width="40%">Removes an image from the control's image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCurFocus</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetCurFocus.htm"><b>TabCtrl_SetCurFocus</b></a></td>
+<td width="40%">Sets focus to a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCurSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetCurSel.htm"><b>TabCtrl_SetCurSel</b></a></td>
+<td width="40%">Selects a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetExtendedStyle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetExtendedStyle.htm"><b>TabCtrl_SetExtendedStyle</b></a></td>
+<td width="40%">Sets extended style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetImageList.htm"><b>TabCtrl_SetImageList</b></a></td>
+<td width="40%">Sets new image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetItem.htm"><b>TabCtrl_SetItem</b></a></td>
+<td width="40%">Alters settings of a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetItem.htm"><b>TabCtrl_SetItem</b></a></td>
+<td width="40%">Alters state of a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemExtra</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetItemExtra.htm"><b>TabCtrl_SetItemExtra</b></a></td>
+<td width="40%">Changes the number of extra bytes per a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetItemSize.htm"><b>TabCtrl_SetItemSize</b></a></td>
+<td width="40%">Resizes a tab.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetMinTabWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetMinTabWidth.htm"><b>TabCtrl_SetMinTabWidth</b></a></td>
+<td width="40%">Sets minimum tab width.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetPadding</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetPadding.htm"><b>TabCtrl_SetPadding</b></a></td>
+<td width="40%">Sets padding around tabs' icons.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetToolTips.htm"><b>TabCtrl_SetToolTips</b></a></td>
+<td width="40%">Sets ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Macros/TabCtrl_SetUnicodeFormat.htm"><b>TabCtrl_SetUnicodeFormat</b></a></td>
+<td width="40%">Sets unicode format setting.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/Tab.htm">Tab Controls Overview</a>
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Tab/RefList.htm">Tab Control Reference</a>
+</p>
+
+</body>
+</html>

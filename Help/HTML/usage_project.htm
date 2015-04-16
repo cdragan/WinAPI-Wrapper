@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creating a project</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Creating a project"/>
+<MSHelp:RLTitle Title="Creating a project"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Project"/>
+<MSHelp:Keyword Index="K" Term="project properties, WinAPI Wrapper"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Creating a project"/>
+<MSHelp:Keyword Index="F" Term="project"/>
+<MSHelp:Keyword Index="F" Term="WinAPI, Wrapper"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Creating a project</h1>
+
+<p>You create a project that takes advantage of the WinAPI Wrapper project like any other
+project type (especially a Win32 Application/DLL project or an MFC project). You can
+also use the WinAPI Wrapper in normal Windows application and DLL projects.</p>
+
+<p>To use the WinAPI Wrapper, you have to <b>#include &lt;winapi.h></b> header file.
+Almost all functions in this header are inline, but not all. Some of the functions
+have been precompiled and reside in static libraries. This libraries must be accessible
+during linking (what was pointed out in <a href="usage_intro.htm">Installation notes</a>.
+However, in Microsoft Visual Studio you have to define the libraries in the project
+file, because they are not the default libraries.</p>
+
+<p>In order to specify an additional library for a project in Microsoft Visual Studio .NET,
+you have to open project properties (e.g. right-click on a project name in Solution Explorer
+and choose Properties), then select Linker/Input in the left-hand treeview and then
+add the library names (separated by spaces) as the Additional Dependencies.
+</p>
+
+<p>The following table specifies which libraries to use in which project configurations:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Library</th>
+<th align="left" width="70%">When to use</th>
+</tr>
+
+<tr valign="top">
+<td width="30%">WinAPI.lib</td>
+<td width="70%">Normal use of the WinAPI Wrapper, Release project configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%">WinAPId.lib</td>
+<td width="70%">Normal use of the WinAPI Wrapper, Debug project configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%">WinAPIp.lib</td>
+<td width="70%">Use pure WinAPI Wrapper, Release project configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%">WinAPIpd.lib</td>
+<td width="70%">Use pure WinAPI Wrapper, Debug project configuration.</td>
+</tr>
+
+</table>
+
+<p>In other words, the pure wrapper static libraries have an additional <b>p</b> letter
+in the name. See <a href="usage_pure.htm">Pure Wrapper</a> for more information on
+pure WinAPI Wrapper. You add a <b>d</b> letter to the library name in Debug project configurations.</p>
+
+</body>
+</html>

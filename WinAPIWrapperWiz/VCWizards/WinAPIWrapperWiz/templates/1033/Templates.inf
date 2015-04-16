@@ -1,0 +1,19 @@
+stdafx.h
+[!if PRE_COMPILED_HEADER]
+stdafx.cpp
+[!endif]
+main_window.h
+main_window.cpp
+[!if MDI_APP]
+document_window.h
+document_window.cpp
+[!endif]
+resource.h
+root.rc
+[!if TOOLBAR]
+CopyOnly | toolbar.bmp
+[!endif]
+[!if XP_MANIFEST]
+root.exe.manifest
+[!endif]
+CopyOnly | root.ico

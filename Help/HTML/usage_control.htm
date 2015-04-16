@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Accessing controls in dialog boxes</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Accessing controls in dialog boxes"/>
+<MSHelp:RLTitle Title="Accessing controls in dialog boxes"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_ControlsInDialogs"/>
+<MSHelp:Keyword Index="K" Term="dialog box controls, accessing [WinAPI Wrapper]"/>
+<MSHelp:Keyword Index="F" Term="dialog"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Accessing controls in dialog boxes</h1>
+
+<p>Controls in dialog boxes are explicitly created together with the dialogs. A dialog
+box class can access them using the <b>GetDlgItem</b> function. However, the controls
+have their own classes, therefore a type cast is required.</p>
+
+<p>The following example shows a local, in-line solution:</p>
+
+<pre>class SomeDialog: public Dialog {
+protected:
+    /* ... */
+    virtual void OnCommand( int nIdentifier, int nNotifyCode, HWND hwndControl ) {
+        switch ( nIdentifier ) {
+
+        case IDC_BUTTON:
+            <b>Edit edit( GetDlgItem( IDC_EDITBOX ) );</b>
+            string s = edit.GetLine( 0 );
+            break;
+
+        }
+    }
+    /* ... */
+};</pre>
+
+<p>In the above example the control object is created in-place, when it is needed.
+The control variable has to be created every time it is needed. Another solution is
+to create a single class variable once, so that it can be accessed as many times
+as needed and as long as the dialog box is alive:</p>
+
+<pre>class SomeDialog: public Dialog {
+    <b>Edit edit;</b>
+protected:
+    /* ... */
+    virtual bool OnInitDialog( HWND hwndFocus, LPARAM lParam ) {
+        /* ... */
+        <b>edit.Assign( GetDlgItem( IDC_EDITBOX ) );</b>
+        return true;
+    }
+    virtual void OnCommand( int nIdentifier, int nNotifyCode, HWND hwndControl ) {
+        switch ( nIdentifier ) {
+
+        case IDC_BUTTON:
+            string s = edit.GetLine( 0 );
+            break;
+
+        }
+    }
+    /* ... */
+};</pre>
+
+<p>The <b>Assign</b> function called during dialog box initialization (<i>WM_INITDIALOG</i>)
+exchanges the <i>HWND</i> handle of the control that the control object supports.</p>
+
+<h4>See Also</h4>
+
+<p>
+<a href="usage_dialog.htm">Creating dialog boxes</a>,
+<a href="class_control.htm"><b>Control</b></a>
+</p>
+
+</body>
+</html>

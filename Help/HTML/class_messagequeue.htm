@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>MessageQueue</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="MessageQueue"/>
+<MSHelp:RLTitle Title="MessageQueue"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_MessageQueue"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MessageQueue"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MessageQueue"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MessageQueue::GetMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MessageQueue::GetMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MessageQueue::PeekMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MessageQueue::PeekMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MessageQueue::TranslateMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MessageQueue::TranslateMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MessageQueue::DispatchMessage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MessageQueue::DispatchMessage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MessageQueue::TranslateAccelerator"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MessageQueue::TranslateAccelerator"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::MessageQueue::TranslateMDISysAccel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::MessageQueue::TranslateMDISysAccel"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>MessageQueue</h1>
+
+<p>
+The <b>MessageQueue</b> class extends the <a href="ms-help://MS.MSDNVS/winui/messques_39f6.htm"><b>MSG</b></a>
+structure with C++ functionality. Is is provided primarily for internal use by the
+<a href="class_application.htm"><b>Application&lt;T></b></a> class.
+See <a href="ms-help://MS.MSDNVS/winui/messques_0ilv.htm">Messages and Message Queues Overview</a> for details.
+</p>
+
+<p>The <b>MessageQueue</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/messques_10kl.htm"><b>GetMessage</b></a></td>
+<td width="40%">Gets a message from the actual queue to the <b>MessageQueue</b> object removing the message from the queue. If the message queue is empty, the function waits until some message appears in it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>PeekMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/messques_8085.htm"><b>PeekMessage</b></a></td>
+<td width="40%">Similar to <b>GetMessage</b>, but does not wait for messages if the message queue is empty.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TranslateMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/messques_8vj9.htm"><b>TranslateMessage</b></a></td>
+<td width="40%">Resolves key and system key messages after <b>GetMessage</b> or <b>PeekMessage</b>.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DispatchMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/messques_55b9.htm"><b>DispatchMessage</b></a></td>
+<td width="40%">Dispatches message to a window procedure (the window is specified by the message itself).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TranslateAccelerator</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/keybacel_25o2.htm"><b>TranslateAccelerator</b></a></td>
+<td width="40%">Translates message through an accelerator table to create a WM_COMMAND message.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>TranslateMDISysAccel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/mdocint_04rw.htm"><b>TranslateMDISysAccel</b></a></td>
+<td width="40%">Similar to <b>TranslateAccelerator</b>, but works with a Windows internal accelerator table for MDI children.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsDialogMessage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/dlgboxes_5t45.htm"><b>IsDialogMessage</b></a></td>
+<td width="40%">Processes dialog box messages - useful for modeless dialog boxes.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/messques_0ilv.htm">Messages and Message Queues Overview</a>,
+<a href="ms-help://MS.MSDNVS/winui/messques_910z.htm">Messages and Message Queues Functions</a>
+</p>
+
+</body>
+</html>

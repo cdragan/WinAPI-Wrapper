@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>StatusBar</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="StatusBar"/>
+<MSHelp:RLTitle Title="StatusBar"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_StatusBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::StatusBar"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::StatusBar"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetBorders"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetBorders"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetIcon"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetIcon"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetParts"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetParts"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetPartType"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetPartType"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetTextLen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetTextLen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetTipText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetTipText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::IsSimple"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::IsSimple"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::SetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::SetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::SetIcon"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::SetIcon"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::SetMinHeight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::SetMinHeight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::SetParts"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::SetParts"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::SetText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::SetText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::SetTipText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::SetTipText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::StatusBar::Simple"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::StatusBar::Simple"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>StatusBar</h1>
+
+<p>
+The <b>StatusBar</b> class extends the StatusBar standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Status.htm">Status Bars Overview</a> for details.
+</p>
+
+<p>The <b>StatusBar</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>StatusBar</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBorders</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETBORDERS.htm"><b>SB_GETBORDERS</b></a></td>
+<td width="40%">Returns status bar border sizes.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetIcon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETICON.htm"><b>SB_GETICON</b></a></td>
+<td width="40%">Returns part's icon.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetParts</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETPARTS.htm"><b>SB_GETPARTS</b></a></td>
+<td width="40%">Returns number of parts and where they end.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETRECT.htm"><b>SB_GETRECT</b></a></td>
+<td width="40%">Returns part's rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetPartType</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETTEXTLENGTH.htm"><b>SB_GETTEXTLENGTH</b></a></td>
+<td width="40%">Returns part type.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextLen</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETTEXTLENGTH.htm"><b>SB_GETTEXTLENGTH</b></a></td>
+<td width="40%">Returns string length of a part.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETTEXT.htm"><b>SB_GETTEXT</b></a></td>
+<td width="40%">Returns part's string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTipText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETTIPTEXT.htm"><b>SB_GETTIPTEXT</b></a></td>
+<td width="40%">Returns part's tip text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETUNICODEFORMAT.htm"><b>SB_GETUNICODEFORMAT</b></a></td>
+<td width="40%">Returns unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsSimple</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_ISSIMPLE.htm"><b>SB_ISSIMPLE</b></a></td>
+<td width="40%">Tests whether the status bar is in simple mode.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_SETBKCOLOR.htm"><b>SB_SETBKCOLOR</b></a></td>
+<td width="40%">Sets background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetIcon</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_GETICON.htm"><b>SB_GETICON</b></a></td>
+<td width="40%">Sets part's icon.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetMinHeight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_SETMINHEIGHT.htm"><b>SB_SETMINHEIGHT</b></a></td>
+<td width="40%">Sets minimum height of drawing area.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetParts</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_SETPARTS.htm"><b>SB_SETPARTS</b></a></td>
+<td width="40%">Sets part sizes.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_SETTEXT.htm"><b>SB_SETTEXT</b></a></td>
+<td width="40%">Sets part's text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTipText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_SETTIPTEXT.htm"><b>SB_SETTIPTEXT</b></a></td>
+<td width="40%">Sets part's tip text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_SETUNICODEFORMAT.htm"><b>SB_SETUNICODEFORMAT</b></a></td>
+<td width="40%">Sets unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Simple</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Messages/SB_SIMPLE.htm"><b>SB_SIMPLE</b></a></td>
+<td width="40%">Switches between simple mode and displaying all parts.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/Status.htm">Status Bars Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/Status/RefList.htm">Status Bar Reference</a>
+</p>
+
+</body>
+</html>

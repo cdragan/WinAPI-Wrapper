@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Basic ideas</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Basic Ideas"/>
+<MSHelp:RLTitle Title="Basic Ideas"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Basics"/>
+<MSHelp:Keyword Index="K" Term="WinAPI Wrapper, Basics"/>
+<MSHelp:Keyword Index="F" Term="WinAPI, Wrapper"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Basic ideas</h1>
+
+<p>
+The main idea behind the WinAPI Wrapper is to provide a C++ layer for the WinAPI.
+The Wrapper does not change any functionality of the WinAPI, but rather enhances
+it with the capabilities of C++.
+</p>
+
+<p>
+All classes of the WinAPI Wrapper reside in the <b>namespace WinAPI</b>.
+The following code includes all required WinAPI headers (such as <i>windows.h</i>
+or <i>commctrl.h</i>) and puts all WinAPI Wrapper classes in the global namespace:
+</p>
+<pre>#include &lt;winapi.h>
+
+using namespace WinAPI;</pre>
+
+<p>
+The WinAPI Wrapper undefines the <b>min</b> and <b>max</b> macros, so the equivalent
+C++ functions from the standard library can be used.
+</p>
+
+<p>
+The WinAPI Wrapper is mainly aimed at writing executable programs and not DLLs
+(although it is very easy to use it for writing DLLs).
+Because executables are usually loaded at address 0x00400000 (4MBytes) their
+module handle equals to that number. The WinAPI Wrapper defines a special macro
+<b>__MODULE_HANDLE</b> which also equals to that value and it is used in all
+places where <i>HINSTANCE</i> is required. To change this behavior, you can define the
+macro yourself before including <i>winapi.h</i> header.
+</p>
+
+<pre>#define __MODULE_HANDLE GetModuleHandle( 0 )
+#include &lt;winapi.h></pre>
+
+<p>
+The WinAPI Wrapper should work with any modern C++ compiler, but it is especially
+aimed at Microsoft Visual C++ .NET. To provide enough compatibility with the
+Win64 model, the Wrapper introduces a new function cast: <b>windows_cast</b>. It is
+especially useful in places where you have to convert between Windows types, such
+as <i>LPARAM</i> and <i>HWND</i>, avoiding the annoying warning messages 4311 and 4312. Example:
+</p>
+
+<pre>HWND hWnd = /* ... */;
+LPARAM lParam = windows_cast< LPARAM >( hWnd );</pre>
+
+<p>
+Certain kinds of objects should not be copied, because the copying of them would introduce
+unnecessary complexity (like copying self-closable <i>File</i> objects), a special class
+<i>NonCopyAble</i> is used as a base class for those objects' classes. The idea of
+the <i>NonCopyAble</i> class was taken from the <a href="http://www.boost.org/">Boost</a>
+library.
+</p>
+
+<p>
+There are two kinds of classes in the WinAPI Wrapper. The first kind - transparent classes -
+does not destroy the actual objects. These classes serve as "wrappers" for actual
+Windows objects (like the <i>GenericWindow</i> class enhances <i>HWND</i>). The other
+kind - self-destructible classes - allocate objects in the constructor and destroy them
+in the destructor, so the object lives as long as the object of the class and it is
+usually non-copyable (an example is the <a href="class_paintdc.htm"><b>PaintDC</b></a> class that calls <i>BeginPaint</i>
+in the constructor and <i>EndPaint</i> in the destructor). It is recommended to use
+references to pass the second kind of objects to functions.
+</p>
+
+</body>
+</html>

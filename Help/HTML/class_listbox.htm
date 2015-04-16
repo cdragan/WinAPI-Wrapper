@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>ListBox</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="ListBox"/>
+<MSHelp:RLTitle Title="ListBox"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_ListBox"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::ListBox"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::ListBox"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::AddFile"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::AddFile"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::AddString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::AddString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::InsertString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::InsertString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::DeleteString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::DeleteString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::ResetContent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::ResetContent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::FindString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::FindString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::FindStringExact"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::FindStringExact"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::Dir"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::Dir"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetCurSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetCurSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetCurSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetCurSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SelectString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SelectString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetHorizontalExtent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetHorizontalExtent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetHorizontalExtent"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetHorizontalExtent"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetItemData"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetItemData"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetItemData"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetItemData"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetItemHeight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetItemHeight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetItemHeight"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetItemHeight"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetTextLen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetTextLen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetLocale"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetLocale"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetLocale"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetLocale"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetTopIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetTopIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetTopIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetTopIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetAnchorIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetAnchorIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetAnchorIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetAnchorIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetCaretIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetCaretIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetCaretIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetCaretIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetItemRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetItemRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetSel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetSel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetSelCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetSelCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::GetSelItems"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::GetSelItems"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::ItemFromPoint"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::ItemFromPoint"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SelItemRange"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SelItemRange"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetColumnWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetColumnWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::SetTabStops"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::SetTabStops"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListBox::MakeDragList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListBox::MakeDragList"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>ListBox</h1>
+
+<p>
+The <b>ListBox</b> class extends the ListBox standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/winui/listbox_9s4z.htm">List Boxes Overview</a> for details.
+</p>
+
+<p>The <b>ListBox</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related message</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ListBox</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddFile</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_9691.htm"><b>LB_ADDFILE</b></a></td>
+<td width="40%">Adds a filename to a listbox with directory listing.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>AddString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_74kn.htm"><b>LB_ADDSTRING</b></a></td>
+<td width="40%">Adds a string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_1nfr.htm"><b>LB_INSERTSTRING</b></a></td>
+<td width="40%">Inserts a string at a specified index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_7jzb.htm"><b>LB_DELETESTRING</b></a></td>
+<td width="40%">Deletes a string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ResetContent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_2584.htm"><b>LB_RESETCONTENT</b></a></td>
+<td width="40%">Removes all contents of the listbox.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FindString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_0ixz.htm"><b>LB_FINDSTRING</b></a></td>
+<td width="40%">Finds an item begining with the speicified string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FindStringExact</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_2nqs.htm"><b>LB_FINDSTRINGEXACT</b></a></td>
+<td width="40%">Finds a string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Dir</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_5lpu.htm"><b>LB_DIR</b></a></td>
+<td width="40%">Fills the list box with a directory listing.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_52b8.htm"><b>LB_GETCOUNT</b></a></td>
+<td width="40%">Returns the number of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCurSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_58ks.htm"><b>LB_GETCURSEL</b></a></td>
+<td width="40%">Returns current selection.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCurSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_8ii4.htm"><b>LB_SETCURSEL</b></a></td>
+<td width="40%">Selects an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SelectString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_5jaf.htm"><b>LB_SELECTSTRING</b></a></td>
+<td width="40%">Selects an item starting with the specified string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHorizontalExtent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_7jsk.htm"><b>LB_GETHORIZONTALEXTENT</b></a></td>
+<td width="40%">Returns number of pixels by which the list box can be scrolled horizontally.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHorizontalExtent</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_4j1w.htm"><b>LB_SETHORIZONTALEXTENT</b></a></td>
+<td width="40%">Sets number of pixels by which the list box can be scrolled horizontally.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemData</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_3ysh.htm"><b>LB_GETITEMDATA</b></a></td>
+<td width="40%">Returns user item value.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemData</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_1bdt.htm"><b>LB_SETITEMDATA</b></a></td>
+<td width="40%">Sets user item value.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemHeight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_9q7o.htm"><b>LB_GETITEMHEIGHT</b></a></td>
+<td width="40%">Returns height of every item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemHeight</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_4hh0.htm"><b>LB_SETITEMHEIGHT</b></a></td>
+<td width="40%">Sets height of every item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextLen</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_1qr2.htm"><b>LB_GETTEXTLEN</b></a></td>
+<td width="40%">Returns length of an item's string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_6a9g.htm"><b>LB_GETTEXT</b></a></td>
+<td width="40%">Returns an item's string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetLocale</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_7y3p.htm"><b>LB_GETLOCALE</b></a></td>
+<td width="40%">Returns current locale.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetLocale</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_1811.htm"><b>LB_SETLOCALE</b></a></td>
+<td width="40%">Sets new locale.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTopIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_3u0o.htm"><b>LB_GETTOPINDEX</b></a></td>
+<td width="40%">Returns index of the first visible item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTopIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_16m0.htm"><b>LB_SETTOPINDEX</b></a></td>
+<td width="40%">Makes the specified item visible.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetAnchorIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_40mw.htm"><b>LB_GETANCHORINDEX</b></a></td>
+<td width="40%">Returns index of an anchor item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetAnchorIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_8h88.htm"><b>LB_SETANCHORINDEX</b></a></td>
+<td width="40%">Makes an item an anchor item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCaretIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_9tiw.htm"><b>LB_GETCARETINDEX</b></a></td>
+<td width="40%">Returns index of an item that has the caret.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCaretIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_4ks8.htm"><b>LB_SETCARETINDEX</b></a></td>
+<td width="40%">Sets the focus rectangle to a specific item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_2yes.htm"><b>LB_GETITEMRECT</b></a></td>
+<td width="40%">Returns the rectangle of an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_7tm4.htm"><b>LB_GETSEL</b></a></td>
+<td width="40%">Retrieves selection state of an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetSel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_5zjg.htm"><b>LB_SETSEL</b></a></td>
+<td width="40%">Alters selection state of an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSelCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_8df8.htm"><b>LB_GETSELCOUNT</b></a></td>
+<td width="40%">Returns the number of selected items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSelItems</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_2mgj.htm"><b>LB_GETSELITEMS</b></a></td>
+<td width="40%">Returns indices of selected items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ItemFromPoint</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_1w1g.htm"><b>LB_ITEMFROMPOINT</b></a></td>
+<td width="40%">Returns index of an item at the specified display position in client coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SelItemRange</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_4xt1.htm"><b>LB_SELITEMRANGE</b></a></td>
+<td width="40%">Selects one or more consecutive items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetColumnWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_8hk8.htm"><b>LB_SETCOLUMNWIDTH</b></a></td>
+<td width="40%">Sets column width in a multi-column listbox.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_7awk.htm"><b>LB_SETCOUNT</b></a></td>
+<td width="40%">Sets the number of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTabStops</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/listbox_9bzn.htm"><b>LB_SETTABSTOPS</b></a></td>
+<td width="40%">Sets tab stops.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>MakeDragList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/DragLB/Functions/MakeDragList.htm"><b>MakeDragList</b></a></td>
+<td width="40%">Changes a single-selection listbox into a drag listbox.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/winui/listbox_9s4z.htm">List Boxes Overview</a>,
+<a href="ms-help://MS.MSDNVS/winui/listbox_05rn.htm">List Box Messages</a>
+</p>
+
+</body>
+</html>

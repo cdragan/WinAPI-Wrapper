@@ -1,0 +1,722 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>ListView</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="ListView"/>
+<MSHelp:RLTitle Title="ListView"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_ListView"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::ListView"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::ListView"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::Create"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::Create"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::ApproximateViewRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::ApproximateViewRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::Arrange"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::Arrange"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::CreateDragImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::CreateDragImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::DeleteAllItems"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::DeleteAllItems"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::DeleteColumn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::DeleteColumn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::DeleteItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::DeleteItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::EditLabel"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::EditLabel"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::EnsureVisible"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::EnsureVisible"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::FindItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::FindItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetBkImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetBkImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetCallbackMask"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetCallbackMask"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetCheckState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetCheckState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetColumn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetColumn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetColumnOrderArray"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetColumnOrderArray"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetColumnWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetColumnWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetCountPerPage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetCountPerPage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetEditControl"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetEditControl"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetExtendedListViewStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetExtendedListViewStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetHeader"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetHeader"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetHotCursor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetHotCursor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetHotItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetHotItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetHoverTime"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetHoverTime"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetISearchString"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetISearchString"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemParam"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemParam"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemPosition"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemPosition"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemSpacing"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemSpacing"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetItemText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetItemText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetNextItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetNextItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetNumberOfWorkAreas"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetNumberOfWorkAreas"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetOrigin"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetOrigin"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetSelectedCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetSelectedCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetSelectionMark"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetSelectionMark"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetStringWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetStringWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetSubItemRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetSubItemRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetTextBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetTextBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetTopIndex"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetTopIndex"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetViewRect"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetViewRect"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::GetWorkAreas"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::GetWorkAreas"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::HitTest"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::HitTest"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::InsertColumn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::InsertColumn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::InsertItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::InsertItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::RedrawItems"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::RedrawItems"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::Scroll"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::Scroll"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetBkImage"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetBkImage"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetCallbackMask"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetCallbackMask"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetColumn"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetColumn"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetColumnOrderArray"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetColumnOrderArray"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetColumnWidth"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetColumnWidth"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetExtendedListViewStyle"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetExtendedListViewStyle"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetHotCursor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetHotCursor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetHotItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetHotItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetHoverTime"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetHoverTime"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetIconSpacing"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetIconSpacing"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetImageList"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetImageList"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetItem"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetItem"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetItemCount"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetItemCount"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetItemPosition"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetItemPosition"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetItemPosition32"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetItemPosition32"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetItemState"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetItemState"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetItemText"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetItemText"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetSelectionMark"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetSelectionMark"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetTextBkColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetTextBkColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetTextColor"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetTextColor"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetToolTips"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetToolTips"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetUnicodeFormat"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SetWorkAreas"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SetWorkAreas"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SortItems"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SortItems"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SortItemsEx"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SortItemsEx"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::SubItemHitTest"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::SubItemHitTest"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::ListView::Update"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::ListView::Update"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>ListView</h1>
+
+<p>
+The <b>ListView</b> class extends the ListView standard Windows control with C++ functionality.
+It is derived from the <a href="class_control.htm"><b>Control</b></a> class.
+See <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/ListView.htm">List-View Controls Overview</a> for details.
+</p>
+
+<p>The <b>ListView</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related macro</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ListView</b></td>
+<td width="30%">-</td>
+<td width="40%">Creates the object optionally assigning an existing control handle to it.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Create</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a></td>
+<td width="40%">Creates the control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>ApproximateViewRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_ApproximateViewRect.htm"><b>ListView_ApproximateViewRect</b></a></td>
+<td width="40%">Calculates rectangle size for a given number of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Arrange</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_Arrange.htm"><b>ListView_Arrange</b></a></td>
+<td width="40%">Arranges items in icon view.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>CreateDragImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_CreateDragImage.htm"><b>ListView_CreateDragImage</b></a></td>
+<td width="40%">Creates an image for dragging.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteAllItems</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_DeleteAllItems.htm"><b>ListView_DeleteAllItems</b></a></td>
+<td width="40%">Empties the listview.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteColumn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_DeleteColumn.htm"><b>ListView_DeleteColumn</b></a></td>
+<td width="40%">Deletes a column.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>DeleteItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_DeleteItem.htm"><b>ListView_DeleteItem</b></a></td>
+<td width="40%">Deletes an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EditLabel</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_EditLabel.htm"><b>ListView_EditLabel</b></a></td>
+<td width="40%">Initiates editing of a label.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>EnsureVisible</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_EnsureVisible.htm"><b>ListView_EnsureVisible</b></a></td>
+<td width="40%">Makes an item visible.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>FindItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_FindItem.htm"><b>ListView_FindItem</b></a></td>
+<td width="40%">Finds an item with the specified characteristics.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetBkColor.htm"><b>ListView_GetBkColor</b></a></td>
+<td width="40%">Returns background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetBkImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetBkImage.htm"><b>ListView_GetBkImage</b></a></td>
+<td width="40%">Returns background image.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCallbackMask</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetCallbackMask.htm"><b>ListView_GetCallbackMask</b></a></td>
+<td width="40%">Returns events for which the callback is called.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCheckState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetCheckState.htm"><b>ListView_GetCheckState</b></a></td>
+<td width="40%">Checks whether an item is selected.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetColumn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetColumn.htm"><b>ListView_GetColumn</b></a></td>
+<td width="40%">Returns column configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetColumnOrderArray</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetColumnOrderArray.htm"><b>ListView_GetColumnOrderArray</b></a></td>
+<td width="40%">Returns order of columns.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetColumnWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetColumnWidth.htm"><b>ListView_GetColumnWidth</b></a></td>
+<td width="40%">Returns array with column widths.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetCountPerPage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetCountPerPage.htm"><b>ListView_GetCountPerPage</b></a></td>
+<td width="40%">Returns number of items per page.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetEditControl</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetEditControl.htm"><b>ListView_GetEditControl</b></a></td>
+<td width="40%">Returns edit control while editing item text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetExtendedListViewStyle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetExtendedListViewStyle.htm"><b>ListView_GetExtendedListViewStyle</b></a></td>
+<td width="40%">Returns extended style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHeader</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetHeader.htm"><b>ListView_GetHeader</b></a></td>
+<td width="40%">Returns header control.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHotCursor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetHotCursor.htm"><b>ListView_GetHotCursor</b></a></td>
+<td width="40%">Returns hot cursor.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHotItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetHotItem.htm"><b>ListView_GetHotItem</b></a></td>
+<td width="40%">Returns current hot item under cursor.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetHoverTime</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Messages/LVM_GETHOVERTIME.htm"><b>LVM_GETHOVERTIME</b></a></td>
+<td width="40%">Returns the hover time (before the hot item is selected).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetImageList.htm"><b>ListView_GetImageList</b></a></td>
+<td width="40%">Returns listview's image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetISearchString</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetISearchString.htm"><b>ListView_GetISearchString</b></a></td>
+<td width="40%">Returns the incremental search string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItem.htm"><b>ListView_GetItem</b></a></td>
+<td width="40%">Returns item configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItem.htm"><b>ListView_GetItem</b></a></td>
+<td width="40%">Returns item image index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemParam</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItem.htm"><b>ListView_GetItem</b></a></td>
+<td width="40%">Returns item user parameter.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItemCount.htm"><b>ListView_GetItemCount</b></a></td>
+<td width="40%">Returns the number of items in the listview.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemPosition</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItemPosition.htm"><b>ListView_GetItemPosition</b></a></td>
+<td width="40%">Returns screen position of an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItemRect.htm"><b>ListView_GetItemRect</b></a></td>
+<td width="40%">Returns screen rectangle of an item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemSpacing</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItemSpacing.htm"><b>ListView_GetItemSpacing</b></a></td>
+<td width="40%">Returns spacing between items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItemState.htm"><b>ListView_GetItemState</b></a></td>
+<td width="40%">Returns item state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetItemText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetItemText.htm"><b>ListView_GetItemText</b></a></td>
+<td width="40%">Returns item text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNextItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetNextItem.htm"><b>ListView_GetNextItem</b></a></td>
+<td width="40%">Returns next item with the specified properties.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetNumberOfWorkAreas</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetNumberOfWorkAreas.htm"><b>ListView_GetNumberOfWorkAreas</b></a></td>
+<td width="40%">Returns the number of working areas.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetOrigin</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetOrigin.htm"><b>ListView_GetOrigin</b></a></td>
+<td width="40%">Returns the current view origin.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSelectedCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetSelectedCount.htm"><b>ListView_GetSelectedCount</b></a></td>
+<td width="40%">Returns the number of selected items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSelectionMark</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetSelectionMark.htm"><b>ListView_GetSelectionMark</b></a></td>
+<td width="40%">Returns the currently selected item index.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetStringWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetStringWidth.htm"><b>ListView_GetStringWidth</b></a></td>
+<td width="40%">Calculates width of a specified string.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSubItemRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetSubItemRect.htm"><b>ListView_GetSubItemRect</b></a></td>
+<td width="40%">Returns rectangle of a subitem.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetTextBkColor.htm"><b>ListView_GetTextBkColor</b></a></td>
+<td width="40%">Returns text background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetTextColor.htm"><b>ListView_GetTextColor</b></a></td>
+<td width="40%">Returns text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Messages/LVM_GETTOOLTIPS.htm"><b>LVM_GETTOOLTIPS</b></a></td>
+<td width="40%">Returns ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetTopIndex</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetTopIndex.htm"><b>ListView_GetTopIndex</b></a></td>
+<td width="40%">Returns index of first visible item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetUnicodeFormat.htm"><b>ListView_GetUnicodeFormat</b></a></td>
+<td width="40%">Returns unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetViewRect</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetViewRect.htm"><b>ListView_GetViewRect</b></a></td>
+<td width="40%">Returns current view rectangle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetWorkAreas</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_GetWorkAreas.htm"><b>ListView_GetWorkAreas</b></a></td>
+<td width="40%">Returns working areas.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>HitTest</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_HitTest.htm"><b>ListView_HitTest</b></a></td>
+<td width="40%">Returns index of an item under the specified screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertColumn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_InsertColumn.htm"><b>ListView_InsertColumn</b></a></td>
+<td width="40%">Inserts a new column.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>InsertItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_InsertItem.htm"><b>ListView_InsertItem</b></a></td>
+<td width="40%">Inserts a new item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>RedrawItems</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_RedrawItems.htm"><b>ListView_RedrawItems</b></a></td>
+<td width="40%">Redraws items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Scroll</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_Scroll.htm"><b>ListView_Scroll</b></a></td>
+<td width="40%">Scrolls by a specified amount.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetBkColor.htm"><b>ListView_SetBkColor</b></a></td>
+<td width="40%">Sets background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetBkImage</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetBkImage.htm"><b>ListView_SetBkImage</b></a></td>
+<td width="40%">Sets background image.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetCallbackMask</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetCallbackMask.htm"><b>ListView_SetCallbackMask</b></a></td>
+<td width="40%">Sets events to which the callback responds.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetColumn</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetColumn.htm"><b>ListView_SetColumn</b></a></td>
+<td width="40%">Alters column configuration.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetColumnOrderArray</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetColumnOrderArray.htm"><b>ListView_SetColumnOrderArray</b></a></td>
+<td width="40%">Sets order of columns.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetColumnWidth</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetColumnWidth.htm"><b>ListView_SetColumnWidth</b></a></td>
+<td width="40%">Sets column widths.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetExtendedListViewStyle</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetExtendedListViewStyle.htm"><b>ListView_SetExtendedListViewStyle</b></a></td>
+<td width="40%">Sets extended style.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHotCursor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetHotCursor.htm"><b>ListView_SetHotCursor</b></a></td>
+<td width="40%">Sets hot cursor.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHotItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetHotItem.htm"><b>ListView_SetHotItem</b></a></td>
+<td width="40%">Sets hot item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetHoverTime</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Messages/LVM_SETHOVERTIME.htm"><b>LVM_SETHOVERTIME</b></a></td>
+<td width="40%">Sets hover time (after which the item is selected).</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetIconSpacing</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetIconSpacing.htm"><b>ListView_SetIconSpacing</b></a></td>
+<td width="40%">Sets spacing between icons.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetImageList</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetImageList.htm"><b>ListView_SetImageList</b></a></td>
+<td width="40%">Sets new listview's image list.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItem</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetItem.htm"><b>ListView_SetItem</b></a></td>
+<td width="40%">Alters item configuration/data.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemCount</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetItemCount.htm"><b>ListView_SetItemCount</b></a> <a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetItemCountEx.htm"><b>ListView_SetItemCountEx</b></a></td>
+<td width="40%">Sets the number of items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemPosition</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetItemPosition.htm"><b>ListView_SetItemPosition</b></a></td>
+<td width="40%">Moves an item to a specified position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemPosition32</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetItemPosition32.htm"><b>ListView_SetItemPosition32</b></a></td>
+<td width="40%">Moves an item to a specified position.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemState</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Messages/LVM_SETITEMSTATE.htm"><b>LVM_SETITEMSTATE</b></a></td>
+<td width="40%">Sets item state.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetItemText</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetItemText.htm"><b>ListView_SetItemText</b></a></td>
+<td width="40%">Sets item text.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetSelectionMark</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetSelectionMark.htm"><b>ListView_SetSelectionMark</b></a></td>
+<td width="40%">Selects another item.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTextBkColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetTextBkColor.htm"><b>ListView_SetTextBkColor</b></a></td>
+<td width="40%">Sets text background color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTextColor</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetTextColor.htm"><b>ListView_SetTextColor</b></a></td>
+<td width="40%">Sets text color.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetToolTips</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Messages/LVM_SETTOOLTIPS.htm"><b>LVM_SETTOOLTIPS</b></a></td>
+<td width="40%">Sets ToolTip.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetUnicodeFormat</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetUnicodeFormat.htm"><b>ListView_SetUnicodeFormat</b></a></td>
+<td width="40%">Sets unicode format setting.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetWorkAreas</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SetWorkAreas.htm"><b>ListView_SetWorkAreas</b></a></td>
+<td width="40%">Sets working areas.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SortItems</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SortItems.htm"><b>ListView_SortItems</b></a></td>
+<td width="40%">Sorts items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SortItemsEx</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SortItemsEx.htm"><b>ListView_SortItemsEx</b></a></td>
+<td width="40%">Sorts items.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SubItemHitTest</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_SubItemHitTest.htm"><b>ListView_SubItemHitTest</b></a></td>
+<td width="40%">Returns index of a subitem at the specified screen coordinates.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Update</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/Macros/ListView_Update.htm"><b>ListView_Update</b></a></td>
+<td width="40%">Updates an item.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/ListView.htm">List-View Controls Overview</a>,
+<a href="ms-help://MS.MSDNVS/shellcc/platform/CommCtls/ListView/RefList.htm">List-View Control Reference</a>
+</p>
+
+</body>
+</html>

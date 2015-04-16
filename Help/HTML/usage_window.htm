@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creating windows and controls</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="Creating windows and controls"/>
+<MSHelp:RLTitle Title="Creating windows and controls"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_Usage_Creating_Windows"/>
+<MSHelp:Keyword Index="K" Term="window creation [WinAPI Wrapper]"/>
+<MSHelp:Keyword Index="F" Term="window"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbArticle"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>Creating windows and controls</h1>
+
+<p>In the Windows API a window is represented by two entities: a window class and a window procedure.
+A window class is a set of parameters, one of which is a window procedure. A window class
+has several parameters that are window-specific (like background brush and menu) but are
+not specified in the <a href="ms-help://MS.MSDNVS/winui/windows_1w6w.htm"><b>CreateWindowEx</b></a>
+function, because they are actually GDI resources. A window class also has several
+WindowProc-specific parameters, like the size of an additional data area used by the
+window procedure and specific to a particular instance of window.
+</p>
+
+<p>The WinAPI Wrapper simplifies and automates the process of creating windows.
+To define a window, you create a C++ class that describes the window. This class
+has several methods (virtual functions) that are invoked by the system in order to process particular window
+messages. The class can have miscellaneous fields. An object of this class represents
+one particular window, thus the contents of the class' instance are private to the window.
+You can create your own window classes (in the Windows meaning) but they always
+use the same window procedure in background, so the C++ window class model is always the
+same.
+</p>
+
+<p>An example of a window follows:</p>
+
+<pre>class MyOwnWindow: public Window {
+public:
+    MyOwnWindow() {
+        Create( "Test Window Title" );
+    }
+    virtual int HandleMessage( int uMsg, int wParam, int lParam ) {
+        switch ( uMsg ) {
+		
+        default:
+            return Window::HandleMessage( uMsg, wParam, lParam );
+
+        }
+    }
+    virtual void OnPaint() {
+        PaintDC dc( *this );
+        dc.TextOut( WPoint( 50, 50 ), "Hello, World!" );
+    }
+    virtual void OnClose() {
+        if ( MessageBox( "Sure to close?", "Question", MB_YESNO | MB_ICONQUESTION ) == IDYES )
+            Destroy();
+    }
+private:
+    virtual ~MyOwnWindow() { }
+};</pre>
+
+<p>The above window class is derived from the <b>Window</b> class, and therefore it is a C++ class and not a WNDCLASS-WindowProc pair.
+It could have miscalleaneous fields that would be specific to every window instance. The
+actual window (in the Windows meaning) is created in the constructor by invoking <b>Create</b>, and thus it is created <i>after</i> the actual window object is created.
+The object of this class will be automatically destroyed when the window is destroyed (thus no need to call the <b>delete</b> operator).
+Most window messages go to the <b>HandleMessage</b> method, which in turn calls its ancestor's instance (that later calls <b>DefWindowProc</b> in fact).
+Some messages are processed by other <b>Window</b>'s methods, like <i>WM_PAINT</i> and <i>WM_CLOSE</i> in this example.
+</p>
+
+<h3>Construction and destruction</h3>
+
+<p>It is a good practice to call <b>Create</b> in the constructor of a window class, because
+this means that the constructor actually constructs the window as well as the object.
+Therefore logically the object of the window class <i>is</i> the window.
+</p>
+
+<p>Because every object of your window class is a window, when the window is destroyed the
+object also should be destroyed - and it is so. The object of your class is always automatically
+destroyed after the last message has been processed, so you must not call <b>delete</b> operator
+on the pointer you keep, because it would be an attempt to delete the object twice.
+You must also always create you window objects using the <b>new</b> operator.
+</p>
+
+<h3>Other windows that you don't define</h3>
+
+<p>It is very different to create your own, custom windows, like above, and to use standard windows or
+controls. When you use a non-custom window or control, the WinAPI Wrapper provides an appropriate
+class for it (for example the <a href="class_genericwindow.htm"><b>GenericWindow</b></a>
+class which is the most crucial class of the WinAPI Wrapper, or the <a href="class_button.htm"><b>Button</b></a>
+class that corresponds to a button control). This class is only a wrapper for <i>HWND</i>
+window handle, and it does not destroy the window explicitly, nor the window destroys
+the object of the class. In opposite to your own custom windows, the generic window and
+control classes are wrappers for the <i>window handles</i> and not <i>window procedures</i>.
+Therefore you should always create the objects of these classes statically in order not to
+forget to delete them. This rule concerns all WinAPI Wrapper's classes derived from <a href="class_genericwindow.htm"><b>GenericWindow</b></a>
+except those derived from <a href="class_window.htm"><b>Window</b></a> (this does not concern modal dialog boxes, however).
+</p>
+
+<p>For example, to set text on an edit control in a hypothetical dialog box you can do like follows:
+<pre>virtual int SomeDialog::HandleMessage( int uMsg, int wParam, int lParam )
+{
+    switch ( uMsg ) {
+
+    case WM_SOMEMESSAGE:
+        {   Edit edit( GetDlgItem( ID_SOMEEDITBOX ) );
+            edit.SetText( "Temporary text" );
+        }
+        break;
+        
+    }
+    return 0;
+}</pre>
+
+(Notice that for a dialog you don't call the ancestor's <b>HandleMessage</b>).
+In the above example, the edit control's window handle <i>HWND</i> is wrapped by
+the <a href="class_edit.htm"><b>Edit</b></a> class. It is created statically and
+it does not destroy the actual edit box, which is the part of the dialog.
+The edit box is accessed in order to set its text (calling <b>SetText</b> function).
+</p>
+
+<p>Also notice, that it would be yet simplier to call:
+<pre>Edit( GetDlgItem( ID_SOMEEDITBOX ) ).SetText( "Temporary text" );</pre>
+</p>
+
+<h3>Rules of thumb</h3>
+
+<p>Every custom window class created with the WinAPI Wrapper, like in the first example, and directly or indirectly derived from the <a href="class_window.htm"><b>Window</b></a> class (except modal dialog boxes) must obey the following rules:
+
+<ul>
+<li>Every custom window class is directly or indirectly derived from the <a href="class_window.htm"><b>Window</b></a> class.</li>
+<li>Every custom window object (object of the window class) is always created using the <b>new</b> operator and it must not be created statically.</li>
+<li>The actual window object is always created explicitly with the <b>Create</b> function, that must be called, and that in turn calls the <b>CreateWindowEx</b> WinAPI function.</li>
+<li>If you define a class and you want later to derive from that class, you must not call the <b>Create</b> function in the intermediate class' constructor.
+Otherwise the <i>WM_CREATE</i> message and all other messages during window creation will not be processed (because the derived class will not yet be initialized).</li>
+<li>If the window class is a final class and you are not going to derive from it further, the best option is
+to call <b>Create</b> in its constructor in order to create the window.</li>
+<li>You should make the destructor of your window class either <i>private</i> or <i>protected</i>, depending on whether you want later to derive from this class or not.</li>
+<li>You must not use the <b>delete</b> operator to destroy the window. The window object (of your window class) is always
+destroyed automatically when the window destruction ends (it is destroyed after the last
+window message is processed, that is the <i>WM_NCDESTROY</i>). In order to destroy a window
+use the <b>Destroy</b> function.</li>
+<li>In order to handle miscellaneous window messages you must override the <b>HandleMessage</b> method.
+This method has the same function as the window procedure in regular Windows API.
+In this handler method, you must always call the base class' <b>HandleMessage</b> for
+the messages that you don't handle, otherwise your window will not work. This is very
+similar to calling <b>DefWindowProc</b>.</li>
+<li>If you use <a href="usage_pure.htm">pure</a> wrapper, all messages go to <b>HandleMessage</b>. However if you
+use the WinAPI Wrapper in the regular way, some messages go to related methods; for example
+<i>WM_PAINT</i> goes to <b>OnPaint</b>.
+</ul>
+
+In the Microsoft Windows operating system, all visual phenomena - windows, controls, widgets
+- are the same: they are just windows. Therefore you can use the <b>Window</b> class' derivatives
+as regular or main windows, popup windows or controls.
+
+</p>
+
+<h3>Summary</h3>
+
+<p>
+The main goal of the <b>Window</b> class is to simplify the process of creating a window.
+If you want to create a window of the class in the first example, it is enough to call:
+<pre>new MyOwnWindow;</pre>
+Of course you would also call <b>Show</b> and <b>Update</b> later, if it was a main window.
+The rules for the <b>Window</b>-derived classes concern only your own custom windows.
+Other windows, that you communicate with and not actually make, are wrapped by miscellaneous
+WinAPI Wrapper's classes and their objects are created statically.
+</p>
+
+<h3>Drawback 1</h3>
+
+<p>
+It may seem a drawback, that there is a different way to create your own custom windows
+and windows of existing types, like in the following example:
+<pre>// A custom window
+MyOwnWindow* p_window = new MyOwnWindow;
+
+// Regular listbox
+ListBox listbox;
+listbox.Create( WRect(0,0,0,0), hwndParent, ID_LIST );
+</pre>
+This difference is caused by the different nature of the two objects created.
+The first object is a self-destructible object that you cannot destroy. It is destroyed
+by Windows. The other object is just a wrapper for a window handle <i>HWND</i>, which
+has no influence on the existence of the actual window.
+</p>
+
+<p>If you wanted to create your own listbox, for instance, you would have to
+create two classes: The first class would be derived from <b>Window</b> and its object
+would be created dynamically. The other class would be derived from <b>GenericWindow</b>
+or from <b>Control</b> (like <b>ListBox</b> is) and it would be your primary usage class
+and it would delegate all calls to the first class.
+See the example:</p>
+
+<pre>// The implementation class of the listbox - corresponds to the window procedure
+class MyListBox_Implementation: public Window {
+public:
+    MyListBox_Implementation( WRect rc, HWND hwndParent, int id, DWORD dwStyle = 0 ) {
+        Create( "", dwStyle|WS_CHILD|WS_VISIBLE, rc, hwndParent, windows_cast<HMENU>(id) );
+    }
+    virtual int HandleMessage( int uMsg, int wParam, int lParam ) {
+        /* Drawing and user interactions with the listbox */
+    }
+
+    // Actual operations on the listbox
+    void AddString( const char* s );
+    int GetCurSel() const;
+    string GetString( int index ) const;
+};
+
+// The wrapper of the window handle - available to the end-user of the listbox
+class MyListBox: public GenericWindow {
+    MyListBox_Implementation* ptr;
+public:
+    MyListBox(): ptr( 0 ) { }
+    MyListBox( HWND hwnd ):
+        GenericWindow( hwnd ),
+        ptr( windows_cast&lt;MyListBox_Implementation*>(
+            GetWindowLong( hwnd, GWL_USERDATA ) ) ) { }
+    bool Create( WRect rc, HWND hwndParent, int id, DWORD dwStyle = 0 ) {
+        ptr = new MyListBox_Implementation( rc, hwndParent, id, dwStyle );
+        hWnd = *ptr;
+        return IsCreated();
+    }
+
+    // Delegates
+    void AddString( const char* s ) { if ( ptr != 0 ) ptr->AddString( s ); }
+    int GetCurSel() const { return (ptr != 0) ? ptr->GetCurSel() : 0; }
+    string GetString( int index ) const { return (ptr != 0) ? ptr->GetString( index ) : ""; }
+};
+</pre>
+
+<p>And now how to use the listbox:</p>
+
+<pre>MyListBox listbox;
+listbox.Create( WRect(0,0,0,0), hwndParent, ID_LIST );
+listbox.AddString( "sel1" );
+listbox.AddString( "sel2" );</pre>
+
+<h3>Drawback 2</h3>
+
+<p>Another drawback is, that the WinAPI Wrapper's <b>Window</b> class does not provide methods for
+all default messages, and for user defined messages. If you want such handlers, you
+have to dispatch the messages yourself in <b>HandleMessage</b>.
+</p>
+
+<p>It is so because the WinAPI Wrapper is not another API; it is only a simple wrapper.
+It does not try to change the WinAPI, it only simplifies its use.</p>
+
+<p>The additional <b>OnXXX</b> handlers in the non-pure configuration of the wrapper
+are provided as a help for the most common and basic standard window messages.</p>
+
+<h4>See Also</h4>
+
+<p>
+<a href="class_window.htm"><b>Window</b></a>
+</p>
+
+</body>
+</html>

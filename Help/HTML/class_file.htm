@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" DIR="LTR"><HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>File</TITLE>
+<xml>
+<MSHelp:TOCTitle Title="File"/>
+<MSHelp:RLTitle Title="File"/>
+<MSHelp:Keyword Index="A" Term="_winapi_wrapper_File"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::File"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::File"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::SetTo"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::SetTo"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::IsOpen"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::IsOpen"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::Close"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::Close"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::Read"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::Read"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::Write"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::Write"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::GetSize"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::GetSize"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::Seek"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::Seek"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::Truncate"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::Truncate"/>
+<MSHelp:Keyword Index="K" Term="WinAPI::File::Flush"/>
+<MSHelp:Keyword Index="F" Term="WinAPI::File::Flush"/>
+<MSHelp:Attr Name="Technology" Value="WinAPIWrapper"/>
+<MSHelp:Attr Name="Technology" Value="Win32API"/>
+<MSHelp:Attr Name="Technology" Value="WinUI"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWin32API"/>
+<MSHelp:Attr Name="TechnologyVers" Value="kbWinUI"/>
+<MSHelp:Attr Name="TopicType" Value="kbSyntax"/>
+<MSHelp:Attr Name="DocSet" Value="PSDK"/>
+<MSHelp:Attr Name="DocSet" Value="Visual C++"/>
+<MSHelp:Attr Name="DevLang" Value="C++"/>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"/>
+</xml>
+<LINK REL="STYLESHEET" HREF="backsdk4.css"><SCRIPT SRC="ms-help://MS.MSDNVS/winui/langref.js"></SCRIPT><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+<BODY TOPMARGIN="0"><TABLE CLASS="buttonbarshade" CELLSPACING=0 ID="Table4"><TR><TD>&nbsp;</TD></TR></TABLE>
+<TABLE CLASS="buttonbartable" CELLSPACING=0 ID="Table2">
+<TR ID="hdr"><TD CLASS="runninghead">WinAPI&nbsp;Wrapper</TD></TR>
+</TABLE>
+
+<h1>File</h1>
+
+<p>
+The <b>File</b> class extends <i>HANDLE</i> objects that are handles to files. See
+<a href="ms-help://MS.MSDNVS/fileio/filesio_2xm7.htm">File I/O Overview</a> for the details.
+</p>
+
+<p>The <b>File</b> class has the following functions:</p>
+
+<table>
+
+<tr valign="top">
+<th align="left" width="30%">Function</th>
+<th align="left" width="30%">Related WinAPI function</th>
+<th align="left" width="40%">Description</th>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>File</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_7wmd.htm"><b>CreateFile</b></a></td>
+<td width="40%">Assigns <i>INVALID_HANDLE_VALUE</i> or calls SetTo().</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>~File</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/helplib/handobj_289x.htm"><b>CloseHandle</b></a></td>
+<td width="40%">Calls Close()</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>operator HANDLE</b></td>
+<td width="30%">-</td>
+<td width="40%">Returns the file handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>SetTo</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_7wmd.htm"><b>CreateFile</b></a></td>
+<td width="40%">Opens or creates file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>IsOpen</b></td>
+<td width="30%">-</td>
+<td width="40%">Validates the handle.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Close</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/helplib/handobj_289x.htm"><b>CloseHandle</b></a></td>
+<td width="40%">Closes file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Read</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_39id.htm"><b>ReadFile</b></a></td>
+<td width="40%">Reads a buffer from file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Write</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_3kkl.htm"><b>WriteFile</b></a></td>
+<td width="40%">Writes a buffer to file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>GetSize</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_05id.htm"><b>GetFileSize</b></a></td>
+<td width="40%">Returns size of the file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Seek</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_8iwi.htm"><b>SetFilePointer</b></a></td>
+<td width="40%">Moves file pointer within the file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Truncate</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_18bp.htm"><b>SetEndOfFile</b></a></td>
+<td width="40%">Makes the current position of the file pointer the end of file.</td>
+</tr>
+
+<tr valign="top">
+<td width="30%"><b>Flush</b></td>
+<td width="30%"><a href="ms-help://MS.MSDNVS/fileio/filesio_8wvn.htm"><b>FlushFileBuffers</b></a></td>
+<td width="40%">Saves all unsaved internal Windows file buffers to disk.</td>
+</tr>
+
+</table>
+
+<h4>See Also</h4>
+<p>
+<a href="index.htm">WinAPI Wrapper</a>,
+<a href="classes.htm">WinAPI Wrapper classes</a>,
+<a href="ms-help://MS.MSDNVS/fileio/filesio_2xm7.htm">File I/O Overview</a>,
+<a href="ms-help://MS.MSDNVS/fileio/filesio_4lf7.htm">File I/O Functions</a>
+</p>
+
+</body>
+</html>

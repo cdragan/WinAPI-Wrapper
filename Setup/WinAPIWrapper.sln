@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinAPIWrapper", "WinAPIWrapper.vdproj", "{1909ED19-6B4F-45D9-BCE0-34160C15BBFE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RegisterDirs", "RegisterDirs\RegisterDirs.vcproj", "{02B6FE2B-5F64-4DEB-910A-83D69EEDB078}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1909ED19-6B4F-45D9-BCE0-34160C15BBFE}.Debug.ActiveCfg = Debug
+		{1909ED19-6B4F-45D9-BCE0-34160C15BBFE}.Debug.Build.0 = Debug
+		{1909ED19-6B4F-45D9-BCE0-34160C15BBFE}.Release.ActiveCfg = Release
+		{1909ED19-6B4F-45D9-BCE0-34160C15BBFE}.Release.Build.0 = Release
+		{02B6FE2B-5F64-4DEB-910A-83D69EEDB078}.Debug.ActiveCfg = Debug|Win32
+		{02B6FE2B-5F64-4DEB-910A-83D69EEDB078}.Debug.Build.0 = Debug|Win32
+		{02B6FE2B-5F64-4DEB-910A-83D69EEDB078}.Release.ActiveCfg = Release|Win32
+		{02B6FE2B-5F64-4DEB-910A-83D69EEDB078}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
